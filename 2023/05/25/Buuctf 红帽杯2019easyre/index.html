@@ -19,12 +19,12 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf 红帽杯2019easyre分析得知64位无壳 放入IDA中，看到base64加密数组和”you find me”，定位后者  看到这段代码后，我把v12与i异或得到Info:The fir，但这很明显是一句不完整的话，回头看到v15是36，觉得应该v13，v14是接在v12后的但是因为不可见字符导致IDA把它们分成三个字符串，重新拼接异或后得到一句奇怪的提示 接着往下看 点进400E">
+    <meta name="description" content="title: Buuctf 红帽杯2019easyredate: 2023-05-25 22:00:01tags:Buuctf Buuctf 红帽杯2019easyre分析得知64位无壳 放入IDA中，看到base64加密数组和”you find me”，定位后者  看到这段代码后，我把v12与i异或得到Info:The fir，但这很明显是一句不完整的话，回头看到v15是36，觉得应该v13，v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20%E7%BA%A2%E5%B8%BD%E6%9D%AF2019easyre/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf 红帽杯2019easyre分析得知64位无壳 放入IDA中，看到base64加密数组和”you find me”，定位后者  看到这段代码后，我把v12与i异或得到Info:The fir，但这很明显是一句不完整的话，回头看到v15是36，觉得应该v13，v14是接在v12后的但是因为不可见字符导致IDA把它们分成三个字符串，重新拼接异或后得到一句奇怪的提示 接着往下看 点进400E">
+<meta property="og:description" content="title: Buuctf 红帽杯2019easyredate: 2023-05-25 22:00:01tags:Buuctf Buuctf 红帽杯2019easyre分析得知64位无壳 放入IDA中，看到base64加密数组和”you find me”，定位后者  看到这段代码后，我把v12与i异或得到Info:The fir，但这很明显是一句不完整的话，回头看到v15是36，觉得应该v13，v">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429101147796.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-29%20100847.png">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429105946533.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429105518825.png">
 <meta property="article:published_time" content="2023-05-25T13:02:24.386Z">
-<meta property="article:modified_time" content="2023-05-25T13:02:24.519Z">
+<meta property="article:modified_time" content="2023-05-25T14:06:26.806Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429101147796.png">
@@ -495,7 +495,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-红帽杯2019easyre"><a href="#Buuctf-红帽杯2019easyre" class="headerlink" title="Buuctf 红帽杯2019easyre"></a>Buuctf 红帽杯2019easyre</h1><p>分析得知64位无壳</p>
+        <p>title: Buuctf 红帽杯2019easyre<br>date: 2023-05-25 22:00:01<br>tags:Buuctf</p>
+<h1 id="Buuctf-红帽杯2019easyre"><a href="#Buuctf-红帽杯2019easyre" class="headerlink" title="Buuctf 红帽杯2019easyre"></a>Buuctf 红帽杯2019easyre</h1><p>分析得知64位无壳</p>
 <p>放入IDA中，看到base64加密数组和”you find me”，定位后者</p>
 <p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429101147796.png" alt="image-20230429101147796"></p>
 <p>看到这段代码后，我把v12与i异或得到Info:The fir，但这很明显是一句不完整的话，回头看到v15是36，觉得应该v13，v14是接在v12后的但是因为不可见字符导致IDA把它们分成三个字符串，重新拼接异或后得到一句奇怪的提示<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-29%20100847.png" alt="屏幕截图 2023-04-29 100847"></p>
@@ -914,7 +915,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1295,7 +1313,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1442,6 +1460,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

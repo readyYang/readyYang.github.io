@@ -19,18 +19,18 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf ACTF新生赛2020 Oruga(迷宫)分析出文件64位无壳，放入64位IDA中 查看main函数 可以看出flag的开头必须是’actf{‘,因为是在Buuctf上做的这道题，所以这个信息没什么用，整道题的关键在55F91380078A这个函数上，查看这个函数 在浏览器搜索题目Oruga是什么意思的时候，不小心看到别人wp的标题说这是道迷宫题，那这样的话那个256位的字符串55F">
+    <meta name="description" content="title: Buuctf ACTF新生赛2020 Oruga(迷宫)date: 2023-05-25 22:00:01tags:Buuctf Buuctf ACTF新生赛2020 Oruga(迷宫)分析出文件64位无壳，放入64位IDA中 查看main函数 可以看出flag的开头必须是’actf{‘,因为是在Buuctf上做的这道题，所以这个信息没什么用，整道题的关键在55F91380078A这">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20ACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%20Oruga(%E8%BF%B7%E5%AE%AB)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf ACTF新生赛2020 Oruga(迷宫)分析出文件64位无壳，放入64位IDA中 查看main函数 可以看出flag的开头必须是’actf{‘,因为是在Buuctf上做的这道题，所以这个信息没什么用，整道题的关键在55F91380078A这个函数上，查看这个函数 在浏览器搜索题目Oruga是什么意思的时候，不小心看到别人wp的标题说这是道迷宫题，那这样的话那个256位的字符串55F">
+<meta property="og:description" content="title: Buuctf ACTF新生赛2020 Oruga(迷宫)date: 2023-05-25 22:00:01tags:Buuctf Buuctf ACTF新生赛2020 Oruga(迷宫)分析出文件64位无壳，放入64位IDA中 查看main函数 可以看出flag的开头必须是’actf{‘,因为是在Buuctf上做的这道题，所以这个信息没什么用，整道题的关键在55F91380078A这">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503150240085.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503150614632.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503151437798.png">
 <meta property="article:published_time" content="2023-05-25T13:16:22.671Z">
-<meta property="article:modified_time" content="2023-05-25T13:16:22.801Z">
+<meta property="article:modified_time" content="2023-05-25T14:05:38.166Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503150240085.png">
@@ -492,7 +492,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-ACTF新生赛2020-Oruga-迷宫"><a href="#Buuctf-ACTF新生赛2020-Oruga-迷宫" class="headerlink" title="Buuctf ACTF新生赛2020 Oruga(迷宫)"></a>Buuctf ACTF新生赛2020 Oruga(迷宫)</h1><p>分析出文件64位无壳，放入64位IDA中</p>
+        <p>title: Buuctf ACTF新生赛2020 Oruga(迷宫)<br>date: 2023-05-25 22:00:01<br>tags:Buuctf</p>
+<h1 id="Buuctf-ACTF新生赛2020-Oruga-迷宫"><a href="#Buuctf-ACTF新生赛2020-Oruga-迷宫" class="headerlink" title="Buuctf ACTF新生赛2020 Oruga(迷宫)"></a>Buuctf ACTF新生赛2020 Oruga(迷宫)</h1><p>分析出文件64位无壳，放入64位IDA中</p>
 <p>查看main函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503150240085.png" alt="image-20230503150240085"></p>
 <p>可以看出flag的开头必须是’actf{‘,因为是在Buuctf上做的这道题，所以这个信息没什么用，整道题的关键在55F91380078A这个函数上，查看这个函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503150614632.png" alt="image-20230503150614632"></p>
 <p>在浏览器搜索题目Oruga是什么意思的时候，不小心看到别人wp的标题说这是道迷宫题，那这样的话那个256位的字符串55F913A01020就是迷宫，很明显可以看出WMJE分别控制着上下左右，但是下面那个while循环却没有看懂，放进Linux虚拟机中动调也没看出来什么，就先跳过了。把地图画出来后却有点懵，33是终点，0是路，那这题的路不是有很多条吗<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503151437798.png" alt="image-20230503151437798"></p>
@@ -906,7 +907,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1287,7 +1305,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1434,6 +1452,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

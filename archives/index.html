@@ -428,16 +428,44 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">
+                
+                <span class="abstract-title-text">尝试</span>
+            </a>
+            <div class="abstract-content">
+                
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal(%E6%95%B0%E7%BB%84%E6%AF%94%E8%BE%83)/">
                 
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [网鼎杯 2020 青龙组]singal(数组比较)分析程序:32位无壳
+                title: Buuctf [网鼎杯 2020 青龙组]singal(数组比较)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [网鼎杯 2020 青龙组]singal(数组比较)分析程序:32位无壳
 放进32位IDA中，查看主函数
 看上去很简单，进入vm_opera中
 分支函数，在case10有个read，是输入函数，并且输入的长度为15，在case7有个比较函数，如果不满足就退出。所以又是字符串比较类型的题目。a1就是v4，v4就是unk_403040,查看403040
-12345678910111213141516171819202122232425262728290x0A, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00,...
+1234567891011121314151617181920212223...
             </div>
             <!-- read more -->
             
@@ -464,11 +492,10 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf WUSTCTF2020 level4(数据结构二叉树)分析出64位无壳
+                title: Buuctf WUSTCTF2020 level4(数据结构二叉树)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf WUSTCTF2020 level4(数据结构二叉树)分析出64位无壳
 放入64位IDA中，查看主函数第一句话是“练习我的数据结构代码”，没懂它在说什么，接下来这句“打字…………结构………字符……….*左………..*右………emmmmm…..OK！”就更抽象了，然后就是遍历type1和遍历type2，它不愿意告诉我们type3，可以猜测type3就是我们需要的flag。在虚拟机中跑一遍程序查看输出
-可以看出两个类型都是改变v2的顺序输出
-所以type3也是改变字符串顺序的，查看type1和type2
-type1和type2还是递归函数，看不懂，回头去了解数据结构算法这个知识...
+可以看出两个类型都是改...
             </div>
             <!-- read more -->
             
@@ -495,12 +522,11 @@ type1和type2还是递归函数，看不懂，回头去了解数据结构算法�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [Zer0pts2020]easy strcmp解压两次文件，分析，64位无壳
+                title: Buuctf [Zer0pts2020]easy strcmpdate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [Zer0pts2020]easy strcmp解压两次文件，分析，64位无壳
 放入64位IDA中
 a2经过一系列操作然后与字符串对比，所以要去找a2的操作过程，在找函数的调用时没找到，直接从函数列表里找到一个带有a2的函数
-这个for函数是用i表示字符串的长度，瞟了一眼别人的wp，v4是字符串除以8加1，下面那个循环是将字符串每8个为一组，分别减去564927401060中的字符串，然后返回结果。写逆向函数，求得flag，还是错的
-！！注意564927401060中的字符串中的大小序问题
-找了好久的原因，又看了很多人的wp发现可能是564927401060和输出字符串中有...
+这个for函数是用i表示字符串的长度，瞟了一眼别人的wp，v4是字符串除以8加1，下面那个循环是将字符串每8个为一组，分别减去564927401060中的字符串，然后返回结果。写逆向函数，求得flag，还...
             </div>
             <!-- read more -->
             
@@ -527,9 +553,10 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中
+                title: Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中
 只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要它出了答案就出来了写出10元非线性方程组
-12345678910-85 * i + 58 * h + 97 * f + g + -45 * e + 84 * d + 95 * b - 20 * a + 12 * c == 12613   30 * k + -70 * i + -122 * f + -81 * g + -66 * e + -115 * d + -41 * c + ...
+12345678910-85 * i + 58 * h + 97 * f + g + -45 * e + 84 * d + 95 * b - 20 * ...
             </div>
             <!-- read more -->
             
@@ -556,8 +583,9 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [BJDCTF2020]hunburger competetion(unity3D题)下载好题目后，可以看到它有多个文件，打开可执行文件发现是一个奇怪的有味道的小游戏尝试分析.exe可执行文件，64位无壳，放进IDA中，它有非常多的函数，于是尝试字符串定位法，失败了，没有哪个字符串看上去是有用的，无从下手后去查看别人的wp
-他们面对这种Unity3D游戏，选择反编译Assembly-CSharp.dll文件，Unity是用C#语言开发的，Android平台中C#编写的主逻辑模块代码静态编辑之后存储于Assembly-CSharp.dll文件中。想要反编译.dll文件，可以用...
+                title: Buuctf [BJDCTF2020]hunburger competetion(unity3D题)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [BJDCTF2020]hunburger competetion(unity3D题)下载好题目后，可以看到它有多个文件，打开可执行文件发现是一个奇怪的有味道的小游戏尝试分析.exe可执行文件，64位无壳，放进IDA中，它有非常多的函数，于是尝试字符串定位法，失败了，没有哪个字符串看上去是有用的，无从下手后去查看别人的wp
+他们面对这种Unity3D游戏，选择反编译Assembly-CSh...
             </div>
             <!-- read more -->
             
@@ -584,7 +612,8 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf 特殊的BASE64分析出64位无壳
+                title: Buuctf 特殊的BASE64date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf 特殊的BASE64分析出64位无壳
 64位IDA打开，函数非常多，直接字符串定位
 看题目就是魔改字符串，直接跑脚本出flag
 说实话，它一点也不特殊
@@ -615,10 +644,11 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf ACTF新生赛2020 Oruga(迷宫)分析出文件64位无壳，放入64位IDA中
+                title: Buuctf ACTF新生赛2020 Oruga(迷宫)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf ACTF新生赛2020 Oruga(迷宫)分析出文件64位无壳，放入64位IDA中
 查看main函数
 可以看出flag的开头必须是’actf{‘,因为是在Buuctf上做的这道题，所以这个信息没什么用，整道题的关键在55F91380078A这个函数上，查看这个函数
-在浏览器搜索题目Oruga是什么意思的时候，不小心看到别人wp的标题说这是道迷宫题，那这样的话那个256位的字符串55F913A01020就是迷宫，很明显可以看出WMJE分别控制着上下左右，但是下面那个while循环却没有看懂，放进Linux虚拟机中动调也没看出来什么，就先跳过了。把地图画出来后却有点懵，33是终...
+在浏览器搜索题目Oruga是什么意思的时候，不小心看到别人wp的标题说这是道迷宫题，那这样的话那个256位的字符串55F913A01020就是迷宫，很明显可以看出WMJE...
             </div>
             <!-- read more -->
             
@@ -645,7 +675,8 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [FlareOn4]Challenge1(魔改base64)分析出32位无壳
+                title: Buuctf [FlareOn4]Challenge1(魔改base64)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [FlareOn4]Challenge1(魔改base64)分析出32位无壳
 用IDA打开，查看main函数，
 加密过程似乎只有401260这一个函数，跟进
 看不懂，但是查看413000字符串发现它是魔改的base64字符表，到这里我想试试直接base64解码看看能不能出flag
@@ -677,41 +708,9 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [FlareOn4]Overlong分析程序，32位无壳
-查看提示：he secret of this next challenge is cleverly hidden. However, with the right approach, finding the solution will not take an overlong amount of time.（他下一个挑战的秘密被巧妙地隐藏起来。但是，使用正确的方法，找到解决方案不会花费过多的时间。）不太懂提示的意思，题目本身也是超长的意思。运行程序我从不破坏代码
-放入32位IDA中，只有3个函数
-以为text就是输出...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf WUSTCTF2020 crossfun分析出64位无壳，放入IDA中
-进入main函数
-看上去很简单，直接进入check函数
-进去后都是这样的函数，手撸，将a1拼出来，就得到了flag
-
+                title: Buuctf [FlareOn4]Overlongdate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [FlareOn4]Overlong分析程序，32位无壳
+查看提示：he secret of this next challenge is cleverly hidden. However, with the right approach, finding the solution will not take an overlong amount of time.（他下一个挑战的秘密被巧妙地隐藏起来。但是，使用正确的方法，找到解决方案不会...
             </div>
             <!-- read more -->
             
@@ -1070,7 +1069,24 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1451,7 +1467,7 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1598,6 +1614,12 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

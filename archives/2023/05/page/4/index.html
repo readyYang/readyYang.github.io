@@ -428,12 +428,48 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20Find%20it/">
+                
+                <span class="abstract-title-text">[Untitled Post]</span>
+            </a>
+            <div class="abstract-content">
+                title: Buuctf Find itdate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf Find itAPK文件放入jeb反编译
+用c语言形式查看MainActivity函数里全是字符串，而且它函数很宽，jeb又没有左右移动的滑块看得非常难受，我还是复制代码到vscode上才看懂了一些，上面的函数好像没什么用，虽然字符串中有flag，但是关键在下面那个函数上
+注意
+如图，当字符超出ASCII码范围，c语言将无法识别其对应ASCII码大小
+
+但是依旧可以进行运算，不知道用python写脚本会不会遇到这个问题
+
+所以因为上面的原因这道题我写出了上面这...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BACTF%5Deasyre/">
                 
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [ACTF]easyre分析程序，32位带UPX壳，脱壳
+                title: Buuctf [ACTF]easyredate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [ACTF]easyre分析程序，32位带UPX壳，脱壳
 进入主函数，字符串对比，查看datastart字符串
 
 写加密函数的逆函数，就可以得到flag了
@@ -465,7 +501,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [ACTF]easyre分析程序，32位带UPX壳，脱壳
+                title: Buuctf [ACTF]easyredate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [ACTF]easyre分析程序，32位带UPX壳，脱壳
 进入主函数，字符串对比，查看datastart字符串
 
 写加密函数的逆函数，就可以得到flag了
@@ -497,9 +534,10 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf 简单注册器看到是apk文件，放入jeb中，在MainActivity中按TAB用c语言查看反编译后的结果,好像看到了关键的对比函数
+                title: Buuctf 简单注册器date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf 简单注册器看到是apk文件，放入jeb中，在MainActivity中按TAB用c语言查看反编译后的结果,好像看到了关键的对比函数
 写脚本跑一下就可以得到flag了
-1234567891011121314int main() &#123;	char x[] = &quot;dd2940c04462b4dd7c450528835cca15&quot;;	x[2] = ((x[2] + x[3]) - 50);	x[4] = ((x[2] + x[5]) - 48);	x[30] = (char)((x[31] + x[9]) - 48);	x[14] = (char)((x[...
+1234567891011121314int main() &#123;	char x[] = &quot;dd2940c04462b4dd7c450528835cca15&quot;;	x[2] = ((x[2] + x[3]) - 50);	x[4] = ((x[2] + x[5]) - 48);...
             </div>
             <!-- read more -->
             
@@ -526,11 +564,12 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf 刮开有奖检查程序，32位无壳
+                title: Buuctf 刮开有奖date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf 刮开有奖检查程序，32位无壳
 直接放入IDA中，查看字符串
 有很多莫名其妙的字符串，比如那些月份字符串，在里面可以找到base64的加密字符串，但是没有A，还以为是变表加密，后面发现其实是IDA用的不熟，跟进字符串可以看到A的，自己做的时候还不知道。
 进入主函数，好像又是字符串比较。点进开头被赋值的元素，发现他们的内存是连在一起的，所以他们实际上是一个字符串，随后字符串进入了4010F0函数
-这个函数我是一点看不懂，看大佬wp，他们将函数放进编译器中跑了一遍，得出这是一个将字符串中的字符从小到大升序排列的函数。所以大家看不出来的函数不要嗯看，可以将函数改造完后放入可执行的c...
+这个函数我是一点看不懂，看大佬wp，他们将函数放进编译器中跑了一遍，得出这...
             </div>
             <!-- read more -->
             
@@ -557,7 +596,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf justre
+                title: Buuctf justredate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf justre
 从题目看出不能相信窗口说的，逆向它就好了
 放入IDA中，查看字符串列表查看到可疑字符串
 
@@ -590,7 +630,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf Lucky gay用IDA64打开文件，在字符串中定位”OK, it’s flag:”
+                title: Buuctf Lucky gaydate: 2023-05-25 22:00:11tags:Buuctf
+Buuctf Lucky gay用IDA64打开文件，在字符串中定位”OK, it’s flag:”
 转到函数
 
 f1是flag的前半段，直接给出，f2是后半段
@@ -622,10 +663,11 @@ f1是flag的前半段，直接给出，f2是后半段
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf Java逆向.class后缀，是个Java包，放入jd-gui（Java Decompiler）中反编译看到加密和对比的函数
+                title: Buuctf Java逆向date: 2023-05-25 22:00:10tags:Buuctf
+Buuctf Java逆向.class后缀，是个Java包，放入jd-gui（Java Decompiler）中反编译看到加密和对比的函数
 
 虽然是java写的，我对Java也一点不了解，但是这个函数在浏览器的帮助下还是很好看懂的，直接写脚本出flag
-123456789101112int main()&#123;	char key[] = &#123;		180, 136, 137, 147, 191, 137, 147, 191, 148, 136,		133, 191, 134, 140, 129, 135, 191, 65 &#125;;	char a[18] = &#123; ...
+123456789101112int main()&#123;	char key[] = &#123;		180, 136, 137, 147, 191, 137, 147, 191, 148, 136,		133, 191,...
             </div>
             <!-- read more -->
             
@@ -652,13 +694,14 @@ f1是flag的前半段，直接给出，f2是后半段
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf SimpleREV分析程序：64位无壳
+                title: Buuctf SimpleREVdate: 2023-05-25 22:00:09tags:Buuctf
+Buuctf SimpleREV分析程序：64位无壳
 放入64位IDA中，主函数没有什么有用的信息
 进入Decry函数中
 
 可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们可以通过观察得到最后的对比字符串text=killshadow和加密密钥key=adsfkndcls
 剩下的只要写逆向脚本就可以得到flag了，自己写的脚本一直报错输出也是乱码，用一下别人的
-12345678910111213141516171819202122232425int main()&#123;	cha...
+1...
             </div>
             <!-- read more -->
             
@@ -685,43 +728,14 @@ f1是flag的前半段，直接给出，f2是后半段
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf SimpleREV分析程序：64位无壳
+                title: Buuctf SimpleREVdate: 2023-05-25 22:00:08tags:Buuctf
+Buuctf SimpleREV分析程序：64位无壳
 放入64位IDA中，主函数没有什么有用的信息
 进入Decry函数中
 
 可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们可以通过观察得到最后的对比字符串text=killshadow和加密密钥key=adsfkndcls
 剩下的只要写逆向脚本就可以得到flag了，自己写的脚本一直报错输出也是乱码，用一下别人的
-12345678910111213141516171819202122232425int main()&#123;	cha...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20HelloWorld/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf HelloWorld看到是.APK文件，放入jeb中反编译
-
-直接就能在MainActivity中看到flag了
-
+1...
             </div>
             <!-- read more -->
             
@@ -1080,7 +1094,24 @@ f1是flag的前半段，直接给出，f2是后半段
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1461,7 +1492,7 @@ f1是flag的前半段，直接给出，f2是后半段
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1608,6 +1639,12 @@ f1是flag的前半段，直接给出，f2是后半段
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

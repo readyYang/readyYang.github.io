@@ -443,12 +443,44 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20SUCTF2019%20sign%20in(RSA)/">
+                
+                <span class="abstract-title-text">[Untitled Post]</span>
+            </a>
+            <div class="abstract-content">
+                title: Buuctf SUCTF2019 sign in(RSA)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf SUCTF2019 sign in(RSA)分析文件，64位无壳
+直接放入64位IDA中看到下列函数
+搜索96A这个函数内容，发现它是将输入转换成16进制字符
+搜索函数名得知__gmpz_init_set_str(a,b,c)是将b以c的形式存入a中，__gmpz_powm(a,b,c,d)是将b的c次方对d取模然后存入a中,所以函数流程是将输入的flag字符串以16进制的形式储存，再将它的v5次方对v4取模最后与v7做比较，我在...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020level2/">
                 
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf WUSTCTF2020level2分析出32位带UPX壳，脱壳后用IDA32打开，直接看到flag
+                title: Buuctf WUSTCTF2020level2date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf WUSTCTF2020level2分析出32位带UPX壳，脱壳后用IDA32打开，直接看到flag
 
             </div>
             <!-- read more -->
@@ -476,12 +508,13 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf 红帽杯2019easyre分析得知64位无壳
+                title: Buuctf 红帽杯2019easyredate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf 红帽杯2019easyre分析得知64位无壳
 放入IDA中，看到base64加密数组和”you find me”，定位后者
 
 看到这段代码后，我把v12与i异或得到Info:The fir，但这很明显是一句不完整的话，回头看到v15是36，觉得应该v13，v14是接在v12后的但是因为不可见字符导致IDA把它们分成三个字符串，重新拼接异或后得到一句奇怪的提示
 接着往下看
-点进400E44函数，看出它是base64加密，将6CC090中的超长字符串放到在线解密网站上base64解密10次，得到一个网址，点进去却是看雪论坛关于主动防御的文章，当时没意识到自己被骗了，把文章从头到...
+点进400E44函数，看出它是base64加密，将6CC090中的超长字符串放...
             </div>
             <!-- read more -->
             
@@ -508,7 +541,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf transform分析得到是64位无壳
+                title: Buuctf transformdate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf transform分析得到是64位无壳
 放入64位IDA中，利用字符串定位到函数
 看上去很简单，aGy和40F040都已经给了，直接逆就好了
 但是思路卡了好久
@@ -539,13 +573,13 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [GUET-CTF2019]re分析程序得知是64位带UPX壳
+                title: Buuctf [GUET-CTF2019]redate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [GUET-CTF2019]re分析程序得知是64位带UPX壳
 脱壳后打开
 利用字符串”input your flag”定位到函数
 
 进入if后的那个函数
-利用计算器逐个算出值然后转成字符flag{e65421110b0a3099a1c039337}，提交后显示错误，检查了好久，后面发现原函数a1[16]和a1[17]的顺序反了，并且没有a1[6]，调换回去后，去找别的函数中是否有提到a1[6]，结果看不懂且找不到，看了别人的wp发现他们都是直接爆破a1[6],并且a1[6]就是1，可恶，应该尝试一下爆破的
-
+利用计算器逐个算出值然后转成字符flag{e65421110b0a3099a1c039337}，提交后显示错误，检查了好久，后面发现原函数a1[16]和a1[17]的顺序反了，并且没有a1[6]，调换回去后，去找别的函数中是否有提到a1[6]，结果看不懂且找不到，看了别人的wp发现他们都是...
             </div>
             <!-- read more -->
             
@@ -572,7 +606,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf level1分析文件，64位无壳
+                title: Buuctf level1date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf level1分析文件，64位无壳
 放入64位IDA中，找到关键代码段
 
 虽然不是可执行文件，但是它把output给我们了，逆向函数得到flag，要注意的是原文件中的ptr[0]并没有输出，所以要在output前随便补上一个元素，我补的是1
@@ -605,7 +640,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf CrackRTF放入分析软件中，32位无壳
+                title: Buuctf CrackRTFdate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf CrackRTF放入分析软件中，32位无壳
 放入32位IDA中，看到主函数是这样的
 进入两个函数后分别与两个字符串对比
 点入这两个函数中看到两个几乎一样的函数
@@ -615,7 +651,7 @@
 
 第二个密码是~!3a@0
 在程序中先后输入密码后，文件夹中出现一个dbapp.rtf文件，打开后就可以看到flag了
-脚本爆破sha11234567891011import hashlibflag = &quot;@DBApp&quot;for...
+脚本爆破...
             </div>
             <!-- read more -->
             
@@ -642,10 +678,11 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf FloreOn4 login打开压缩包，里面是一个网页，一条提示
+                title: Buuctf FloreOn4 logindate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf FloreOn4 login打开压缩包，里面是一个网页，一条提示
 提示没什么用，网页打开是
 打开网站直接查看原码
-123456789101112131415161718192021&lt;!DOCTYPE Html /&gt;&lt;html&gt;    &lt;head&gt;        &lt;title&gt;FLARE On 2017&lt;/title&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;input type=&quot;text&quot; name=&quot;flag&quot; id=&qu...
+123456789101112131415161718192021&lt;!DOCTYPE Html /&gt;&lt;html&gt;    &lt;head&gt;        &lt;title&gt;FLARE On 2017&lt;/title&gt;    &lt;/head&gt;    &lt;body&gt;   ...
             </div>
             <!-- read more -->
             
@@ -672,15 +709,13 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf rsa提示说RSA是一个很神秘的算法，至于神秘在哪里需要我自己摸索，可恶，解压完只能看到一个.enc文件和一个.key文件，根本不知道从哪里开始摸
+                title: Buuctf rsadate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf rsa提示说RSA是一个很神秘的算法，至于神秘在哪里需要我自己摸索，可恶，解压完只能看到一个.enc文件和一个.key文件，根本不知道从哪里开始摸
 用记事本打开.key.后缀的文件，里面放的是公钥，.enc放的是加密完后的数据
 看别人wp得知，pub.key是公钥，flag.enc是rsa加密后的文件，因此我们只要通过公钥文件解析出n,e,p,q,d，再利用脚本解密rsa加密文件
 
 RSA加密是对明文的E次方后除以N后求余数的过程
-公钥n = p * q，其中p和q是两个大素数
-e是随机选择的数，作为公钥
-
-从通式可知，只要知道E和N任何人都可以进行RSA加密了所以说E、N...
+公钥n = p * q，其中p和q是...
             </div>
             <!-- read more -->
             
@@ -707,7 +742,8 @@ e是随机选择的数，作为公钥
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf rome分析程序，是32位无壳的
+                title: Buuctf romedate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf rome分析程序，是32位无壳的
 字符串定位进main函数
 可以看出关键在下面这个加密过程中
 
@@ -715,43 +751,7 @@ v1是输入
 看出*(_DWORD *)&amp;v12[17]是i
 %26+65和%26+97是变大小写
 我认为偏移量是51-39和79-71，，所以写的脚本一直报错，看了一下别人的wp，没想到偏移量就是65-51和97-79，我自己的脚本在这之后又没有+26，导致一些字符不对，+26后就能得出flag
-123456789101112131415161718192021int main()&#123;	char y[] = &quot;Qsw3sj_lz4_Ujw@l&quot;...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20Find%20it/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf Find itAPK文件放入jeb反编译
-用c语言形式查看MainActivity函数里全是字符串，而且它函数很宽，jeb又没有左右移动的滑块看得非常难受，我还是复制代码到vscode上才看懂了一些，上面的函数好像没什么用，虽然字符串中有flag，但是关键在下面那个函数上
-注意
-如图，当字符超出ASCII码范围，c语言将无法识别其对应ASCII码大小
-
-但是依旧可以进行运算，不知道用python写脚本会不会遇到这个问题
-
-所以因为上面的原因这道题我写出了上面这个解密函数却跑不出结果
-看别人wp可以用网上的凯撒加密在线工具，在函数里可以看出偏移量是10，在线解密一下得到flag
-
+123456789101112131415161718192021i...
             </div>
             <!-- read more -->
             
@@ -1202,7 +1202,24 @@ v1是输入
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1583,7 +1600,7 @@ v1是输入
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1730,6 +1747,12 @@ v1是输入
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

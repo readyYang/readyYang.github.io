@@ -443,16 +443,48 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20HelloWorld/">
+                
+                <span class="abstract-title-text">[Untitled Post]</span>
+            </a>
+            <div class="abstract-content">
+                title: Buuctf HelloWorlddate: 2023-05-25 22:00:07tags:Buuctf
+Buuctf HelloWorld看到是.APK文件，放入jeb中反编译
+
+直接就能在MainActivity中看到flag了
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20xor/">
                 
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf xor分析出64位无壳
+                title: Buuctf xordate: 2023-05-25 22:00:06tags:Buuctf
+Buuctf xor分析出64位无壳
 放入64位IDA中，查看主函数
 字符串比较，经过了异或加密，查看global的内容
 写出脚本
-1234567891011int main()&#123;	char a[33] = &#123;0x66, 0x0A, 0x6B, 0x0C, 0x77, 0x26, 0x4F, 0x2E, 0x40, 0x11, 0x78, 0x0D, 0x5A, 0x3B, 0x55, 0x11,	0x70, 0x19, 0x46, 0x1F, 0x76, 0x22, 0x4D, 0x23, 0x44, 0x0E, 0x67, 0x06, 0x68, 0x0F, 0x...
+1234567891011int main()&#123;	char a[33] = &#123;0x66, 0x0A, 0x6B, 0x0C, 0x77, 0x26, 0x4F, 0x2E, 0x40, 0x11, 0x78, 0x0D, 0x5A, 0x3B, 0x55, 0x11,	0x70, 0x19, 0x46, 0x1F, 0x76, 0x...
             </div>
             <!-- read more -->
             
@@ -479,7 +511,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf 新年快乐分析程序32位带UPX壳
+                title: Buuctf 新年快乐date: 2023-05-25 22:00:05tags:Buuctf
+Buuctf 新年快乐分析程序32位带UPX壳
 使用命令脱壳.\upx -d
 之后用32位IDA查看主函数
 又是字符串比较，可以看出flag就是HappyNewYear！
@@ -510,7 +543,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf 内涵的软件打开可执行文件，他叫我们逆向试试
+                title: Buuctf 内涵的软件date: 2023-05-25 22:00:03tags:Buuctf
+Buuctf 内涵的软件打开可执行文件，他叫我们逆向试试
 那就听他的！
 分析出32位无壳
 放入32位IDA中，进入主函数
@@ -542,7 +576,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf reverse_2分析出64位无壳
+                title: Buuctf reverse_2date: 2023-05-25 22:00:02tags:Buuctf
+Buuctf reverse_2分析出64位无壳
 用64位IDA打开，字符串定位法进入main函数，可以看出又是字符串比较的题查看s2，看不到，在字符串界面看到可疑字符串
 猜测这就是flag，将’i’和’r改为’1’,尝试输入，成功了
 
@@ -572,7 +607,8 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf reverse_1分析程序64位无壳
+                title: Buuctf reverse_1date: 2023-05-25 22:00:01tags:Buuctf 
+Buuctf reverse_1分析程序64位无壳
 放入64位IDA中，进入main函数中
 可以看出是字符串比较的题目，查看Str2，看到是{hello_world}，提交flag，错了，上面有一个操作是把Str2中的’o’替换成’0’(o的ASCII值是111，0的ASCII值是48),试试flag{hello_w0rld}，成功了。v3，v7和i不知道有什么用，已经得到了flag，就不用管它们了
 
@@ -581,7 +617,7 @@
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/24">
+                <div class="abstract-date" title="Last updated: 2023/05/25">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/24</span>
                 </div>
                 <!-- tags -->
@@ -1055,7 +1091,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1436,7 +1489,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1583,6 +1636,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

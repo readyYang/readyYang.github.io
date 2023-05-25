@@ -19,12 +19,12 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中 只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要它出了答案就出来了写出10元非线性方程组 12345678910-85 * i + 58 * h + 97 * f + g + -45 * e + 84 * d + 95 * b - 2">
+    <meta name="description" content="title: Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)date: 2023-05-25 22:00:01tags:Buuctf Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中 只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20[ACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020]Universe_final_answer(z3%E5%BA%93%E8%A7%A3%E6%96%B9%E7%A8%8B)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中 只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要它出了答案就出来了写出10元非线性方程组 12345678910-85 * i + 58 * h + 97 * f + g + -45 * e + 84 * d + 95 * b - 2">
+<meta property="og:description" content="title: Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)date: 2023-05-25 22:00:01tags:Buuctf Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中 只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230504175527937.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230504180013125.png">
@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230504212801186.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230504213505086.png">
 <meta property="article:published_time" content="2023-05-25T13:19:34.055Z">
-<meta property="article:modified_time" content="2023-05-25T13:19:34.195Z">
+<meta property="article:modified_time" content="2023-05-25T14:07:27.600Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230504175527937.png">
@@ -494,7 +494,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-ACTF新生赛2020-Universe-final-answer-z3库解方程"><a href="#Buuctf-ACTF新生赛2020-Universe-final-answer-z3库解方程" class="headerlink" title="Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)"></a>Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)</h1><p>分析出64位无壳，放入64位IDA中<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230504175527937.png" alt="image-20230504175527937"></p>
+        <p>title: Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)<br>date: 2023-05-25 22:00:01<br>tags:Buuctf</p>
+<h1 id="Buuctf-ACTF新生赛2020-Universe-final-answer-z3库解方程"><a href="#Buuctf-ACTF新生赛2020-Universe-final-answer-z3库解方程" class="headerlink" title="Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)"></a>Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)</h1><p>分析出64位无壳，放入64位IDA中<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230504175527937.png" alt="image-20230504175527937"></p>
 <p>只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要它出了答案就出来了<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230504180013125.png" alt="image-20230504180013125">写出10元非线性方程组</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-85 * i + 58 * h + 97 * f + g + -45 * e + 84 * d + 95 * b - 20 * a + 12 * c == 12613   </span><br><span class="line">30 * k + -70 * i + -122 * f + -81 * g + -66 * e + -115 * d + -41 * c + -86 * a - 15 * b - 30 * h == -54400 </span><br><span class="line">-103 * k + 120 * h + 108 * g + 48 * d + -89 * c + 78 * a - 41 * b + 31 * e - (f &lt;&lt; 6) - 120 * i == -10283</span><br><span class="line">71 * f + (g &lt;&lt; 7) + 99 * e + -111 * c + 85 * a + 79 * b - 30 * d - 119 * h + 48 * i - 16 * k == 22855</span><br><span class="line">5 * k + 23 * i + 122 * h + -19 * f + 99 * g + -117 * e + -69 * c + 22 * a - 98 * b + 10 * d == -2944</span><br><span class="line">-54 * k + -23 * h + -82 * c + -85 * b + 124 * a - 11 * d - 8 * e - 60 * g + 95 * f + 100 * i == -2222</span><br><span class="line">-83 * k + -111 * g + -57 * b + 41 * a + 73 * c - 18 * d + 26 * e + 16 * f + 77 * h - 63 * i == -13258</span><br><span class="line">81 * k + -48 * i + 66 * h + -104 * f + -121 * g + 95 * e + 85 * d + 60 * c + -85 * b + 80 * a == -1559</span><br><span class="line">101 * k + -85 * i + 7 * f + 117 * g + -83 * e + -101 * d + 90 * c + -28 * a + 18 * b - h == 6308</span><br><span class="line">99 * k + -28 * i + 5 * h + 93 * f + -18 * g + -127 * e + 6 * d + -9 * c + -93 * a + 58 * b == -1697</span><br></pre></td></tr></table></figure>
 
@@ -916,7 +917,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1297,7 +1315,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1444,6 +1462,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

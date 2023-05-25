@@ -19,19 +19,19 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳 放入64位IDA中，查看main函数 函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数 第一次进来时有的元素是负数，按两次">
+    <meta name="description" content="title: Buuctf [GWCTF 2019]xxor(tea加密)date: 2023-05-25 22:00:01tags:Buuctf Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳 放入64位IDA中，查看main函数 函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20[GWCTF%202019]xxor(tea%E5%8A%A0%E5%AF%86)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳 放入64位IDA中，查看main函数 函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数 第一次进来时有的元素是负数，按两次">
+<meta property="og:description" content="title: Buuctf [GWCTF 2019]xxor(tea加密)date: 2023-05-25 22:00:01tags:Buuctf Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳 放入64位IDA中，查看main函数 函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520105705284.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520110552803.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520111406711.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/d565783bb2b04728b95add4b4472e63e.png#pic_center">
 <meta property="article:published_time" content="2023-05-25T13:12:44.201Z">
-<meta property="article:modified_time" content="2023-05-25T13:12:44.337Z">
+<meta property="article:modified_time" content="2023-05-25T14:06:46.283Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520105705284.png">
@@ -493,7 +493,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-GWCTF-2019-xxor-tea加密"><a href="#Buuctf-GWCTF-2019-xxor-tea加密" class="headerlink" title="Buuctf [GWCTF 2019]xxor(tea加密)"></a>Buuctf [GWCTF 2019]xxor(tea加密)</h1><p>分析程序：64位无壳</p>
+        <p>title: Buuctf [GWCTF 2019]xxor(tea加密)<br>date: 2023-05-25 22:00:01<br>tags:Buuctf</p>
+<h1 id="Buuctf-GWCTF-2019-xxor-tea加密"><a href="#Buuctf-GWCTF-2019-xxor-tea加密" class="headerlink" title="Buuctf [GWCTF 2019]xxor(tea加密)"></a>Buuctf [GWCTF 2019]xxor(tea加密)</h1><p>分析程序：64位无壳</p>
 <p>放入64位IDA中，查看main函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520105705284.png" alt="image-20230520105705284"></p>
 <p>函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520110552803.png" alt="image-20230520110552803"></p>
 <p>第一次进来时有的元素是负数，按两次H转换成16进制再转换回来就变成正的10进制数了，上面是三个方程，用python的z3库可以约束求解出a[2],a[3],a[4]的值，然后再回头看那个加密函数400686<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520111406711.png" alt="image-20230520111406711"></p>
@@ -916,7 +917,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1297,7 +1315,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1444,6 +1462,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

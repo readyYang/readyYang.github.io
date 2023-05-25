@@ -19,18 +19,18 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf SimpleREV分析程序：64位无壳 放入64位IDA中，主函数没有什么有用的信息 进入Decry函数中  可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们可以通过观察得到最后的对比字符串text&#x3D;killshadow和加密密钥key&#x3D;adsfkndcls 剩下的只要写逆向脚">
+    <meta name="description" content="title: Buuctf SimpleREVdate: 2023-05-25 22:00:09tags:Buuctf Buuctf SimpleREV分析程序：64位无壳 放入64位IDA中，主函数没有什么有用的信息 进入Decry函数中  可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20SimpleREV/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf SimpleREV分析程序：64位无壳 放入64位IDA中，主函数没有什么有用的信息 进入Decry函数中  可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们可以通过观察得到最后的对比字符串text&#x3D;killshadow和加密密钥key&#x3D;adsfkndcls 剩下的只要写逆向脚">
+<meta property="og:description" content="title: Buuctf SimpleREVdate: 2023-05-25 22:00:09tags:Buuctf Buuctf SimpleREV分析程序：64位无壳 放入64位IDA中，主函数没有什么有用的信息 进入Decry函数中  可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523174945154.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-05-23%20175042.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523181047931.png">
 <meta property="article:published_time" content="2023-05-25T12:39:36.500Z">
-<meta property="article:modified_time" content="2023-05-25T12:39:36.648Z">
+<meta property="article:modified_time" content="2023-05-25T14:09:39.662Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523174945154.png">
@@ -492,7 +492,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-SimpleREV"><a href="#Buuctf-SimpleREV" class="headerlink" title="Buuctf SimpleREV"></a>Buuctf SimpleREV</h1><p>分析程序：64位无壳</p>
+        <p>title: Buuctf SimpleREV<br>date: 2023-05-25 22:00:09<br>tags:Buuctf</p>
+<h1 id="Buuctf-SimpleREV"><a href="#Buuctf-SimpleREV" class="headerlink" title="Buuctf SimpleREV"></a>Buuctf SimpleREV</h1><p>分析程序：64位无壳</p>
 <p>放入64位IDA中，主函数没有什么有用的信息<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523174945154.png" alt="image-20230523174945154"></p>
 <p>进入Decry函数中</p>
 <p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-05-23%20175042.png" alt="屏幕截图 2023-05-23 175042"><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523181047931.png" alt="image-20230523181047931"></p>
@@ -912,7 +913,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1293,7 +1311,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1440,6 +1458,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

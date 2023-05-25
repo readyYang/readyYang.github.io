@@ -428,16 +428,48 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">
+                
+                <span class="abstract-title-text">[Untitled Post]</span>
+            </a>
+            <div class="abstract-content">
+                title: Buuctf WUSTCTF2020 crossfundate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf WUSTCTF2020 crossfun分析出64位无壳，放入IDA中
+进入main函数
+看上去很简单，直接进入check函数
+进去后都是这样的函数，手撸，将a1拼出来，就得到了flag
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BGWCTF%202019%5Dxxor(tea%E5%8A%A0%E5%AF%86)/">
                 
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳
+                title: Buuctf [GWCTF 2019]xxor(tea加密)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳
 放入64位IDA中，查看main函数
 函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数
-第一次进来时有的元素是负数，按两次H转换成16进制再转换回来就变成正的10进制数了，上面是三个方程，用python的z3库可以约束求解出a[2],a[3],a[4]的值，然后再回头看那个加密函数400686
-它通过多次位运算进行...
+第一次进来时有的元素是负数，按两次H转换成16进制再转换回来就变成正的10进制数...
             </div>
             <!-- read more -->
             
@@ -464,11 +496,12 @@
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf [FlareOn4]IgniteMe分析出32位无壳
+                title: Buuctf [FlareOn4]IgniteMedate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf [FlareOn4]IgniteMe分析出32位无壳
 只有4个函数
 这段函数是加密函数，字符串403000已经知道了，唯一不知道的是v4的初值，v4的初值是函数401000的值，但是函数401000的内容只有
 return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
-完全不知道函数的意思，搜索也搜索不到。只找到了汇编命令ROL：（循环左移）指令把所有位都向左移。最高位复制到进位标志位和最低位。但是还是不知道函数的作用和输出。很奇怪，进行动态调试也看不到v4的值。看别人的wp，他们动调能出来。重新打开IDA，动...
+完全不知道函数的意思，搜索也搜索不到。只找到了汇编命令ROL：（循环左移）指令把所有位都向左移。最高位复制到...
             </div>
             <!-- read more -->
             
@@ -495,7 +528,8 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf WUSTCTF2020 level3分析出64位无壳
+                title: Buuctf WUSTCTF2020 level3date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf WUSTCTF2020 level3分析出64位无壳
 
 根据提示是魔改base64编码，点进base64加密，它只是普通的base64加密，在main函数上发现一个奇怪的函数，点进去
 发现它是在魔改编码表
@@ -527,10 +561,11 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf 相册APK文件，放入jeb中反编译
+                title: Buuctf 相册date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf 相册APK文件，放入jeb中反编译
 在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码
 不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail，看到了sendMailByJavaMail（java里的实现邮件发送），跟进，右击点击查找，（找实现邮件发送应该是为了查找邮箱地址吧）
-再通过跟进MAILSERVER发现它是base64编码naturemethod中的信息的，而naturemethod就是文件中非java代码的外部文件，wp告诉我...
+再通过跟进MAILSERVER发现它是base64编码n...
             </div>
             <!-- read more -->
             
@@ -557,7 +592,8 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf hello_world_go分析64位go语言写的，打开F5，直接看到flag了
+                title: Buuctf hello_world_godate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf hello_world_go分析64位go语言写的，打开F5，直接看到flag了
 
             </div>
             <!-- read more -->
@@ -585,13 +621,13 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf Youngter-drive分析，32位UPX壳
+                title: Buuctf Youngter-drivedate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf Youngter-drive分析，32位UPX壳
 脱壳后放入32位IDA中，查看主函数
 DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是对比加密后的字符串是否与”TOiZiZtOrYaToUwPnToBsOaOapsyS”相同，先进入StartAddress加密函数
 进入DB1127
 尝试写出逆向函数并运行得到结果
-得到dhGsGsDhCeJdHfAiXdHwKhJhJIKEkZ，认为这就是flag，但是错了，再次求助于别人的wp
-发现创建线程函数CreateThread的功能我并没有了解，创建完线程后，里面的两个函数是交替进行的...
+得到dhGsGsDhCeJdHfAiXdHwKhJhJIKEkZ，认为这就是flag，但...
             </div>
             <!-- read more -->
             
@@ -618,11 +654,9 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf MRCTF2020 Xor分析得32位无壳软件
-直接拖32位IDA中，F5main函数，出现报错Decompilation failure: 401095: call analysis failed(反编译失败： 401095：调用分析失败)去网上找解决办法，他们说找到报错位置上的函数，反编译它，然后想要反编译的函数就可以反编译成功了。我随便跟进了一个函数进入汇编界面，然后找到401095上的函数反编译，接着进入了main函数，这题接下来就很简单了
-
-直接就能得到flag了
-
+                title: Buuctf MRCTF2020 Xordate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf MRCTF2020 Xor分析得32位无壳软件
+直接拖32位IDA中，F5main函数，出现报错Decompilation failure: 401095: call analysis failed(反编译失败： 401095：调用分析失败)去网上找解决办法，他们说找到报错位置上的函数，反编译它，然后想要反编译的函数就可以反编译成功了。我随便跟进了一个函数进入汇编界面，然后找到401095上的函数反编译，接着进入了main函数，这题接下来就很简单了...
             </div>
             <!-- read more -->
             
@@ -649,13 +683,14 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf HDCTF2019 Maze(花指令)分析出32位带Upx壳
+                title: Buuctf HDCTF2019 Maze(花指令)date: 2023-05-25 22:00:01tags:Buuctf
+Buuctf HDCTF2019 Maze(花指令)分析出32位带Upx壳
 Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串定位法找到与flag有关的字符串
 尝试跟进却失败了
 由题目得知这题要走迷宫，*字符串很像是迷宫，它有70个字符组成。猜它10个字符为一行，得到一张地图
 
 然后回头看函数却没有看懂，尝试用wasd代表方向输入flag{ssaaasaassdddw}，正确了，但不知道为什么，只好查看别人的wp
-发现涉及花指令的问题。花指令：目的是干扰ida和od等软件对程序的静态分析。使这些软件无法正常反汇编出原始代码。这题的main函数就受到花指令的干扰，导致ma...
+发现涉及花指令的问...
             </div>
             <!-- read more -->
             
@@ -682,7 +717,8 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
                 <span class="abstract-title-text">[Untitled Post]</span>
             </a>
             <div class="abstract-content">
-                Buuctf usualCrypt分析文件，32位无壳
+                title: Buuctf usualCryptdate: 2023-05-25 22:00:01tags:Buuctf
+Buuctf usualCrypt分析文件，32位无壳
 放入IDA中
 可以看出401080是改过的base64加密，调试了好几次，对比完加密结果和base64原编码的加密结果，看不出它改动的规律，只看出它数字不变，大写字符变小写，小写字符在g之前的变大写，在g之后的乱变。
 进入401080函数
@@ -690,39 +726,7 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
 又发现两个函数，401030进去后可以看出是大小写转换
 401000进去后发现是第6个字符到第15个字符也就是’g’到’o’要与自己大10的字符交换位置
 查看运行后的字符串
-得到这题base64的变表，写base64的变表脚本求得flag
-这题因为猜到是魔改base64，以为改的是base64编...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20SUCTF2019%20sign%20in(RSA)/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf SUCTF2019 sign in(RSA)分析文件，64位无壳
-直接放入64位IDA中看到下列函数
-搜索96A这个函数内容，发现它是将输入转换成16进制字符
-搜索函数名得知__gmpz_init_set_str(a,b,c)是将b以c的形式存入a中，__gmpz_powm(a,b,c,d)是将b的c次方对d取模然后存入a中,所以函数流程是将输入的flag字符串以16进制的形式储存，再将它的v5次方对v4取模最后与v7做比较，我在看懂后尝试写逆向函数，但是失败了，我写不出来
-观看别人的wp得知，这又是RSA解密，我一点都没看出来。可以回头看看之前做的rsa题复习一下，根据题...
+...
             </div>
             <!-- read more -->
             
@@ -1081,7 +1085,24 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1462,7 +1483,7 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1609,6 +1630,12 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

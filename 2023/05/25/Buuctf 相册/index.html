@@ -19,12 +19,12 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf 相册APK文件，放入jeb中反编译 在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码 不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail，看到了sendMailByJavaMail（java里的实现邮件发送），跟进，右击点击查找，（找实现邮件">
+    <meta name="description" content="title: Buuctf 相册date: 2023-05-25 22:00:01tags:Buuctf Buuctf 相册APK文件，放入jeb中反编译 在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码 不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20%E7%9B%B8%E5%86%8C/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf 相册APK文件，放入jeb中反编译 在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码 不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail，看到了sendMailByJavaMail（java里的实现邮件发送），跟进，右击点击查找，（找实现邮件">
+<meta property="og:description" content="title: Buuctf 相册date: 2023-05-25 22:00:01tags:Buuctf Buuctf 相册APK文件，放入jeb中反编译 在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码 不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430200934823.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430201031716.png">
@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430214649461.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430214711924.png">
 <meta property="article:published_time" content="2023-05-25T13:10:01.691Z">
-<meta property="article:modified_time" content="2023-05-25T13:10:01.824Z">
+<meta property="article:modified_time" content="2023-05-25T14:05:49.939Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430200934823.png">
@@ -494,7 +494,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-相册"><a href="#Buuctf-相册" class="headerlink" title="Buuctf 相册"></a>Buuctf 相册</h1><p>APK文件，放入jeb中反编译</p>
+        <p>title: Buuctf 相册<br>date: 2023-05-25 22:00:01<br>tags:Buuctf</p>
+<h1 id="Buuctf-相册"><a href="#Buuctf-相册" class="headerlink" title="Buuctf 相册"></a>Buuctf 相册</h1><p>APK文件，放入jeb中反编译</p>
 <p>在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430200934823.png" alt="image-20230430200934823"><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430201031716.png" alt="image-20230430201031716"></p>
 <p>不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail，看到了sendMailByJavaMail（java里的实现邮件发送），跟进，右击点击查找，（找实现邮件发送应该是为了查找邮箱地址吧）<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430212839183.png" alt="image-20230430212839183"></p>
 <p>再通过跟进MAILSERVER发现它是base64编码naturemethod中的信息的，而naturemethod就是文件中非java代码的外部文件，wp告诉我们，c语言写的代码一般放在lib文件下，所以用IDA打开libcore.so文件(先用ApkIDE打开)，字符串定位可疑的base64编码字符<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230430214649461.png" alt="image-20230430214649461"></p>
@@ -909,7 +910,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1290,7 +1308,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1437,6 +1455,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

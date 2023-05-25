@@ -19,16 +19,16 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf Java逆向.class后缀，是个Java包，放入jd-gui（Java Decompiler）中反编译看到加密和对比的函数  虽然是java写的，我对Java也一点不了解，但是这个函数在浏览器的帮助下还是很好看懂的，直接写脚本出flag 123456789101112int main()&amp;#123;	char key[] &#x3D; &amp;#123;		180, 136, 137, 147,">
+    <meta name="description" content="title: Buuctf Java逆向date: 2023-05-25 22:00:10tags:Buuctf Buuctf Java逆向.class后缀，是个Java包，放入jd-gui（Java Decompiler）中反编译看到加密和对比的函数  虽然是java写的，我对Java也一点不了解，但是这个函数在浏览器的帮助下还是很好看懂的，直接写脚本出flag 123456789101112i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20Java%E9%80%86%E5%90%91/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf Java逆向.class后缀，是个Java包，放入jd-gui（Java Decompiler）中反编译看到加密和对比的函数  虽然是java写的，我对Java也一点不了解，但是这个函数在浏览器的帮助下还是很好看懂的，直接写脚本出flag 123456789101112int main()&amp;#123;	char key[] &#x3D; &amp;#123;		180, 136, 137, 147,">
+<meta property="og:description" content="title: Buuctf Java逆向date: 2023-05-25 22:00:10tags:Buuctf Buuctf Java逆向.class后缀，是个Java包，放入jd-gui（Java Decompiler）中反编译看到加密和对比的函数  虽然是java写的，我对Java也一点不了解，但是这个函数在浏览器的帮助下还是很好看懂的，直接写脚本出flag 123456789101112i">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230425222322715.png">
 <meta property="article:published_time" content="2023-05-25T12:40:30.054Z">
-<meta property="article:modified_time" content="2023-05-25T12:40:30.191Z">
+<meta property="article:modified_time" content="2023-05-25T14:09:58.245Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230425222322715.png">
@@ -490,7 +490,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-Java逆向"><a href="#Buuctf-Java逆向" class="headerlink" title="Buuctf Java逆向"></a>Buuctf Java逆向</h1><p>.class后缀，是个Java包，放入jd-gui（Java Decompiler）中反编译看到加密和对比的函数</p>
+        <p>title: Buuctf Java逆向<br>date: 2023-05-25 22:00:10<br>tags:Buuctf</p>
+<h1 id="Buuctf-Java逆向"><a href="#Buuctf-Java逆向" class="headerlink" title="Buuctf Java逆向"></a>Buuctf Java逆向</h1><p>.class后缀，是个Java包，放入jd-gui（Java Decompiler）中反编译看到加密和对比的函数</p>
 <p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230425222322715.png" alt="image-20230425222322715"></p>
 <p>虽然是java写的，我对Java也一点不了解，但是这个函数在浏览器的帮助下还是很好看懂的，直接写脚本出flag</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> key[] = &#123;</span><br><span class="line">		<span class="number">180</span>, <span class="number">136</span>, <span class="number">137</span>, <span class="number">147</span>, <span class="number">191</span>, <span class="number">137</span>, <span class="number">147</span>, <span class="number">191</span>, <span class="number">148</span>, <span class="number">136</span>,</span><br><span class="line">		<span class="number">133</span>, <span class="number">191</span>, <span class="number">134</span>, <span class="number">140</span>, <span class="number">129</span>, <span class="number">135</span>, <span class="number">191</span>, <span class="number">65</span> &#125;;</span><br><span class="line">	<span class="type">char</span> a[<span class="number">18</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">18</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		a[i] = key[i] - <span class="number">64</span> ^ <span class="number">32</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -904,7 +905,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1285,7 +1303,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1432,6 +1450,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         

@@ -19,18 +19,18 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf [FlareOn4]Challenge1(魔改base64)分析出32位无壳 用IDA打开，查看main函数， 加密过程似乎只有401260这一个函数，跟进 看不懂，但是查看413000字符串发现它是魔改的base64字符表，到这里我想试试直接base64解码看看能不能出flag 成功了">
+    <meta name="description" content="title: Buuctf [FlareOn4]Challenge1(魔改base64)date: 2023-05-25 22:00:01tags:Buuctf Buuctf [FlareOn4]Challenge1(魔改base64)分析出32位无壳 用IDA打开，查看main函数， 加密过程似乎只有401260这一个函数，跟进 看不懂，但是查看413000字符串发现它是魔改的base64字符表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20[FlareOn4]Challenge1(%E9%AD%94%E6%94%B9base64)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf [FlareOn4]Challenge1(魔改base64)分析出32位无壳 用IDA打开，查看main函数， 加密过程似乎只有401260这一个函数，跟进 看不懂，但是查看413000字符串发现它是魔改的base64字符表，到这里我想试试直接base64解码看看能不能出flag 成功了">
+<meta property="og:description" content="title: Buuctf [FlareOn4]Challenge1(魔改base64)date: 2023-05-25 22:00:01tags:Buuctf Buuctf [FlareOn4]Challenge1(魔改base64)分析出32位无壳 用IDA打开，查看main函数， 加密过程似乎只有401260这一个函数，跟进 看不懂，但是查看413000字符串发现它是魔改的base64字符表">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503103738644.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503103921300.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503104140421.png">
 <meta property="article:published_time" content="2023-05-25T13:15:38.492Z">
-<meta property="article:modified_time" content="2023-05-25T13:15:38.632Z">
+<meta property="article:modified_time" content="2023-05-25T14:07:13.789Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503103738644.png">
@@ -492,7 +492,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-FlareOn4-Challenge1-魔改base64"><a href="#Buuctf-FlareOn4-Challenge1-魔改base64" class="headerlink" title="Buuctf [FlareOn4]Challenge1(魔改base64)"></a>Buuctf [FlareOn4]Challenge1(魔改base64)</h1><p>分析出32位无壳</p>
+        <p>title: Buuctf [FlareOn4]Challenge1(魔改base64)<br>date: 2023-05-25 22:00:01<br>tags:Buuctf</p>
+<h1 id="Buuctf-FlareOn4-Challenge1-魔改base64"><a href="#Buuctf-FlareOn4-Challenge1-魔改base64" class="headerlink" title="Buuctf [FlareOn4]Challenge1(魔改base64)"></a>Buuctf [FlareOn4]Challenge1(魔改base64)</h1><p>分析出32位无壳</p>
 <p>用IDA打开，查看main函数，<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503103738644.png" alt="image-20230503103738644"></p>
 <p>加密过程似乎只有401260这一个函数，跟进<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503103921300.png" alt="image-20230503103921300"></p>
 <p>看不懂，但是查看413000字符串发现它是魔改的base64字符表，到这里我想试试直接base64解码看看能不能出flag<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230503104140421.png" alt="image-20230503104140421"></p>
@@ -906,7 +907,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1287,7 +1305,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1434,6 +1452,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
         
