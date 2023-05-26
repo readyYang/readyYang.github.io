@@ -428,6 +428,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20%E5%88%AE%E5%BC%80%E6%9C%89%E5%A5%96/">
+                
+                <span class="abstract-title-text">Buuctf 刮开有奖</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf 刮开有奖检查程序，32位无壳
+直接放入IDA中，查看字符串
+有很多莫名其妙的字符串，比如那些月份字符串，在里面可以找到base64的加密字符串，但是没有A，还以为是变表加密，后面发现其实是IDA用的不熟，跟进字符串可以看到A的，自己做的时候还不知道。
+进入主函数，好像又是字符串比较。点进开头被赋值的元素，发现他们的内存是连在一起的，所以他们实际上是一个字符串，随后字符串进入了4010F0函数
+这个函数我是一点看不懂，看大佬wp，他们将函数放进编译器中跑了一遍，得出这是一个将字符串中的字符从小到大升序排列的函数。所以大家看不出来的函数不要嗯看，可以将函数改造完后放入可执行的c...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">
                 
                 <span class="abstract-title-text">Buuctf 新年快乐</span>
@@ -958,220 +997,7 @@
         
         
         
-        
-        
-        
-        
-        
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -1268,7 +1094,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 47
+        Total : 46
         </div>
         <!-- search  -->
         
@@ -1400,6 +1226,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DChallenge1(%E9%AD%94%E6%94%B9base64)/">Buuctf [FlareOn4]Challenge1(魔改base64)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DIgniteMe/">Buuctf [FlareOn4]IgniteMe</a>
         </li>
     
         
@@ -1550,18 +1382,6 @@
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%BA%A2%E5%B8%BD%E6%9D%AF2019easyre/">Buuctf 红帽杯2019easyre</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DIgniteMe/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
         </li>
     
     </div>
