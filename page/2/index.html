@@ -443,6 +443,47 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20SimpleREV/">
+                
+                <span class="abstract-title-text">Buuctf SimpleREV</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf SimpleREV分析程序：64位无壳
+放入64位IDA中，主函数没有什么有用的信息
+进入Decry函数中
+
+可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们可以通过观察得到最后的对比字符串text=killshadow和加密密钥key=adsfkndcls
+剩下的只要写逆向脚本就可以得到flag了，自己写的脚本一直报错输出也是乱码，用一下别人的
+12345678910111213141516171819202122232425int main()&#123;	cha...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20SUCTF2019%20sign%20in(RSA)/">
                 
                 <span class="abstract-title-text">Buuctf SUCTF2019 sign in(RSA)</span>
@@ -761,46 +802,6 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
                 Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中
 只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要它出了答案就出来了写出10元非线性方程组
 12345678910-85 * i + 58 * h + 97 * f + g + -45 * e + 84 * d + 95 * b - 20 * a + 12 * c == 12613   30 * k + -70 * i + -122 * f + -81 * g + -66 * e + -115 * d + -41 * c + ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DChallenge1(%E9%AD%94%E6%94%B9base64)/">
-                
-                <span class="abstract-title-text">Buuctf [FlareOn4]Challenge1(魔改base64)</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [FlareOn4]Challenge1(魔改base64)分析出32位无壳
-用IDA打开，查看main函数，
-加密过程似乎只有401260这一个函数，跟进
-看不懂，但是查看413000字符串发现它是魔改的base64字符表，到这里我想试试直接base64解码看看能不能出flag
-成功了
-
             </div>
             <!-- read more -->
             
@@ -1259,7 +1260,26 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1356,7 +1376,7 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 46
+        Total : 47
         </div>
         <!-- search  -->
         
@@ -1370,6 +1390,12 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/26</span>
+            <a class="archive-post-title" href="/2023/05/26/2020-easyre/">Buuctf [羊城杯2020]easyre</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
