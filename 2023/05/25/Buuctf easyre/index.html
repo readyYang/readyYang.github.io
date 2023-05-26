@@ -19,25 +19,25 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf 简单注册器看到是apk文件，放入jeb中，在MainActivity中按TAB用c语言查看反编译后的结果,好像看到了关键的对比函数 写脚本跑一下就可以得到flag了 1234567891011121314int main() &amp;#123;	char x[] &#x3D; &quot;dd2940c04462b4dd7c450528835cca15&quot;;	x[2] &#x3D; ((x[2] +">
+    <meta name="description" content="Buuctf easyre分析程序64位无壳 放入64位IDA中，直接就可以看见flag">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Buuctf 简单注册器">
-<meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20%E7%AE%80%E5%8D%95%E6%B3%A8%E5%86%8C%E5%99%A8/index.html">
+<meta property="og:title" content="Buuctf easyre">
+<meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20easyre/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf 简单注册器看到是apk文件，放入jeb中，在MainActivity中按TAB用c语言查看反编译后的结果,好像看到了关键的对比函数 写脚本跑一下就可以得到flag了 1234567891011121314int main() &amp;#123;	char x[] &#x3D; &quot;dd2940c04462b4dd7c450528835cca15&quot;;	x[2] &#x3D; ((x[2] +">
+<meta property="og:description" content="Buuctf easyre分析程序64位无壳 放入64位IDA中，直接就可以看见flag">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230524211832250.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523101401230.png">
 <meta property="article:published_time" content="2023-05-25T14:00:01.000Z">
-<meta property="article:modified_time" content="2023-05-25T14:17:46.010Z">
+<meta property="article:modified_time" content="2023-05-26T05:42:44.629Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Buuctf">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230524211832250.png">
+<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523101401230.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Buuctf 简单注册器 · readyYang‘s blog</title>
+    <title>Buuctf easyre · readyYang‘s blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -262,7 +262,7 @@
                 <a href="/">我的博客</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">Buuctf 简单注册器</a>
+                <a href="#" class="post-name">Buuctf easyre</a>
             </div>
         </div>
     
@@ -308,7 +308,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                Buuctf 简单注册器
+                Buuctf easyre
             <!-- 404 -->
             
         </h1>
@@ -493,10 +493,8 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-简单注册器"><a href="#Buuctf-简单注册器" class="headerlink" title="Buuctf 简单注册器"></a>Buuctf 简单注册器</h1><p>看到是apk文件，放入jeb中，在MainActivity中按<code>TAB</code>用c语言查看反编译后的结果,好像看到了关键的对比函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230524211832250.png" alt="image-20230524211832250"></p>
-<p>写脚本跑一下就可以得到flag了</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">char</span> x[] = <span class="string">&quot;dd2940c04462b4dd7c450528835cca15&quot;</span>;</span><br><span class="line">	x[<span class="number">2</span>] = ((x[<span class="number">2</span>] + x[<span class="number">3</span>]) - <span class="number">50</span>);</span><br><span class="line">	x[<span class="number">4</span>] = ((x[<span class="number">2</span>] + x[<span class="number">5</span>]) - <span class="number">48</span>);</span><br><span class="line">	x[<span class="number">30</span>] = (<span class="type">char</span>)((x[<span class="number">31</span>] + x[<span class="number">9</span>]) - <span class="number">48</span>);</span><br><span class="line">	x[<span class="number">14</span>] = (<span class="type">char</span>)((x[<span class="number">27</span>] + x[<span class="number">28</span>]) - <span class="number">97</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i++) &#123;</span><br><span class="line">		<span class="type">char</span> a = x[<span class="number">31</span> - i];</span><br><span class="line">		x[<span class="number">31</span> - i] = x[i];</span><br><span class="line">		x[i] = a;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;flag&#123;%s&#125;&quot;</span>, x);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h1 id="Buuctf-easyre"><a href="#Buuctf-easyre" class="headerlink" title="Buuctf easyre"></a>Buuctf easyre</h1><p>分析程序64位无壳</p>
+<p>放入64位IDA中，直接就可以看见flag<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523101401230.png" alt="image-20230523101401230"></p>
 
     </article>
     <!-- license -->
@@ -506,16 +504,16 @@
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href="/2023/05/25/Buuctf%20%E7%9B%B8%E5%86%8C/" title="Buuctf 相册">
-                    <div class="nextTitle">Buuctf 相册</div>
+                <a href="/2023/05/25/Buuctf%20%5BZer0pts2020%5Deasy%20strcmp/" title="Buuctf [Zer0pts2020]easy strcmp">
+                    <div class="nextTitle">Buuctf [Zer0pts2020]easy strcmp</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2023/05/25/Buuctf%20%E7%BA%A2%E5%B8%BD%E6%9D%AF2019easyre/" title="Buuctf 红帽杯2019easyre">
-                    <div class="prevTitle">Buuctf 红帽杯2019easyre</div>
+                <a href="/2023/05/25/Buuctf%20hello_world_go/" title="Buuctf hello_world_go">
+                    <div class="prevTitle">Buuctf hello_world_go</div>
                 </a>
             
         </li>
@@ -662,7 +660,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Buuctf-%E7%AE%80%E5%8D%95%E6%B3%A8%E5%86%8C%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">Buuctf 简单注册器</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Buuctf-easyre"><span class="toc-number">1.</span> <span class="toc-text">Buuctf easyre</span></a></li></ol>
             </div>
         
         <!-- sidebar -->

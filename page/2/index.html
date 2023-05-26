@@ -443,13 +443,51 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20SUCTF2019%20sign%20in(RSA)/">
                 
-                <span class="abstract-title-text">[Untitled Post]</span>
+                <span class="abstract-title-text">Buuctf SUCTF2019 sign in(RSA)</span>
             </a>
             <div class="abstract-content">
-                title: Buuctf WUSTCTF2020 crossfundate: 2023-05-25 22:00:01tags:Buuctf
-Buuctf WUSTCTF2020 crossfun分析出64位无壳，放入IDA中
+                Buuctf SUCTF2019 sign in(RSA)分析文件，64位无壳
+直接放入64位IDA中看到下列函数
+搜索96A这个函数内容，发现它是将输入转换成16进制字符
+搜索函数名得知__gmpz_init_set_str(a,b,c)是将b以c的形式存入a中，__gmpz_powm(a,b,c,d)是将b的c次方对d取模然后存入a中,所以函数流程是将输入的flag字符串以16进制的形式储存，再将它的v5次方对v4取模最后与v7做比较，我在看懂后尝试写逆向函数，但是失败了，我写不出来
+观看别人的wp得知，这又是RSA解密，我一点都没看出来。可以回头看看之前做的rsa题复习一下，根据题...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">
+                
+                <span class="abstract-title-text">Buuctf WUSTCTF2020 crossfun</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf WUSTCTF2020 crossfun分析出64位无壳，放入IDA中
 进入main函数
 看上去很简单，直接进入check函数
 进去后都是这样的函数，手撸，将a1拼出来，就得到了flag
@@ -464,36 +502,13 @@ Buuctf WUSTCTF2020 crossfun分析出64位无壳，放入IDA中
                 </div>
                 <!-- tags -->
                 
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+                    <div class= abstract-tags >
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BGWCTF%202019%5Dxxor(tea%E5%8A%A0%E5%AF%86)/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                title: Buuctf [GWCTF 2019]xxor(tea加密)date: 2023-05-25 22:00:01tags:Buuctf
-Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳
-放入64位IDA中，查看main函数
-函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数
-第一次进来时有的元素是负数，按两次H转换成16进制再转换回来就变成正的10进制数...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
                 
             </div>
         </article>
@@ -506,17 +521,16 @@ Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DIgniteMe/">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level4(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C%E5%8F%89%E6%A0%91)/">
                 
-                <span class="abstract-title-text">[Untitled Post]</span>
+                <span class="abstract-title-text">Buuctf WUSTCTF2020 level4(数据结构二叉树)</span>
             </a>
             <div class="abstract-content">
-                title: Buuctf [FlareOn4]IgniteMedate: 2023-05-25 22:00:01tags:Buuctf
-Buuctf [FlareOn4]IgniteMe分析出32位无壳
-只有4个函数
-这段函数是加密函数，字符串403000已经知道了，唯一不知道的是v4的初值，v4的初值是函数401000的值，但是函数401000的内容只有
-return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
-完全不知道函数的意思，搜索也搜索不到。只找到了汇编命令ROL：（循环左移）指令把所有位都向左移。最高位复制到...
+                Buuctf WUSTCTF2020 level4(数据结构二叉树)分析出64位无壳
+放入64位IDA中，查看主函数第一句话是“练习我的数据结构代码”，没懂它在说什么，接下来这句“打字…………结构………字符……….*左………..*右………emmmmm…..OK！”就更抽象了，然后就是遍历type1和遍历type2，它不愿意告诉我们type3，可以猜测type3就是我们需要的flag。在虚拟机中跑一遍程序查看输出
+可以看出两个类型都是改变v2的顺序输出
+所以type3也是改变字符串顺序的，查看type1和type2
+type1和type2还是递归函数，看不懂，回头去了解数据结构算法这个知识...
             </div>
             <!-- read more -->
             
@@ -526,6 +540,91 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
                 </div>
                 <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020level2/">
+                
+                <span class="abstract-title-text">Buuctf WUSTCTF2020level2</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf WUSTCTF2020level2分析出32位带UPX壳，脱壳后用IDA32打开，直接看到flag
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20Youngter-drive/">
+                
+                <span class="abstract-title-text">Buuctf Youngter-drive</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf Youngter-drive分析，32位UPX壳
+脱壳后放入32位IDA中，查看主函数
+DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是对比加密后的字符串是否与”TOiZiZtOrYaToUwPnToBsOaOapsyS”相同，先进入StartAddress加密函数
+进入DB1127
+尝试写出逆向函数并运行得到结果
+得到dhGsGsDhCeJdHfAiXdHwKhJhJIKEkZ，认为这就是flag，但是错了，再次求助于别人的wp
+发现创建线程函数CreateThread的功能我并没有了解，创建完线程后，里面的两个函数是交替进行的...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
                 
             </div>
         </article>
@@ -540,11 +639,10 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
         <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level3/">
                 
-                <span class="abstract-title-text">[Untitled Post]</span>
+                <span class="abstract-title-text">Buuctf WUSTCTF2020 level3</span>
             </a>
             <div class="abstract-content">
-                title: Buuctf WUSTCTF2020 level3date: 2023-05-25 22:00:01tags:Buuctf
-Buuctf WUSTCTF2020 level3分析出64位无壳
+                Buuctf WUSTCTF2020 level3分析出64位无壳
 
 根据提示是魔改base64编码，点进base64加密，它只是普通的base64加密，在main函数上发现一个奇怪的函数，点进去
 发现它是在魔改编码表
@@ -560,36 +658,13 @@ Buuctf WUSTCTF2020 level3分析出64位无壳
                 </div>
                 <!-- tags -->
                 
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+                    <div class= abstract-tags >
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%E7%9B%B8%E5%86%8C/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                title: Buuctf 相册date: 2023-05-25 22:00:01tags:Buuctf
-Buuctf 相册APK文件，放入jeb中反编译
-在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码
-不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail，看到了sendMailByJavaMail（java里的实现邮件发送），跟进，右击点击查找，（找实现邮件发送应该是为了查找邮箱地址吧）
-再通过跟进MAILSERVER发现它是base64编码n...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
                 
             </div>
         </article>
@@ -602,119 +677,34 @@ Buuctf 相册APK文件，放入jeb中反编译
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20hello_world_go/">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BACTF%5Deasyre/">
                 
-                <span class="abstract-title-text">[Untitled Post]</span>
+                <span class="abstract-title-text">Buuctf [ACTF]easyre</span>
             </a>
             <div class="abstract-content">
-                title: Buuctf hello_world_godate: 2023-05-25 22:00:01tags:Buuctf
-Buuctf hello_world_go分析64位go语言写的，打开F5，直接看到flag了
+                Buuctf [ACTF]easyre分析程序，32位带UPX壳，脱壳
+进入主函数，字符串对比，查看datastart字符串
+
+写加密函数的逆函数，就可以得到flag了
+
 
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
+                <div class="abstract-date" title="Last updated: 2023/05/26">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
                 </div>
                 <!-- tags -->
                 
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+                    <div class= abstract-tags >
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20Youngter-drive/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                title: Buuctf Youngter-drivedate: 2023-05-25 22:00:01tags:Buuctf
-Buuctf Youngter-drive分析，32位UPX壳
-脱壳后放入32位IDA中，查看主函数
-DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是对比加密后的字符串是否与”TOiZiZtOrYaToUwPnToBsOaOapsyS”相同，先进入StartAddress加密函数
-进入DB1127
-尝试写出逆向函数并运行得到结果
-得到dhGsGsDhCeJdHfAiXdHwKhJhJIKEkZ，认为这就是flag，但...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20MRCTF2020%20Xor/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                title: Buuctf MRCTF2020 Xordate: 2023-05-25 22:00:01tags:Buuctf
-Buuctf MRCTF2020 Xor分析得32位无壳软件
-直接拖32位IDA中，F5main函数，出现报错Decompilation failure: 401095: call analysis failed(反编译失败： 401095：调用分析失败)去网上找解决办法，他们说找到报错位置上的函数，反编译它，然后想要反编译的函数就可以反编译成功了。我随便跟进了一个函数进入汇编界面，然后找到401095上的函数反编译，接着进入了main函数，这题接下来就很简单了...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20HDCTF2019%20Maze(%E8%8A%B1%E6%8C%87%E4%BB%A4)/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                title: Buuctf HDCTF2019 Maze(花指令)date: 2023-05-25 22:00:01tags:Buuctf
-Buuctf HDCTF2019 Maze(花指令)分析出32位带Upx壳
-Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串定位法找到与flag有关的字符串
-尝试跟进却失败了
-由题目得知这题要走迷宫，*字符串很像是迷宫，它有70个字符组成。猜它10个字符为一行，得到一张地图
+</div>
 
-然后回头看函数却没有看懂，尝试用wasd代表方向输入flag{ssaaasaassdddw}，正确了，但不知道为什么，只好查看别人的wp
-发现涉及花指令的问...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
                 
             </div>
         </article>
@@ -727,30 +717,107 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20usualCrypt/">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BBJDCTF2020%5Dhunburger%20competetion(unity3D%E9%A2%98)/">
                 
-                <span class="abstract-title-text">[Untitled Post]</span>
+                <span class="abstract-title-text">Buuctf [BJDCTF2020]hunburger competetion(unity3D题)</span>
             </a>
             <div class="abstract-content">
-                title: Buuctf usualCryptdate: 2023-05-25 22:00:01tags:Buuctf
-Buuctf usualCrypt分析文件，32位无壳
-放入IDA中
-可以看出401080是改过的base64加密，调试了好几次，对比完加密结果和base64原编码的加密结果，看不出它改动的规律，只看出它数字不变，大写字符变小写，小写字符在g之前的变大写，在g之后的乱变。
-进入401080函数
-
-又发现两个函数，401030进去后可以看出是大小写转换
-401000进去后发现是第6个字符到第15个字符也就是’g’到’o’要与自己大10的字符交换位置
-查看运行后的字符串
-...
+                Buuctf [BJDCTF2020]hunburger competetion(unity3D题)下载好题目后，可以看到它有多个文件，打开可执行文件发现是一个奇怪的有味道的小游戏尝试分析.exe可执行文件，64位无壳，放进IDA中，它有非常多的函数，于是尝试字符串定位法，失败了，没有哪个字符串看上去是有用的，无从下手后去查看别人的wp
+他们面对这种Unity3D游戏，选择反编译Assembly-CSharp.dll文件，Unity是用C#语言开发的，Android平台中C#编写的主逻辑模块代码静态编辑之后存储于Assembly-CSharp.dll文件中。想要反编译.dll文件，可以用...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
+                <div class="abstract-date" title="Last updated: 2023/05/26">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
                 </div>
                 <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%5DUniverse_final_answer(z3%E5%BA%93%E8%A7%A3%E6%96%B9%E7%A8%8B)/">
+                
+                <span class="abstract-title-text">Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中
+只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要它出了答案就出来了写出10元非线性方程组
+12345678910-85 * i + 58 * h + 97 * f + g + -45 * e + 84 * d + 95 * b - 20 * a + 12 * c == 12613   30 * k + -70 * i + -122 * f + -81 * g + -66 * e + -115 * d + -41 * c + ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DChallenge1(%E9%AD%94%E6%94%B9base64)/">
+                
+                <span class="abstract-title-text">Buuctf [FlareOn4]Challenge1(魔改base64)</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf [FlareOn4]Challenge1(魔改base64)分析出32位无壳
+用IDA打开，查看main函数，
+加密过程似乎只有401260这一个函数，跟进
+看不懂，但是查看413000字符串发现它是魔改的base64字符表，到这里我想试试直接base64解码看看能不能出flag
+成功了
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
                 
             </div>
         </article>
@@ -1496,94 +1563,6 @@ Buuctf usualCrypt分析文件，32位无壳
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
     
     
@@ -1601,88 +1580,277 @@ Buuctf usualCrypt分析文件，32位无壳
         
             
             
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20ACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%20Oruga(%E8%BF%B7%E5%AE%AB)/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20WUSTCTF2020level2/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20ACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%20Oruga(%E8%BF%B7%E5%AE%AB)/">Buuctf ACTF新生赛2020 Oruga(迷宫)</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20CrackRTF/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20Find%20it/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2023 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20Youngter-drive/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20CrackRTF/">Buuctf CrackRTF</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DChallenge1(%E9%AD%94%E6%94%B9base64)/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20Find%20it/">Buuctf Find it</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20transform/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20HelloWorld/">Buuctf HelloWorld</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20HDCTF2019%20Maze(%E8%8A%B1%E6%8C%87%E4%BB%A4)/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20FloreOn4%20login/">Buuctf FloreOn4 login</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DOverlong/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20HDCTF2019%20Maze(%E8%8A%B1%E6%8C%87%E4%BB%A4)/">Buuctf HDCTF2019 Maze(花指令)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20Java%E9%80%86%E5%90%91/">Buuctf Java逆向</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20Lucky%20gay/">Buuctf Lucky gay</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20MRCTF2020%20Xor/">Buuctf MRCTF2020 Xor</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20SimpleREV/">Buuctf SimpleREV</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20SUCTF2019%20sign%20in(RSA)/">Buuctf SUCTF2019 sign in(RSA)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">Buuctf WUSTCTF2020 crossfun</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level4(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C%E5%8F%89%E6%A0%91)/">Buuctf WUSTCTF2020 level4(数据结构二叉树)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20WUSTCTF2020level2/">Buuctf WUSTCTF2020level2</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20Youngter-drive/">Buuctf Youngter-drive</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level3/">Buuctf WUSTCTF2020 level3</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BACTF%5Deasyre/">Buuctf [ACTF]easyre</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BBJDCTF2020%5Dhunburger%20competetion(unity3D%E9%A2%98)/">Buuctf [BJDCTF2020]hunburger competetion(unity3D题)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%5DUniverse_final_answer(z3%E5%BA%93%E8%A7%A3%E6%96%B9%E7%A8%8B)/">Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DChallenge1(%E9%AD%94%E6%94%B9base64)/">Buuctf [FlareOn4]Challenge1(魔改base64)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DOverlong/">Buuctf [FlareOn4]Overlong</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BGUET-CTF2019%5Dre/">Buuctf [GUET-CTF2019]re</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BGWCTF%202019%5Dxxor(tea%E5%8A%A0%E5%AF%86)/">Buuctf [GWCTF 2019]xxor(tea加密)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal(%E6%95%B0%E7%BB%84%E6%AF%94%E8%BE%83)/">Buuctf [网鼎杯 2020 青龙组]singal(数组比较)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BZer0pts2020%5Deasy%20strcmp/">Buuctf [Zer0pts2020]easy strcmp</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20easyre/">Buuctf easyre</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20hello_world_go/">Buuctf hello_world_go</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20justre/">Buuctf justre</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20level1/">Buuctf level1</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20pyre/">Buuctf [ACTF]easyre</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20reverse_2/">Buuctf reverse_2</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20reverse_1/">Buuctf reverse_1</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20rome/">Buuctf rome</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20reverse_3/">Buuctf SimpleREV</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20rsa/">Buuctf rsa</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">Buuctf usualCrypt</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20transform/">Buuctf transform</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20xor/">Buuctf xor</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E5%86%85%E6%B6%B5%E7%9A%84%E8%BD%AF%E4%BB%B6/">Buuctf 内涵的软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E5%88%AE%E5%BC%80%E6%9C%89%E5%A5%96/">Buuctf 刮开有奖</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">Buuctf 新年快乐</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%89%B9%E6%AE%8A%E7%9A%84BASE64/">Buuctf 特殊的BASE64</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%9B%B8%E5%86%8C/">Buuctf 相册</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%AE%80%E5%8D%95%E6%B3%A8%E5%86%8C%E5%99%A8/">Buuctf 简单注册器</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/25</span>
+            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%BA%A2%E5%B8%BD%E6%9D%AF2019easyre/">Buuctf 红帽杯2019easyre</a>
         </li>
     
         
@@ -1694,376 +1862,7 @@ Buuctf usualCrypt分析文件，32位无壳
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%BA%A2%E5%B8%BD%E6%9D%AF2019easyre/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BBJDCTF2020%5Dhunburger%20competetion(unity3D%E9%A2%98)/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20hello_world_go/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BGWCTF%202019%5Dxxor(tea%E5%8A%A0%E5%AF%86)/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level3/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level4(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C%E5%8F%89%E6%A0%91)/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%5DUniverse_final_answer(z3%E5%BA%93%E8%A7%A3%E6%96%B9%E7%A8%8B)/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20usualCrypt/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
             <a class="archive-post-title" href="/2023/05/25/%E5%B0%9D%E8%AF%95/">尝试</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20FloreOn4%20login/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20reverse_3/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E5%86%85%E6%B6%B5%E7%9A%84%E8%BD%AF%E4%BB%B6/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20xor/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20Java%E9%80%86%E5%90%91/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20HelloWorld/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20Lucky%20gay/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20MRCTF2020%20Xor/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2023 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20SimpleREV/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20SUCTF2019%20sign%20in(RSA)/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2023 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal(%E6%95%B0%E7%BB%84%E6%AF%94%E8%BE%83)/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20justre/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BGUET-CTF2019%5Dre/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BACTF%5Deasyre/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%5BZer0pts2020%5Deasy%20strcmp/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2023 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span>
-            <a class="archive-post-title" href="/2023/05/24/Buuctf%20reverse_1/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span>
-            <a class="archive-post-title" href="/2023/05/24/Buuctf%20easyre/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20level1/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2023 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20pyre/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/25</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20reverse_2/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20rome/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20rsa/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E5%88%AE%E5%BC%80%E6%9C%89%E5%A5%96/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%89%B9%E6%AE%8A%E7%9A%84BASE64/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%9B%B8%E5%86%8C/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/2023/05/25/Buuctf%20%E7%AE%80%E5%8D%95%E6%B3%A8%E5%86%8C%E5%99%A8/">[Untitled Post]</a>
         </li>
     
     </div>
@@ -2071,6 +1870,11 @@ Buuctf usualCrypt分析文件，32位无壳
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="Buuctf">
+                <span class="iconfont-archer">&#xe606;</span>
+                Buuctf
+            </span>
         
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
