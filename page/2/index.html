@@ -443,6 +443,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20MRCTF2020%20Xor/">
+                
+                <span class="abstract-title-text">Buuctf MRCTF2020 Xor</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf MRCTF2020 Xor分析得32位无壳软件
+直接拖32位IDA中，F5main函数，出现报错Decompilation failure: 401095: call analysis failed(反编译失败： 401095：调用分析失败)去网上找解决办法，他们说找到报错位置上的函数，反编译它，然后想要反编译的函数就可以反编译成功了。我随便跟进了一个函数进入汇编界面，然后找到401095上的函数反编译，接着进入了main函数，这题接下来就很简单了
+
+直接就能得到flag了
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20SimpleREV/">
                 
                 <span class="abstract-title-text">Buuctf SimpleREV</span>
@@ -765,43 +804,6 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
             <div class="abstract-content">
                 Buuctf [BJDCTF2020]hunburger competetion(unity3D题)下载好题目后，可以看到它有多个文件，打开可执行文件发现是一个奇怪的有味道的小游戏尝试分析.exe可执行文件，64位无壳，放进IDA中，它有非常多的函数，于是尝试字符串定位法，失败了，没有哪个字符串看上去是有用的，无从下手后去查看别人的wp
 他们面对这种Unity3D游戏，选择反编译Assembly-CSharp.dll文件，Unity是用C#语言开发的，Android平台中C#编写的主逻辑模块代码静态编辑之后存储于Assembly-CSharp.dll文件中。想要反编译.dll文件，可以用...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%5DUniverse_final_answer(z3%E5%BA%93%E8%A7%A3%E6%96%B9%E7%A8%8B)/">
-                
-                <span class="abstract-title-text">Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [ACTF新生赛2020]Universe_final_answer(z3库解方程)分析出64位无壳，放入64位IDA中
-只有两个函数，逻辑清晰，看第一个比较函数(v1和v2,v6和v7是反的)，只要它出了答案就出来了写出10元非线性方程组
-12345678910-85 * i + 58 * h + 97 * f + g + -45 * e + 84 * d + 95 * b - 20 * a + 12 * c == 12613   30 * k + -70 * i + -122 * f + -81 * g + -66 * e + -115 * d + -41 * c + ...
             </div>
             <!-- read more -->
             
@@ -1265,7 +1267,24 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1376,7 +1395,7 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 47
+        Total : 48
         </div>
         <!-- search  -->
         
@@ -1392,8 +1411,14 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/29</span>
+            <a class="archive-post-title" href="/2023/05/29/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5D%20jocker(smc%E8%87%AA%E5%8A%A0%E5%AF%86)/">Buuctf [网鼎杯 2020 青龙组] jocker</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">05/26</span>
-            <a class="archive-post-title" href="/2023/05/26/2020-easyre/">Buuctf [羊城杯2020]easyre</a>
+            <a class="archive-post-title" href="/2023/05/26/Buuctf%20%5B%E7%BE%8A%E5%9F%8E%E6%9D%AF2020%5Deasyre/">Buuctf [羊城杯2020]easyre</a>
         </li>
     
         

@@ -19,25 +19,33 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf reverse_1分析程序64位无壳 放入64位IDA中，进入main函数中 可以看出是字符串比较的题目，查看Str2，看到是{hello_world}，提交flag，错了，上面有一个操作是把Str2中的’o’替换成’0’(o的ASCII值是111，0的ASCII值是48),试试flag{hello_w0rld}，成功了。v3，v7和i不知道有什么用，已经得到了flag，就不用管它们">
+    <meta name="description" content="Buuctf [网鼎杯 2020 青龙组] jocker(smc自加密)分析程序32位无壳 直接用32位IDA打开，查看字符串列表，看到一些奇怪的话，这里告诉我们它把最后一部分藏起来了，跟进Really??? Did you find it?OMG!!!，却报错说没有引用这个字符串的地方，很奇怪，跟进那句提示也告诉没有被引用，先跳过进入main函数  因为encrypt函数进不去，报错了。先进入w">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Buuctf reverse_1">
-<meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20reverse_1/index.html">
+<meta property="og:title" content="Buuctf [网鼎杯 2020 青龙组] jocker">
+<meta property="og:url" content="http://example.com/2023/05/29/Buuctf%20[%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84]%20jocker(smc%E8%87%AA%E5%8A%A0%E5%AF%86)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf reverse_1分析程序64位无壳 放入64位IDA中，进入main函数中 可以看出是字符串比较的题目，查看Str2，看到是{hello_world}，提交flag，错了，上面有一个操作是把Str2中的’o’替换成’0’(o的ASCII值是111，0的ASCII值是48),试试flag{hello_w0rld}，成功了。v3，v7和i不知道有什么用，已经得到了flag，就不用管它们">
+<meta property="og:description" content="Buuctf [网鼎杯 2020 青龙组] jocker(smc自加密)分析程序32位无壳 直接用32位IDA打开，查看字符串列表，看到一些奇怪的话，这里告诉我们它把最后一部分藏起来了，跟进Really??? Did you find it?OMG!!!，却报错说没有引用这个字符串的地方，很奇怪，跟进那句提示也告诉没有被引用，先跳过进入main函数  因为encrypt函数进不去，报错了。先进入w">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523102112733.png">
-<meta property="article:published_time" content="2023-05-25T14:00:01.000Z">
-<meta property="article:modified_time" content="2023-05-25T14:22:02.363Z">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527205705861.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210305665.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210946615.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210642023.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210407230.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/ac7036eed92446249992928ce6ea1a32.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529214135670.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529215326811.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529220559035.png">
+<meta property="article:published_time" content="2023-05-29T14:20:00.000Z">
+<meta property="article:modified_time" content="2023-05-29T14:22:01.064Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Buuctf">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523102112733.png">
+<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527205705861.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Buuctf reverse_1 · readyYang‘s blog</title>
+    <title>Buuctf [网鼎杯 2020 青龙组] jocker · readyYang‘s blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -262,7 +270,7 @@
                 <a href="/">我的博客</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">Buuctf reverse_1</a>
+                <a href="#" class="post-name">Buuctf [网鼎杯 2020 青龙组] jocker</a>
             </div>
         </div>
     
@@ -308,7 +316,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                Buuctf reverse_1
+                Buuctf [网鼎杯 2020 青龙组] jocker
             <!-- 404 -->
             
         </h1>
@@ -338,7 +346,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2023/05/25</span>
+                    <span class="post-intro-time">2023/05/29</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -493,9 +501,63 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-reverse-1"><a href="#Buuctf-reverse-1" class="headerlink" title="Buuctf reverse_1"></a>Buuctf reverse_1</h1><p>分析程序64位无壳</p>
-<p>放入64位IDA中，进入main函数中<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230523102112733.png" alt="image-20230523102112733"></p>
-<p>可以看出是字符串比较的题目，查看Str2，看到是{hello_world}，提交flag，错了，上面有一个操作是把Str2中的’o’替换成’0’(o的ASCII值是111，0的ASCII值是48),试试flag{hello_w0rld}，成功了。v3，v7和i不知道有什么用，已经得到了flag，就不用管它们了</p>
+        <h1 id="Buuctf-网鼎杯-2020-青龙组-jocker-smc自加密"><a href="#Buuctf-网鼎杯-2020-青龙组-jocker-smc自加密" class="headerlink" title="Buuctf [网鼎杯 2020 青龙组] jocker(smc自加密)"></a>Buuctf [网鼎杯 2020 青龙组] jocker(smc自加密)</h1><p>分析程序32位无壳</p>
+<p>直接用32位IDA打开，查看字符串列表，看到一些奇怪的话，这里告诉我们它把最后一部分藏起来了，跟进<code>Really??? Did you find it?OMG!!!</code>，却报错说没有引用这个字符串的地方，很奇怪，跟进那句提示也告诉没有被引用，先跳过进入main函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527205705861.png" alt="image-20230527205705861"></p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210305665.png" alt="image-20230527210305665"></p>
+<p>因为encrypt函数进不去，报错了。先进入wrong，和omg函数</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210946615.png" alt="image-20230527210946615"></p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210642023.png" alt="image-20230527210642023"></p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210407230.png" alt="image-20230527210407230"></p>
+<p>一个是字符串加密，一个是字符串比较，写脚本看看</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> a[] = &#123;</span><br><span class="line"><span class="number">0x00000066</span>, <span class="number">0x0000006B</span>, <span class="number">0x00000063</span>, <span class="number">0x00000064</span>, <span class="number">0x0000007F</span>, <span class="number">0x00000061</span>, <span class="number">0x00000067</span>, <span class="number">0x00000064</span>, <span class="number">0x0000003B</span>, <span class="number">0x00000056</span>, <span class="number">0x0000006B</span>, <span class="number">0x00000061</span>, <span class="number">0x0000007B</span>, <span class="number">0x00000026</span>, <span class="number">0x0000003B</span>, <span class="number">0x00000050</span>, <span class="number">0x00000063</span>, <span class="number">0x0000005F</span>, <span class="number">0x0000004D</span>, <span class="number">0x0000005A</span>, <span class="number">0x00000071</span>, <span class="number">0x0000000C</span>, <span class="number">0x00000037</span>, <span class="number">0x00000066</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">23</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> ((i &amp; <span class="number">1</span>) != <span class="number">0</span>)</span><br><span class="line">            a[i] += i;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            a[i] ^= i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>出结果是<code>flag&#123;fak3_alw35_sp_me!!&#125;</code></p>
+<p>啊?这就出了？这种题不应该放这么后面吧，但是我还是很高兴地去提交了，不出所料得成jocker了，可恶，果然encrypt函数的问题总是要解决的，假flag好像告诉我们sp值上是有问题的，到汇编语言40151D的地方可以看到负的sp值，但是改成正的好像没有用，我又瞎几把试了好几个搜到的方法，好像都没有作用，修改完可以修改的sp值后，尝试用动态调试看进不去的函数，下断点，动调输入<code>flag&#123;fak3_alw35_sp_me!!&#125;</code>，在debug界面按c识别encrypt为代码，再按p识别为函数，F5后又出现两个报错，我是直接nop掉了，然后就可以再F5看到函数了</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> __usercall <span class="title function_">sub_401534</span><span class="params">(<span class="type">int</span> a1@&lt;eax&gt;, <span class="type">int</span> a2@&lt;edx&gt;, <span class="type">int</span> a3@&lt;ebp&gt;)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">void</span> *retaddr; <span class="comment">// [esp+0h] [ebp+0h]</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> ( (<span class="type">char</span>)(*(_BYTE *)(a2 + a1) ^ Buffer[*(_DWORD *)(a3 - <span class="number">28</span>)]) != *(_DWORD *)(a3 + <span class="number">4</span> * *(_DWORD *)(a3 - <span class="number">28</span>) - <span class="number">108</span>) )</span><br><span class="line">  &#123;</span><br><span class="line">    *(_DWORD *)(a3 - <span class="number">32</span>) = <span class="number">0</span>;</span><br><span class="line">    retaddr = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  ++*(_DWORD *)(a3 - <span class="number">28</span>);</span><br><span class="line">  JUMPOUT(<span class="number">0x401577</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>妈的，根本看不懂他在写什么，实在搞不懂，看大佬的wp才明白该怎么做，原来并不能直接按p识别为函数，需要先按u重定义整个函数，然后再按p识别成函数，这样就不会有报错了，这是识别出的函数，这下看得懂了</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> __cdecl <span class="title function_">encrypt</span><span class="params">(<span class="type">char</span> *a1)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> v2[<span class="number">19</span>]; <span class="comment">// [esp+1Ch] [ebp-6Ch] BYREF</span></span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// [esp+68h] [ebp-20h]</span></span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [esp+6Ch] [ebp-1Ch]</span></span><br><span class="line"></span><br><span class="line">  v3 = <span class="number">1</span>;</span><br><span class="line">  qmemcpy(v2, &amp;unk_403040, <span class="keyword">sizeof</span>(v2));</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">18</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( (<span class="type">char</span>)(a1[i] ^ Buffer[i]) != v2[i] )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">puts</span>(<span class="string">&quot;wrong ~&quot;</span>);</span><br><span class="line">      v3 = <span class="number">0</span>;</span><br><span class="line">      <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">&quot;come here&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> v3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/ac7036eed92446249992928ce6ea1a32.png" alt="img"></p>
+<p>大佬在之前的这个地方sp差值并不是ALT+K后直接写0，而是要使sp值变成enter函数后面那个值，这好像和enter函数有关</p>
+<p>ENTER 指令为被调用过程自动创建堆栈帧。它为局部变量保留堆栈空间，把 EBP 入栈。具体来说，它执行三个操作：</p>
+<ul>
+<li>把 EBP 入栈 (push ebp)</li>
+<li>把 EBP 设置为堆栈帧的基址 (mov ebp, esp)</li>
+<li>为局部变量保留空间 (sub esp, numbytes)</li>
+</ul>
+<p>但是我这题直接把sp差值设为0好像也没有出什么问题，代码一样能出来。不懂啊，我现在对汇编语言是一点不懂，等之后学了汇编再说吧。</p>
+<p>先写脚本</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> a[] = &#123; <span class="number">0x0000000E</span>, <span class="number">0x0000000D</span>, <span class="number">0x00000009</span>, <span class="number">0x00000006</span>, <span class="number">0x00000013</span>, <span class="number">0x00000005</span>, <span class="number">0x00000058</span>, <span class="number">0x00000056</span>,</span><br><span class="line">    <span class="number">0x0000003E</span>, <span class="number">0x00000006</span>, <span class="number">0x0000000C</span>, <span class="number">0x0000003C</span>, <span class="number">0x0000001F</span>, <span class="number">0x00000057</span>, <span class="number">0x00000014</span>, <span class="number">0x0000006B</span>,</span><br><span class="line">    <span class="number">0x00000057</span>, <span class="number">0x00000059</span>, <span class="number">0x0000000D</span> &#125;;</span><br><span class="line">    <span class="type">char</span> b[] = <span class="string">&quot;hahahaha_do_you_find_me?&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">18</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        a[i] ^= b[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>出了半个flag<code>flag&#123;d07abccf8a410c</code>看来最后半个flag在finally函数中，finally函数一样用p识别为函数后F5</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> __cdecl <span class="title function_">finally</span><span class="params">(<span class="type">char</span> *a1)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">unsigned</span> <span class="type">int</span> v1; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v3[<span class="number">9</span>]; <span class="comment">// [esp+13h] [ebp-15h] BYREF</span></span><br><span class="line">  <span class="type">int</span> v4; <span class="comment">// [esp+1Ch] [ebp-Ch]</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">strcpy</span>(v3, <span class="string">&quot;%tp&amp;:&quot;</span>);</span><br><span class="line">  v1 = time(<span class="number">0</span>);</span><br><span class="line">  srand(v1);</span><br><span class="line">  v4 = rand() % <span class="number">100</span>;</span><br><span class="line">  v3[<span class="number">6</span>] = <span class="number">0</span>;</span><br><span class="line">  *(_WORD *)&amp;v3[<span class="number">7</span>] = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> ( (v3[(<span class="type">unsigned</span> __int8)v3[<span class="number">5</span>]] != a1[(<span class="type">unsigned</span> __int8)v3[<span class="number">5</span>]]) == v4 )</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">&quot;Really??? Did you find it?OMG!!!&quot;</span>);</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">puts</span>(<span class="string">&quot;I hide the last part, you will not succeed!!!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>又看不懂了，卡了好久，再次参考别人的wp，他们好像也没有看懂这个函数，但他们根据得到的最后一个字符肯定是}，又猜测是和同一个字符异或加密，所以那5个字符中的最后一个字符与’}’异或就可以得到加密字符，然后就可以进一步得到另外4个字符了，脚本</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> a[] = <span class="string">&quot;%tp&amp;&#125;&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">3</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        a[i] ^= <span class="string">&#x27;:&#x27;</span> ^ <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>他们这样丑陋地出flag我真不好说，但是好像也找不到哪个师傅用别的方法的，这就是三分逆向七分猜吗，最后得到<code>flag&#123;d07abccf8a410cb37a&#125;</code></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>但是我在看wp的时候有看到有的师傅并不是用动调做的</p>
+<p>他一眼看出下面这段代码是smc自加密，啊？我第一次看到smc自加密这个名词</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529214135670.png" alt="image-20230529214135670"></p>
+<p>接着他根据for循环是smc自加密写了下面这个脚本</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;idc.idc&gt;</span></span></span><br><span class="line"><span class="type">static</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="keyword">auto</span> start = <span class="number">0x401500</span>l;</span><br><span class="line">	<span class="keyword">auto</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (; i &lt; <span class="number">187</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">auto</span> a = Byte(start + i);</span><br><span class="line">		PatchByte(i + start, a ^ <span class="number">0x41</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>脚本首先包含了 <code>idc.idc</code> 头文件，它提供了 IDC 脚本所需的函数和变量。</p>
+<p>接下来定义了一个名为 <code>main</code> 的静态函数。在这个函数中，首先定义了两个变量 <code>start</code> 和 <code>i</code>，并分别初始化为 <code>0x401500l</code> 和 <code>0</code>。</p>
+<p>然后是一个 for 循环，循环条件是 <code>i &lt; 187</code>。在循环体中，首先定义了一个变量 <code>a</code>，并使用 <code>Byte</code> 函数从内存地址 <code>start + i</code> 处读取一个字节的数据。</p>
+<p>接下来使用 <code>PatchByte</code> 函数将内存地址为 <code>i + start</code> 的字节修改为原来的值与 <code>0x41</code> 进行异或的结果。</p>
+<p>保存为.idc文件，导入进IDA中，然后先u再p就可以得到代码了<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529215326811.png" alt="image-20230529215326811"></p>
+<p>真神奇</p>
+<h2 id="smc自加密"><a href="#smc自加密" class="headerlink" title="smc自加密"></a>smc自加密</h2><p>smc自加密是一种反静态分析的加密方式，它和栈指针平衡，花指令还有move混肴都可以阻断静态调试的可能性(后者我还没遇到过，前面两个就遇过一次，题做少了)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SMC（Self-Modifying Code）（自解码），可以在一段代码执行前对它进行修改。常常利用这个特性，把代码以加密的形式保存在可自行文件中，然后在程序执行的时候进行动态解析。这样我们在采用静态分析时，看到的都是加密的内容</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SMC（**Software-Based Memory Encryption**）是一种局部代码加密技术，它可以将一个可执行文件的指定区段进行加密，使得黑客无法直接分析区段内的代码，从而增加恶意代码分析难度和降低恶意攻击成功的可能性。</span><br></pre></td></tr></table></figure>
+
+<p>总的来说，遇到smc自加密一般情况下需要放弃静态调试，转而动调，而smc自加密也有很明显的特征</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529220559035.png" alt="image-20230529220559035"></p>
+<p>就是像这样一长串不是函数的数据(应该吧)</p>
+<p>总结，做完这道题，我真觉得自己就是jocker</p>
 
     </article>
     <!-- license -->
@@ -504,17 +566,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2023/05/25/Buuctf%20reverse_2/" title="Buuctf reverse_2">
-                    <div class="nextTitle">Buuctf reverse_2</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2023/05/25/Buuctf%20rome/" title="Buuctf rome">
-                    <div class="prevTitle">Buuctf rome</div>
+                <a href="/2023/05/26/Buuctf%20%5B%E7%BE%8A%E5%9F%8E%E6%9D%AF2020%5Deasyre/" title="Buuctf [羊城杯2020]easyre">
+                    <div class="prevTitle">Buuctf [羊城杯2020]easyre</div>
                 </a>
             
         </li>
@@ -661,7 +718,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Buuctf-reverse-1"><span class="toc-number">1.</span> <span class="toc-text">Buuctf reverse_1</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Buuctf-%E7%BD%91%E9%BC%8E%E6%9D%AF-2020-%E9%9D%92%E9%BE%99%E7%BB%84-jocker-smc%E8%87%AA%E5%8A%A0%E5%AF%86"><span class="toc-number">1.</span> <span class="toc-text">Buuctf [网鼎杯 2020 青龙组] jocker(smc自加密)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="toc-number">1.1.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#smc%E8%87%AA%E5%8A%A0%E5%AF%86"><span class="toc-number">1.2.</span> <span class="toc-text">smc自加密</span></a></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->
