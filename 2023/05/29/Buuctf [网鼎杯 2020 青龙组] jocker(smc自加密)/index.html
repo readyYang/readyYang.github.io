@@ -31,12 +31,13 @@
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210946615.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210642023.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210407230.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/ac7036eed92446249992928ce6ea1a32.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530092224239.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529214135670.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210305665.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529215326811.png">
 <meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529220559035.png">
 <meta property="article:published_time" content="2023-05-29T14:20:00.000Z">
-<meta property="article:modified_time" content="2023-05-30T01:13:44.601Z">
+<meta property="article:modified_time" content="2023-05-30T01:24:03.577Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Buuctf">
 <meta name="twitter:card" content="summary">
@@ -518,7 +519,7 @@
 <p>妈的，根本看不懂他在写什么，实在搞不懂，看大佬的wp才明白该怎么做，原来并不能直接按p识别为函数，需要先按u重定义整个函数，然后再按p识别成函数，这样就不会有报错了，这是识别出的函数，这下看得懂了</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> __cdecl <span class="title function_">encrypt</span><span class="params">(<span class="type">char</span> *a1)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> v2[<span class="number">19</span>]; <span class="comment">// [esp+1Ch] [ebp-6Ch] BYREF</span></span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// [esp+68h] [ebp-20h]</span></span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [esp+6Ch] [ebp-1Ch]</span></span><br><span class="line"></span><br><span class="line">  v3 = <span class="number">1</span>;</span><br><span class="line">  qmemcpy(v2, &amp;unk_403040, <span class="keyword">sizeof</span>(v2));</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">18</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( (<span class="type">char</span>)(a1[i] ^ Buffer[i]) != v2[i] )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">puts</span>(<span class="string">&quot;wrong ~&quot;</span>);</span><br><span class="line">      v3 = <span class="number">0</span>;</span><br><span class="line">      <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">&quot;come here&quot;</span>);</span><br><span class="line">  <span class="keyword">return</span> v3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://img-blog.csdnimg.cn/ac7036eed92446249992928ce6ea1a32.png" alt="img"></p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530092224239.png" alt="image-20230530092224239"></p>
 <p>大佬在之前的这个地方sp差值并不是ALT+K后直接写0，而是要使sp值变成enter函数后面那个值，这好像和enter函数有关</p>
 <p>ENTER 指令为被调用过程自动创建堆栈帧。它为局部变量保留堆栈空间，把 EBP 入栈。具体来说，它执行三个操作：</p>
 <ul>
@@ -540,6 +541,7 @@
 <h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>但是我在看wp的时候有看到有的师傅并不是用动调做的</p>
 <p>他一眼看出下面这段代码是smc自加密，啊？我第一次看到smc自加密这个名词</p>
 <p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230529214135670.png" alt="image-20230529214135670"></p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230527210305665.png" alt="image-20230527210305665"></p>
 <p>接着他根据for循环是smc自加密写了下面这个脚本</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;idc.idc&gt;</span></span></span><br><span class="line"><span class="type">static</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="keyword">auto</span> start = <span class="number">0x401500</span>l;</span><br><span class="line">	<span class="keyword">auto</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (; i &lt; <span class="number">187</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">auto</span> a = Byte(start + i);</span><br><span class="line">		PatchByte(i + start, a ^ <span class="number">0x41</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
