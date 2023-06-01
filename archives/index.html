@@ -428,6 +428,47 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/06/01/Buuctf%20crack%20me(%E6%9C%89%E9%97%AE%E9%A2%98%E5%BE%85%E8%A7%A3%E5%86%B3)/">
+                
+                <span class="abstract-title-text">Buuctf crack me(有问题待解决)</span>
+            </a>
+            <div class="abstract-content">
+                crack mehint
+1小张从网上下载到一个黑客软件，然而开发者并不打算共享，所以小张注册了一个用户名叫welcomebeijing，但是密码需要进行逆向计算，请求出密码，进行MD5的32位小写哈希，进行提交。
+
+看提示可以知道要输入的用户名是welcomebeijing，而且最后的flag是得到的密码进行MD5小写加密
+运行程序可以看到Come one! Crack Me~~~，和输入用户名的信息，输完后会跳出输入密码的信息，那我们就试试crack它，分析程序32位无壳
+放入32位IDA中反编译，
+sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入是字母和...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/06/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/06/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf 待解决">Buuctf 待解决</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/29/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5D%20jocker(smc%E8%87%AA%E5%8A%A0%E5%AF%86)/">
                 
                 <span class="abstract-title-text">Buuctf [网鼎杯 2020 青龙组] jocker(smc自加密)</span>
@@ -766,46 +807,6 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
 
 虽然是java写的，我对Java也一点不了解，但是这个函数在浏览器的帮助下还是很好看懂的，直接写脚本出flag
 123456789101112int main()&#123;	char key[] = &#123;		180, 136, 137, 147, 191, 137, 147, 191, 148, 136,		133, 191, 134, 140, 129, 135, 191, 65 &#125;;	char a[18] = &#123; ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20Lucky%20gay/">
-                
-                <span class="abstract-title-text">Buuctf Lucky gay</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf Lucky gay用IDA64打开文件，在字符串中定位”OK, it’s flag:”
-转到函数
-
-f1是flag的前半段，直接给出，f2是后半段
-看函数猜测分支函数的执行顺序，发现顺序是4-&gt;5-&gt;1;（因为大小端问题s要逆序）,之后就可以写脚本出flag了
-
             </div>
             <!-- read more -->
             
@@ -1182,7 +1183,24 @@ f1是flag的前半段，直接给出，f2是后半段
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1305,7 +1323,7 @@ f1是flag的前半段，直接给出，f2是后半段
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 48
+        Total : 49
         </div>
         <!-- search  -->
         
@@ -1319,6 +1337,12 @@ f1是flag的前半段，直接给出，f2是后半段
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/01</span>
+            <a class="archive-post-title" href="/2023/06/01/Buuctf%20crack%20me(%E6%9C%89%E9%97%AE%E9%A2%98%E5%BE%85%E8%A7%A3%E5%86%B3)/">Buuctf crack me(有问题待解决)</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/29</span>
@@ -1616,6 +1640,11 @@ f1是flag的前半段，直接给出，f2是后半段
             <span class="sidebar-tag-name" data-tags="Buuctf">
                 <span class="iconfont-archer">&#xe606;</span>
                 Buuctf
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Buuctf 待解决">
+                <span class="iconfont-archer">&#xe606;</span>
+                Buuctf 待解决
             </span>
         
     </div>

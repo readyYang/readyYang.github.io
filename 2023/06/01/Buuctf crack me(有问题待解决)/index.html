@@ -19,28 +19,36 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳 放入64位IDA中，查看main函数 函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数 第一次进来时有的元素是负数，按两次">
+    <meta name="description" content="crack mehint 1小张从网上下载到一个黑客软件，然而开发者并不打算共享，所以小张注册了一个用户名叫welcomebeijing，但是密码需要进行逆向计算，请求出密码，进行MD5的32位小写哈希，进行提交。  看提示可以知道要输入的用户名是welcomebeijing，而且最后的flag是得到的密码进行MD5小写加密 运行程序可以看到Come one! Crack Me~~~，和输入用户名">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Buuctf [GWCTF 2019]xxor(tea加密)">
-<meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20[GWCTF%202019]xxor(tea%E5%8A%A0%E5%AF%86)/index.html">
+<meta property="og:title" content="Buuctf crack me(有问题待解决)">
+<meta property="og:url" content="http://example.com/2023/06/01/Buuctf%20crack%20me(%E6%9C%89%E9%97%AE%E9%A2%98%E5%BE%85%E8%A7%A3%E5%86%B3)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳 放入64位IDA中，查看main函数 函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数 第一次进来时有的元素是负数，按两次">
+<meta property="og:description" content="crack mehint 1小张从网上下载到一个黑客软件，然而开发者并不打算共享，所以小张注册了一个用户名叫welcomebeijing，但是密码需要进行逆向计算，请求出密码，进行MD5的32位小写哈希，进行提交。  看提示可以知道要输入的用户名是welcomebeijing，而且最后的flag是得到的密码进行MD5小写加密 运行程序可以看到Come one! Crack Me~~~，和输入用户名">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520105705284.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520110552803.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520111406711.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/d565783bb2b04728b95add4b4472e63e.png#pic_center">
-<meta property="article:published_time" content="2023-05-25T14:00:01.000Z">
-<meta property="article:modified_time" content="2023-05-26T05:43:38.607Z">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530112017886.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530163831187.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530170621100.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530170658995.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530171506955.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530171712860.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230601164603556.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230601164650205.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230601164253447.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230601164345887.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-01%20164644.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530171506955.png">
+<meta property="article:published_time" content="2023-06-01T13:16:21.000Z">
+<meta property="article:modified_time" content="2023-06-01T13:19:34.586Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Buuctf">
+<meta property="article:tag" content="Buuctf 待解决">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520105705284.png">
+<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530112017886.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Buuctf [GWCTF 2019]xxor(tea加密) · readyYang‘s blog</title>
+    <title>Buuctf crack me(有问题待解决) · readyYang‘s blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -265,7 +273,7 @@
                 <a href="/">我的博客</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">Buuctf [GWCTF 2019]xxor(tea加密)</a>
+                <a href="#" class="post-name">Buuctf crack me(有问题待解决)</a>
             </div>
         </div>
     
@@ -311,7 +319,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                Buuctf [GWCTF 2019]xxor(tea加密)
+                Buuctf crack me(有问题待解决)
             <!-- 404 -->
             
         </h1>
@@ -331,7 +339,7 @@
                     <div class= post-intro-tags >
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf 待解决">Buuctf 待解决</a>
     
 </div>
 
@@ -341,7 +349,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2023/05/25</span>
+                    <span class="post-intro-time">2023/06/01</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -496,20 +504,44 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-GWCTF-2019-xxor-tea加密"><a href="#Buuctf-GWCTF-2019-xxor-tea加密" class="headerlink" title="Buuctf [GWCTF 2019]xxor(tea加密)"></a>Buuctf [GWCTF 2019]xxor(tea加密)</h1><p>分析程序：64位无壳</p>
-<p>放入64位IDA中，查看main函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520105705284.png" alt="image-20230520105705284"></p>
-<p>函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520110552803.png" alt="image-20230520110552803"></p>
-<p>第一次进来时有的元素是负数，按两次H转换成16进制再转换回来就变成正的10进制数了，上面是三个方程，用python的z3库可以约束求解出a[2],a[3],a[4]的值，然后再回头看那个加密函数400686<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230520111406711.png" alt="image-20230520111406711"></p>
-<p>它通过多次位运算进行加密，后来看别人的wp得知这就是tea加密，需要注意的是前面HIDWORD函数和LODWORD函数</p>
-<p>HIWORD是High Word的缩写,作用是取得某个4字节变量(即32位的值)在内存中处于高位的两个字节,即一个word长的数据<br>LOWORD是Low Word的缩写,作用是取得某个4字节变量(即32位的值)在内存中处于低位的两个字节,即一个word长的数据</p>
-<p>但是单看这个解释我还是不明白为什么j的循环只需要进行3次，明明有6个元素的。后来又看到另一个大佬的wp，他给出了HIDWORD和LODWORD的宏定义</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> HIDWORD(x)  (*((_DWORD*)&amp;(x)+1))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LODWORD(x)  (*((_DWORD*)&amp;(x)))</span></span><br></pre></td></tr></table></figure>
+        <h1 id="crack-me"><a href="#crack-me" class="headerlink" title="crack me"></a>crack me</h1><p>hint</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">小张从网上下载到一个黑客软件，然而开发者并不打算共享，所以小张注册了一个用户名叫welcomebeijing，但是密码需要进行逆向计算，请求出密码，进行MD5的32位小写哈希，进行提交。</span><br></pre></td></tr></table></figure>
 
-<p>v6输入的是四个字节，而定义的v6数组是八个字节的<img src="https://img-blog.csdnimg.cn/d565783bb2b04728b95add4b4472e63e.png#pic_center" alt="位置关系"></p>
-<p>这下明白为什么只循环3次了，逆向脚本</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a1[<span class="number">6</span>] = &#123; <span class="number">3746099070</span>,<span class="number">550153460</span>,<span class="number">3774025685</span>,<span class="number">1548802262</span>,<span class="number">2652626477</span>,<span class="number">2230518816</span> &#125;;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> a2[<span class="number">4</span>] = &#123; <span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span> &#125;;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> v3;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> v4;</span><br><span class="line">    <span class="type">int</span> v5;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">unsigned</span> <span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j += <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        v3 = a1[j];</span><br><span class="line">        v4 = a1[j + <span class="number">1</span>];</span><br><span class="line">        v5 = <span class="number">1166789954</span> * <span class="number">64</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">unsigned</span> <span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">64</span>; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            v4 -= (v3 + v5 + <span class="number">20</span>) ^ ((v3 &lt;&lt; <span class="number">6</span>) + a2[<span class="number">2</span>]) ^ ((v3 &gt;&gt; <span class="number">9</span>) + a2[<span class="number">3</span>]) ^ <span class="number">0x10</span>;</span><br><span class="line">            v3 -= (v4 + v5 + <span class="number">11</span>) ^ ((v4 &lt;&lt; <span class="number">6</span>) + *a2) ^ ((v4 &gt;&gt; <span class="number">9</span>) + a2[<span class="number">1</span>]) ^ <span class="number">0x20</span>;</span><br><span class="line">            v5 -= <span class="number">1166789954</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        a1[j] = v3;</span><br><span class="line">        a1[j + <span class="number">1</span>] = v4;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">unsigned</span> <span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%c%c%c&quot;</span>, *((<span class="type">char</span>*)&amp;a1[i] + <span class="number">2</span>), *((<span class="type">char</span>*)&amp;a1[i] + <span class="number">1</span>), *(<span class="type">char</span>*)&amp;a1[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看提示可以知道要输入的用户名是<code>welcomebeijing</code>，而且最后的flag是得到的密码进行MD5小写加密</p>
+<p>运行程序可以看到<code>Come one! Crack Me~~~</code>，和输入用户名的信息，输完后会跳出输入密码的信息，那我们就试试crack它，分析程序32位无壳</p>
+<p>放入32位IDA中反编译，<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530112017886.png" alt="image-20230530112017886"></p>
+<p>sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入是字母和数字返回1否则返回0</p>
+<p>后面的E51180函数在按p识别为函数后可以看出是给字符串赋值<code>conglatulation</code>和<code>try again</code></p>
+<p>181090函数应该是在给输入进行加密<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530163831187.png" alt="image-20230530163831187"></p>
+<p>至于E51830函数我是一点没搞懂它在干嘛</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530170621100.png" alt="image-20230530170621100"><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530170658995.png" alt="image-20230530170658995"></p>
+<p>E51710函数就更抽象了</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530171506955.png" alt="image-20230530171506955"></p>
+<p>E51470函数也不好看懂</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530171712860.png" alt="image-20230530171712860"></p>
+<p>看来这道题不能只通过观察函数作用来出flag了，得靠一些其他方法了，但是我动调什么的并没有看出什么东西来</p>
+<p>在搜索后，知道了<code>ProcessHeap</code>，<code>NtGlobalFlag</code>和<code>BeingDebugged</code>都是反调试函数，详情<a target="_blank" rel="noopener" href="https://blog.csdn.net/lwhaaaa/article/details/116144682%EF%BC%8C%E5%89%A9%E4%B8%8B%E7%9A%84%E4%BB%A3%E7%A0%81%E5%9C%A8%E6%88%91%E7%9C%8B%E4%BA%86%E5%A5%BD%E5%87%A0%E7%AF%87%E5%A4%A7%E4%BD%AC%E7%9A%84wp%E5%90%8E%E6%89%8D%E7%9F%A5%E9%81%93%E5%AE%83%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%8C%E8%BF%98%E6%98%AF%E8%87%AA%E5%B7%B1%E5%A4%AA%E8%8F%9C%E4%BA%86%E3%80%82%E4%B8%8B%E9%9D%A2%E6%98%AF%E9%9B%86%E4%B8%AD%E4%BA%86%E5%A4%A7%E4%BD%AC%E6%99%BA%E6%85%A7%E7%9A%84%E6%B7%BB%E5%8A%A0%E4%BA%86%E6%B3%A8%E9%87%8A%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%8C%E5%85%B6%E4%B8%AD%E5%AD%97%E6%AF%8D%E5%8F%98%E4%B8%BA%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E6%98%AF%E5%B0%86%E4%B8%8D%E6%98%AF%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E7%9A%84%E5%AD%97%E6%AF%8D%E6%8C%89%E9%A1%BA%E5%BA%8F%E8%BD%AC%E5%8C%96%E4%B8%BA&#39;abcdef&#39;%EF%BC%8C%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%B8%BA%E5%A5%87%E6%95%B0%E5%90%8E%E7%9A%84%E9%82%A3%E4%B8%AA%E6%93%8D%E4%BD%9C%E8%BF%87%E4%BA%8E%E6%8A%BD%E8%B1%A1%E6%88%96%E8%80%85%E6%88%91%E5%A4%AA%E8%8F%9C%EF%BC%8C%E4%B8%80%E7%9B%B4%E7%9C%8B%E4%B8%8D%E5%87%BA%E4%BB%96%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%8C%E8%BF%99%E9%87%8C%E5%86%99%E7%9A%84%E6%98%AF%E5%A4%A7%E4%BD%AC%E5%AF%B9%E5%AE%83%E7%9A%84%E5%88%A4%E6%96%AD%E3%80%82%E4%B8%8B%E9%9D%A2%E6%B2%A1%E5%86%99%E6%B3%A8%E9%87%8A%E7%9A%84%E4%BB%A3%E7%A0%81%E5%B0%B1%E6%98%AF%E6%9C%80%E5%85%B3%E9%94%AE%E7%9A%84%E5%8A%A0%E5%AF%86%E8%BF%87%E7%A8%8B%EF%BC%8C%E5%9C%A8OD%E4%B8%AD%E7%94%A8%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95%E6%9F%A5%E7%9C%8B">https://blog.csdn.net/lwhaaaa/article/details/116144682，剩下的代码在我看了好几篇大佬的wp后才知道它的作用，还是自己太菜了。下面是集中了大佬智慧的添加了注释的函数，其中字母变为原始数据是将不是十六进制的字母按顺序转化为&#39;abcdef&#39;，判断是否为奇数后的那个操作过于抽象或者我太菜，一直看不出他的功能，这里写的是大佬对它的判断。下面没写注释的代码就是最关键的加密过程，在OD中用动态调试查看</a></p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230601164603556.png" alt="image-20230601164603556"><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230601164650205.png" alt="image-20230601164650205"></p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230601164253447.png" alt="image-20230601164253447"><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230601164345887.png" alt="image-20230601164345887"></p>
+<p>猜测这个函数的每一个条件都是要满足的，所以a2是<code>dbappfec</code>或<code>dbappsec</code>，经过实践，选的是后者，下面是验证脚本(判断是否为’f’的那个语句不要写入脚本)，结果正好是43924，与上一层函数的对比结果相同</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">0</span>;</span><br><span class="line">	a |= <span class="number">4</span>;</span><br><span class="line">	a |= <span class="number">0x14</span>;</span><br><span class="line">	a |= <span class="number">0x84</span>;</span><br><span class="line">	a |= <span class="number">0x114</span>;</span><br><span class="line">	a |= <span class="number">0x380</span>;</span><br><span class="line">	a |= <span class="number">0xA04</span>;</span><br><span class="line">	a |= <span class="number">0x2310</span>;</span><br><span class="line">	a |= <span class="number">0x8A10</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>因为最后得到的 数组转化为字符即可，每个 <code>4字节</code> 的<code>unsigned int</code>对应 <code>1字节</code> 的 <code>char</code> 但输出发现有1位 <code>char</code> 是空白的，所以输出3位 <code>char</code> 。同时也知道为什么输入是存到v6了，那是因为我乱改函数名导致代码发生了一点点变化，就因为这点变化导致有些东西看不出来了，之后改函数名得小心一点了。</p>
+<h2 id="有问题部分"><a href="#有问题部分" class="headerlink" title="有问题部分"></a>有问题部分</h2><p>接下来就是在OD中的动态调试过程，但是由于我太菜，汇编真的不懂，所以接下来的部分仅仅是看懂了过程，还是有问题的，留着等自己学完汇编后回头再来看这道题吧<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-06-01%20164644.png" alt="屏幕截图 2023-06-01 164644"></p>
+<p>主要是这个异或过程(xor)，下面有一个调用函数的过程，可以根据这两个操作的汇编指令可以在OD中定位到这段代码的位置</p>
+<p>先将所有的反汇编函数nop掉，在异或处下断点，循环8次查看ecx的值(?为什么是ecx？)，得到<code>0x2a, 0xd7, 0x92, 0xe9, 0x53, 0xe2, 0xc4, 0xcd</code></p>
+<p>接下来就是写脚本出结果和MD5加密了</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> str[] = <span class="string">&quot;dbappsec&quot;</span>;</span><br><span class="line">    <span class="type">char</span> flag[<span class="number">17</span>];</span><br><span class="line">    <span class="type">int</span> a[] = &#123; <span class="number">0x2a</span>, <span class="number">0xd7</span>, <span class="number">0x92</span>, <span class="number">0xe9</span>, <span class="number">0x53</span>, <span class="number">0xe2</span>, <span class="number">0xc4</span>, <span class="number">0xcd</span> &#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) </span><br><span class="line">    &#123;</span><br><span class="line">        sprintf_s(flag + i * <span class="number">2</span>, <span class="keyword">sizeof</span>(flag) - i * <span class="number">2</span>, <span class="string">&quot;%02x&quot;</span>, a[i] ^ str[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, flag);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>脚本使用 <code>sprintf_s</code> 函数将一个整数转换为十六进制字符串，并将其存储在字符数组 <code>flag</code> 中。</p>
+<p><code>flag + i * 2</code> 表示字符数组 <code>flag</code> 的地址加上偏移量 <code>i * 2</code>。由于每个十六进制数占两个字符，所以我们需要将偏移量乘以 2，以便在 <code>flag</code> 中正确地存储每个转换后的十六进制数。</p>
+<p><code>sizeof(flag) - i * 2</code> 是目标缓冲区的大小。它表示从 <code>flag + i * 2</code> 开始，剩余的缓冲区大小。这个参数用于防止缓冲区溢出。</p>
+<p><code>&quot;%02x&quot;</code> 是格式字符串，它指定了要将整数转换为两位的十六进制字符串。如果转换后的字符串不足两位，则会在前面补零。</p>
+<p><code>a[i] ^ str[i]</code> 是要转换的整数。它对 <code>a</code> 数组中的第 <code>i</code> 个元素和 <code>str</code> 字符串中第 <code>i</code> 个字符的 ASCII 码进行异或运算。</p>
+<p>因此，这行代码的作用是将 <code>a[i] ^ str[i]</code> 的值转换为两位的十六进制字符串，并将其存储在字符数组 <code>flag</code> 的第 <code>i * 2</code> 个位置。</p>
+<p>脚本结果是<code>4eb5f3992391a1ae</code></p>
+<p>经过MD5的32位小写加密后是<code>d2be2981b84f2a905669995873d6a36c</code>，这就是flag了</p>
+<p>有的大佬说Buuctf的答案是错的，在下面这个函数中对密码也改动了，但是大部分的wp没有分析这个函数，得到的flag虽然能通过Buuctf，但是通不过程序本身，所以Buuctf上戳辣，事实上密码是39d09ffa4cfcc4cc，我试了试，两个密码都不能通过程序本身的验证，这就很奇怪了，留着跟上面那个问题一起解决<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230530171506955.png" alt="image-20230530171506955"></p>
+<p>总结：妈的，这题对现在的我来说真几把难，还是看了好多大佬wp才看懂的，我还是学得太慢了</p>
 
     </article>
     <!-- license -->
@@ -518,17 +550,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2023/05/25/Buuctf%20%5BGUET-CTF2019%5Dre/" title="Buuctf [GUET-CTF2019]re">
-                    <div class="nextTitle">Buuctf [GUET-CTF2019]re</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2023/05/25/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal(%E6%95%B0%E7%BB%84%E6%AF%94%E8%BE%83)/" title="Buuctf [网鼎杯 2020 青龙组]singal(数组比较)">
-                    <div class="prevTitle">Buuctf [网鼎杯 2020 青龙组]singal(数组比较)</div>
+                <a href="/2023/05/29/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5D%20jocker(smc%E8%87%AA%E5%8A%A0%E5%AF%86)/" title="Buuctf [网鼎杯 2020 青龙组] jocker(smc自加密)">
+                    <div class="prevTitle">Buuctf [网鼎杯 2020 青龙组] jocker(smc自加密)</div>
                 </a>
             
         </li>
@@ -675,7 +702,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Buuctf-GWCTF-2019-xxor-tea%E5%8A%A0%E5%AF%86"><span class="toc-number">1.</span> <span class="toc-text">Buuctf [GWCTF 2019]xxor(tea加密)</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#crack-me"><span class="toc-number">1.</span> <span class="toc-text">crack me</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E9%97%AE%E9%A2%98%E9%83%A8%E5%88%86"><span class="toc-number">1.1.</span> <span class="toc-text">有问题部分</span></a></li></ol></li></ol>
             </div>
         
         <!-- sidebar -->

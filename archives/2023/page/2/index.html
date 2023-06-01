@@ -428,6 +428,46 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20Lucky%20gay/">
+                
+                <span class="abstract-title-text">Buuctf Lucky gay</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf Lucky gay用IDA64打开文件，在字符串中定位”OK, it’s flag:”
+转到函数
+
+f1是flag的前半段，直接给出，f2是后半段
+看函数猜测分支函数的执行顺序，发现顺序是4-&gt;5-&gt;1;（因为大小端问题s要逆序）,之后就可以写脚本出flag了
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20MRCTF2020%20Xor/">
                 
                 <span class="abstract-title-text">Buuctf MRCTF2020 Xor</span>
@@ -753,42 +793,6 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
 写加密函数的逆函数，就可以得到flag了
 
 
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BBJDCTF2020%5Dhunburger%20competetion(unity3D%E9%A2%98)/">
-                
-                <span class="abstract-title-text">Buuctf [BJDCTF2020]hunburger competetion(unity3D题)</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [BJDCTF2020]hunburger competetion(unity3D题)下载好题目后，可以看到它有多个文件，打开可执行文件发现是一个奇怪的有味道的小游戏尝试分析.exe可执行文件，64位无壳，放进IDA中，它有非常多的函数，于是尝试字符串定位法，失败了，没有哪个字符串看上去是有用的，无从下手后去查看别人的wp
-他们面对这种Unity3D游戏，选择反编译Assembly-CSharp.dll文件，Unity是用C#语言开发的，Android平台中C#编写的主逻辑模块代码静态编辑之后存储于Assembly-CSharp.dll文件中。想要反编译.dll文件，可以用...
             </div>
             <!-- read more -->
             
@@ -1165,7 +1169,24 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1288,7 +1309,7 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 48
+        Total : 49
         </div>
         <!-- search  -->
         
@@ -1302,6 +1323,12 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/01</span>
+            <a class="archive-post-title" href="/2023/06/01/Buuctf%20crack%20me(%E6%9C%89%E9%97%AE%E9%A2%98%E5%BE%85%E8%A7%A3%E5%86%B3)/">Buuctf crack me(有问题待解决)</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/29</span>
@@ -1599,6 +1626,11 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
             <span class="sidebar-tag-name" data-tags="Buuctf">
                 <span class="iconfont-archer">&#xe606;</span>
                 Buuctf
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Buuctf 待解决">
+                <span class="iconfont-archer">&#xe606;</span>
+                Buuctf 待解决
             </span>
         
     </div>
