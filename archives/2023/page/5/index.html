@@ -428,6 +428,50 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20usualCrypt/">
+                
+                <span class="abstract-title-text">Buuctf usualCrypt</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf usualCrypt分析文件，32位无壳
+放入IDA中
+可以看出401080是改过的base64加密，调试了好几次，对比完加密结果和base64原编码的加密结果，看不出它改动的规律，只看出它数字不变，大写字符变小写，小写字符在g之前的变大写，在g之后的乱变。
+进入401080函数
+
+又发现两个函数，401030进去后可以看出是大小写转换
+401000进去后发现是第6个字符到第15个字符也就是’g’到’o’要与自己大10的字符交换位置
+查看运行后的字符串
+得到这题base64的变表，写base64的变表脚本求得flag
+这题因为猜到是魔改base64，以为改的是base64编...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20transform/">
                 
                 <span class="abstract-title-text">Buuctf transform</span>
@@ -1130,7 +1174,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1265,7 +1326,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 49
+        Total : 50
         </div>
         <!-- search  -->
         
@@ -1279,6 +1340,12 @@
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/02</span>
+            <a class="archive-post-title" href="/2023/06/02/Buuctf%20%5BGUET-CTF2019%5Dnumber_game/">Buuctf [GUET-CTF2019]number_game</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/01</span>

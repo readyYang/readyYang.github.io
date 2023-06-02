@@ -428,6 +428,50 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/06/02/Buuctf%20%5BGUET-CTF2019%5Dnumber_game/">
+                
+                <span class="abstract-title-text">Buuctf [GUET-CTF2019]number_game</span>
+            </a>
+            <div class="abstract-content">
+                [GUET-CTF2019]number_game惯例，分析程序，64位无壳
+放入64位IDA中
+4006D6函数中可以看出来，输入是10位且只允许是0-4
+接下来是两个递归，前一个好像是交换输入的顺序，后一个好像也是(其实根本不是，差远了)
+
+
+接下来是一个赋值函数，它把改变后的数值依次赋值给字符串14#2330#1#0#23##3##042##1中的#
+最后是一个奇怪的字符串对比函数
+我是先从最后的字符串对比入手，用z3库写脚本看一下最后字符串应该是怎样的
+12345678910111213141516171819from z3 import *a = [1,4,5,2,3,3,0,...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/06/02">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/06/02</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/06/01/Buuctf%20crack%20me(%E6%9C%89%E9%97%AE%E9%A2%98%E5%BE%85%E8%A7%A3%E5%86%B3)/">
                 
                 <span class="abstract-title-text">Buuctf crack me(有问题待解决)</span>
@@ -817,7 +861,24 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -952,7 +1013,7 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 49
+        Total : 50
         </div>
         <!-- search  -->
         
@@ -966,6 +1027,12 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/02</span>
+            <a class="archive-post-title" href="/2023/06/02/Buuctf%20%5BGUET-CTF2019%5Dnumber_game/">Buuctf [GUET-CTF2019]number_game</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/01</span>
