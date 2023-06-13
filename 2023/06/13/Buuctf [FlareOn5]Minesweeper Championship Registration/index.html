@@ -19,30 +19,26 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf usualCrypt分析文件，32位无壳 放入IDA中 可以看出401080是改过的base64加密，调试了好几次，对比完加密结果和base64原编码的加密结果，看不出它改动的规律，只看出它数字不变，大写字符变小写，小写字符在g之前的变大写，在g之后的乱变。 进入401080函数  又发现两个函数，401030进去后可以看出是大小写转换 401000进去后发现是第6个字符到第15个字">
+    <meta name="description" content="[FlareOn5]Minesweeper Championship Registrationhint: Welcome to the Fifth Annual Flare-On Challenge! The Minesweeper World Championship is coming soon and we found the registration app. You weren’t of">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Buuctf usualCrypt">
-<meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20usualCrypt/index.html">
+<meta property="og:title" content="Buuctf [FlareOn5]Minesweeper Championship Registration">
+<meta property="og:url" content="http://example.com/2023/06/13/Buuctf%20[FlareOn5]Minesweeper%20Championship%20Registration/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf usualCrypt分析文件，32位无壳 放入IDA中 可以看出401080是改过的base64加密，调试了好几次，对比完加密结果和base64原编码的加密结果，看不出它改动的规律，只看出它数字不变，大写字符变小写，小写字符在g之前的变大写，在g之后的乱变。 进入401080函数  又发现两个函数，401030进去后可以看出是大小写转换 401000进去后发现是第6个字符到第15个字">
+<meta property="og:description" content="[FlareOn5]Minesweeper Championship Registrationhint: Welcome to the Fifth Annual Flare-On Challenge! The Minesweeper World Championship is coming soon and we found the registration app. You weren’t of">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429212038319.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429214530804.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429214559514.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429214808025.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429221250102.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429221330618.png">
-<meta property="article:published_time" content="2023-05-25T14:00:01.000Z">
-<meta property="article:modified_time" content="2023-05-25T14:19:57.273Z">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613202917574.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613202502337.png">
+<meta property="article:published_time" content="2023-06-13T12:31:30.000Z">
+<meta property="article:modified_time" content="2023-06-13T12:33:51.631Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Buuctf">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429212038319.png">
+<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613202917574.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Buuctf usualCrypt · readyYang‘s blog</title>
+    <title>Buuctf [FlareOn5]Minesweeper Championship Registration · readyYang‘s blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -267,7 +263,7 @@
                 <a href="/">我的博客</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">Buuctf usualCrypt</a>
+                <a href="#" class="post-name">Buuctf [FlareOn5]Minesweeper Championship Registration</a>
             </div>
         </div>
     
@@ -313,7 +309,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                Buuctf usualCrypt
+                Buuctf [FlareOn5]Minesweeper Championship Registration
             <!-- 404 -->
             
         </h1>
@@ -343,7 +339,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2023/05/25</span>
+                    <span class="post-intro-time">2023/06/13</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -498,16 +494,16 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-usualCrypt"><a href="#Buuctf-usualCrypt" class="headerlink" title="Buuctf usualCrypt"></a>Buuctf usualCrypt</h1><p>分析文件，32位无壳</p>
-<p>放入IDA中<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429212038319.png" alt="image-20230429212038319"></p>
-<p>可以看出401080是改过的base64加密，调试了好几次，对比完加密结果和base64原编码的加密结果，看不出它改动的规律，只看出它数字不变，大写字符变小写，小写字符在g之前的变大写，在g之后的乱变。</p>
-<p>进入401080函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429214530804.png" alt="image-20230429214530804"></p>
-<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429214559514.png" alt="image-20230429214559514"></p>
-<p>又发现两个函数，401030进去后可以看出是大小写转换</p>
-<p>401000进去后发现是第6个字符到第15个字符也就是’g’到’o’要与自己大10的字符交换位置<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429214808025.png" alt="image-20230429214808025"></p>
-<p>查看运行后的字符串<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429221250102.png" alt="image-20230429221250102"></p>
-<p>得到这题base64的变表，写base64的变表脚本求得flag<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230429221330618.png" alt="image-20230429221330618"></p>
-<p>这题因为猜到是魔改base64，以为改的是base64编码的代码，注意力都放在观察它是如何改变base64的原代码上，没注意到它是放在别的函数中改变base64编码表</p>
+        <h1 id="FlareOn5-Minesweeper-Championship-Registration"><a href="#FlareOn5-Minesweeper-Championship-Registration" class="headerlink" title="[FlareOn5]Minesweeper Championship Registration"></a>[FlareOn5]Minesweeper Championship Registration</h1><p>hint:</p>
+<p>Welcome to the Fifth Annual Flare-On Challenge! The Minesweeper World Championship is coming soon and we found the registration app. You weren’t <em>officially</em> invited but if you can figure out what the code is you can probably get in anyway. Good luck!</p>
+<p>本题解出相应字符串后请用flag{}包裹，形如：flag{<a href="mailto:&#49;&#x32;&#51;&#x34;&#x35;&#x36;&#x40;&#102;&#x6c;&#x61;&#x72;&#101;&#45;&#x6f;&#x6e;&#46;&#x63;&#x6f;&#109;">&#49;&#x32;&#51;&#x34;&#x35;&#x36;&#x40;&#102;&#x6c;&#x61;&#x72;&#101;&#45;&#x6f;&#x6e;&#46;&#x63;&#x6f;&#109;</a>}</p>
+<p>看不懂，翻译一下：欢迎参加第五届Flare-On挑战赛! 扫雷世界锦标赛即将到来，我们找到了注册应用程序。你没有得到正式的邀请，但如果你能弄清楚代码是什么，你可能会进入。祝您好运!</p>
+<p>擦，开银趴不叫我是吧</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613202917574.png" alt="image-20230613202917574"></p>
+<p>看到文件是.jar后缀,放入jd-gui中反编译</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613202502337.png" alt="image-20230613202502337"></p>
+<p>直接看到flag了，尝试输入，正确了</p>
+<p>总结：没什么好总结的</p>
 
     </article>
     <!-- license -->
@@ -516,17 +512,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2023/05/25/Buuctf%20rsa/" title="Buuctf rsa">
-                    <div class="nextTitle">Buuctf rsa</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2023/05/25/Buuctf%20transform/" title="Buuctf transform">
-                    <div class="prevTitle">Buuctf transform</div>
+                <a href="/2023/06/13/Buuctf%20findKey/" title="Buuctf findKey">
+                    <div class="prevTitle">Buuctf findKey</div>
                 </a>
             
         </li>
@@ -673,7 +664,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Buuctf-usualCrypt"><span class="toc-number">1.</span> <span class="toc-text">Buuctf usualCrypt</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#FlareOn5-Minesweeper-Championship-Registration"><span class="toc-number">1.</span> <span class="toc-text">[FlareOn5]Minesweeper Championship Registration</span></a></li></ol>
             </div>
         
         <!-- sidebar -->

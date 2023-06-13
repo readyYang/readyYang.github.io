@@ -443,6 +443,47 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20Youngter-drive/">
+                
+                <span class="abstract-title-text">Buuctf Youngter-drive</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf Youngter-drive分析，32位UPX壳
+脱壳后放入32位IDA中，查看主函数
+DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是对比加密后的字符串是否与”TOiZiZtOrYaToUwPnToBsOaOapsyS”相同，先进入StartAddress加密函数
+进入DB1127
+尝试写出逆向函数并运行得到结果
+得到dhGsGsDhCeJdHfAiXdHwKhJhJIKEkZ，认为这就是flag，但是错了，再次求助于别人的wp
+发现创建线程函数CreateThread的功能我并没有了解，创建完线程后，里面的两个函数是交替进行的...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level3/">
                 
                 <span class="abstract-title-text">Buuctf WUSTCTF2020 level3</span>
@@ -764,45 +805,6 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
 函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数
 第一次进来时有的元素是负数，按两次H转换成16进制再转换回来就变成正的10进制数了，上面是三个方程，用python的z3库可以约束求解出a[2],a[3],a[4]的值，然后再回头看那个加密函数400686
 它通过多次位运算进行...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal(%E6%95%B0%E7%BB%84%E6%AF%94%E8%BE%83)/">
-                
-                <span class="abstract-title-text">Buuctf [网鼎杯 2020 青龙组]singal(数组比较)</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [网鼎杯 2020 青龙组]singal(数组比较)分析程序:32位无壳
-放进32位IDA中，查看主函数
-看上去很简单，进入vm_opera中
-分支函数，在case10有个read，是输入函数，并且输入的长度为15，在case7有个比较函数，如果不满足就退出。所以又是字符串比较类型的题目。a1就是v4，v4就是unk_403040,查看403040
-12345678910111213141516171819202122232425262728290x0A, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00,...
             </div>
             <!-- read more -->
             
@@ -1286,7 +1288,24 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1445,7 +1464,7 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 51
+        Total : 52
         </div>
         <!-- search  -->
         
@@ -1463,6 +1482,12 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
         <li class="archive-post-item">
             <span class="archive-post-date">06/13</span>
             <a class="archive-post-title" href="/2023/06/13/Buuctf%20findKey/">Buuctf findKey</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20%5BFlareOn5%5DMinesweeper%20Championship%20Registration/">Buuctf [FlareOn5]Minesweeper Championship Registration</a>
         </li>
     
         
