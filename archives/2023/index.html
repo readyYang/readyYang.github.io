@@ -428,6 +428,48 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/06/13/Buuctf%20findKey/">
+                
+                <span class="abstract-title-text">Buuctf findKey</span>
+            </a>
+            <div class="abstract-content">
+                findKeyhint：没想到给小明神秘盒子的论坛高手居然是本次ctf的策划人之一，在比赛的时候，神秘盒子再一次出现，小明下意识的再次重复之前的操作，结果显而易见得失败了，赶紧帮小明解答这个加了点佐料的盒子。 注意：得到的 flag 请包上 flag{} 提交
+没看懂它在说什么，按照惯例分析程序：32位无壳
+放入32位IDA中，用字符串定位法定位flag{}进入主要函数，但是函数无法反编译，选中红色的部分按p识别为函数，再F5反编译
+
+
+可以有很多看不懂的粉色函数，从头开始看，先进入40101E函数
+
+这个函数之前在别的题里见过的，但是我刚开始没看出来，后面才发现这就是MD5加密，然后再...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/06/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/06/13</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/06/02/Buuctf%20%5BGUET-CTF2019%5Dnumber_game/">
                 
                 <span class="abstract-title-text">Buuctf [GUET-CTF2019]number_game</span>
@@ -794,51 +836,10 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20HDCTF2019%20Maze(%E8%8A%B1%E6%8C%87%E4%BB%A4)/">
-                
-                <span class="abstract-title-text">Buuctf HDCTF2019 Maze(花指令)</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf HDCTF2019 Maze(花指令)分析出32位带Upx壳
-Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串定位法找到与flag有关的字符串
-尝试跟进却失败了
-由题目得知这题要走迷宫，*字符串很像是迷宫，它有70个字符组成。猜它10个字符为一行，得到一张地图
-
-然后回头看函数却没有看懂，尝试用wasd代表方向输入flag{ssaaasaassdddw}，正确了，但不知道为什么，只好查看别人的wp
-发现涉及花指令的问题。花指令：目的是干扰ida和od等软件对程序的静态分析。使这些软件无法正常反汇编出原始代码。这题的main函数就受到花指令的干扰，导致ma...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/2023/page/2/">2</a><a class="page-number" href="/archives/2023/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2023/page/5/">5</a><a class="extend next" rel="next" href="/archives/2023/page/2/">NEXT &gt;</a>
+            <span class="page-number current">1</span><a class="page-number" href="/archives/2023/page/2/">2</a><a class="page-number" href="/archives/2023/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2023/page/6/">6</a><a class="extend next" rel="next" href="/archives/2023/page/2/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -1199,7 +1200,24 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1346,7 +1364,7 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 50
+        Total : 51
         </div>
         <!-- search  -->
         
@@ -1360,6 +1378,12 @@ Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串�
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20findKey/">Buuctf findKey</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/02</span>

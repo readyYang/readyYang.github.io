@@ -428,6 +428,47 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20HDCTF2019%20Maze(%E8%8A%B1%E6%8C%87%E4%BB%A4)/">
+                
+                <span class="abstract-title-text">Buuctf HDCTF2019 Maze(花指令)</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf HDCTF2019 Maze(花指令)分析出32位带Upx壳
+Upx脱壳后放入32位IDA中，函数列表中没有main函数，用字符串定位法找到与flag有关的字符串
+尝试跟进却失败了
+由题目得知这题要走迷宫，*字符串很像是迷宫，它有70个字符组成。猜它10个字符为一行，得到一张地图
+
+然后回头看函数却没有看懂，尝试用wasd代表方向输入flag{ssaaasaassdddw}，正确了，但不知道为什么，只好查看别人的wp
+发现涉及花指令的问题。花指令：目的是干扰ida和od等软件对程序的静态分析。使这些软件无法正常反汇编出原始代码。这题的main函数就受到花指令的干扰，导致ma...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20Java%E9%80%86%E5%90%91/">
                 
                 <span class="abstract-title-text">Buuctf Java逆向</span>
@@ -773,50 +814,10 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level3/">
-                
-                <span class="abstract-title-text">Buuctf WUSTCTF2020 level3</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf WUSTCTF2020 level3分析出64位无壳
-
-根据提示是魔改base64编码，点进base64加密，它只是普通的base64加密，在main函数上发现一个奇怪的函数，点进去
-发现它是在魔改编码表
-写脚本解出
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/3/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/3/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -1177,7 +1178,24 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1324,7 +1342,7 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 50
+        Total : 51
         </div>
         <!-- search  -->
         
@@ -1338,6 +1356,12 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20findKey/">Buuctf findKey</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/02</span>

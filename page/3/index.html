@@ -443,6 +443,46 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level3/">
+                
+                <span class="abstract-title-text">Buuctf WUSTCTF2020 level3</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf WUSTCTF2020 level3分析出64位无壳
+
+根据提示是魔改base64编码，点进base64加密，它只是普通的base64加密，在main函数上发现一个奇怪的函数，点进去
+发现它是在魔改编码表
+写脚本解出
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BACTF%5Deasyre/">
                 
                 <span class="abstract-title-text">Buuctf [ACTF]easyre</span>
@@ -785,50 +825,10 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BZer0pts2020%5Deasy%20strcmp/">
-                
-                <span class="abstract-title-text">Buuctf [Zer0pts2020]easy strcmp</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [Zer0pts2020]easy strcmp解压两次文件，分析，64位无壳
-放入64位IDA中
-a2经过一系列操作然后与字符串对比，所以要去找a2的操作过程，在找函数的调用时没找到，直接从函数列表里找到一个带有a2的函数
-这个for函数是用i表示字符串的长度，瞟了一眼别人的wp，v4是字符串除以8加1，下面那个循环是将字符串每8个为一组，分别减去564927401060中的字符串，然后返回结果。写逆向函数，求得flag，还是错的
-！！注意564927401060中的字符串中的大小序问题
-找了好久的原因，又看了很多人的wp发现可能是564927401060和输出字符串中有...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/page/2/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/page/2/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -1281,7 +1281,24 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1428,7 +1445,7 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 50
+        Total : 51
         </div>
         <!-- search  -->
         
@@ -1442,6 +1459,12 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20findKey/">Buuctf findKey</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/02</span>

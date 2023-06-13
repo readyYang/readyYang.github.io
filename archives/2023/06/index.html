@@ -428,6 +428,48 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/06/13/Buuctf%20findKey/">
+                
+                <span class="abstract-title-text">Buuctf findKey</span>
+            </a>
+            <div class="abstract-content">
+                findKeyhint：没想到给小明神秘盒子的论坛高手居然是本次ctf的策划人之一，在比赛的时候，神秘盒子再一次出现，小明下意识的再次重复之前的操作，结果显而易见得失败了，赶紧帮小明解答这个加了点佐料的盒子。 注意：得到的 flag 请包上 flag{} 提交
+没看懂它在说什么，按照惯例分析程序：32位无壳
+放入32位IDA中，用字符串定位法定位flag{}进入主要函数，但是函数无法反编译，选中红色的部分按p识别为函数，再F5反编译
+
+
+可以有很多看不懂的粉色函数，从头开始看，先进入40101E函数
+
+这个函数之前在别的题里见过的，但是我刚开始没看出来，后面才发现这就是MD5加密，然后再...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/06/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/06/13</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/06/02/Buuctf%20%5BGUET-CTF2019%5Dnumber_game/">
                 
                 <span class="abstract-title-text">Buuctf [GUET-CTF2019]number_game</span>
@@ -866,7 +908,24 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1013,7 +1072,7 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 50
+        Total : 51
         </div>
         <!-- search  -->
         
@@ -1027,6 +1086,12 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20findKey/">Buuctf findKey</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/02</span>

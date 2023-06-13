@@ -428,6 +428,49 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20rsa/">
+                
+                <span class="abstract-title-text">Buuctf rsa</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf rsa提示说RSA是一个很神秘的算法，至于神秘在哪里需要我自己摸索，可恶，解压完只能看到一个.enc文件和一个.key文件，根本不知道从哪里开始摸
+用记事本打开.key.后缀的文件，里面放的是公钥，.enc放的是加密完后的数据
+看别人wp得知，pub.key是公钥，flag.enc是rsa加密后的文件，因此我们只要通过公钥文件解析出n,e,p,q,d，再利用脚本解密rsa加密文件
+
+RSA加密是对明文的E次方后除以N后求余数的过程
+公钥n = p * q，其中p和q是两个大素数
+e是随机选择的数，作为公钥
+
+从通式可知，只要知道E和N任何人都可以进行RSA加密了所以说E、N...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20usualCrypt/">
                 
                 <span class="abstract-title-text">Buuctf usualCrypt</span>
@@ -775,50 +818,10 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%E7%BA%A2%E5%B8%BD%E6%9D%AF2019easyre/">
-                
-                <span class="abstract-title-text">Buuctf 红帽杯2019easyre</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf 红帽杯2019easyre分析得知64位无壳
-放入IDA中，看到base64加密数组和”you find me”，定位后者
-
-看到这段代码后，我把v12与i异或得到Info:The fir，但这很明显是一句不完整的话，回头看到v15是36，觉得应该v13，v14是接在v12后的但是因为不可见字符导致IDA把它们分成三个字符串，重新拼接异或后得到一句奇怪的提示
-接着往下看
-点进400E44函数，看出它是base64加密，将6CC090中的超长字符串放到在线解密网站上base64解密10次，得到一个网址，点进去却是看雪论坛关于主动防御的文章，当时没意识到自己被骗了，把文章从头到...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/page/4/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span>
+            <a class="extend prev" rel="prev" href="/archives/page/4/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/6/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -1179,7 +1182,24 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1326,7 +1346,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 50
+        Total : 51
         </div>
         <!-- search  -->
         
@@ -1340,6 +1360,12 @@
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20findKey/">Buuctf findKey</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/02</span>
