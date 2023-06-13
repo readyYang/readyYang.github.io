@@ -428,6 +428,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal(%E6%95%B0%E7%BB%84%E6%AF%94%E8%BE%83)/">
+                
+                <span class="abstract-title-text">Buuctf [网鼎杯 2020 青龙组]singal(数组比较)</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf [网鼎杯 2020 青龙组]singal(数组比较)分析程序:32位无壳
+放进32位IDA中，查看主函数
+看上去很简单，进入vm_opera中
+分支函数，在case10有个read，是输入函数，并且输入的长度为15，在case7有个比较函数，如果不满足就退出。所以又是字符串比较类型的题目。a1就是v4，v4就是unk_403040,查看403040
+12345678910111213141516171819202122232425262728290x0A, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00,...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BZer0pts2020%5Deasy%20strcmp/">
                 
                 <span class="abstract-title-text">Buuctf [Zer0pts2020]easy strcmp</span>
@@ -753,47 +792,6 @@ v1是输入
 %26+65和%26+97是变大小写
 我认为偏移量是51-39和79-71，，所以写的脚本一直报错，看了一下别人的wp，没想到偏移量就是65-51和97-79，我自己的脚本在这之后又没有+26，导致一些字符不对，+26后就能得出flag
 123456789101112131415161718192021int main()&#123;	char y[] = &quot;Qsw3sj_lz4_Ujw@l&quot;...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20reverse_3/">
-                
-                <span class="abstract-title-text">Buuctf SimpleREV</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf SimpleREV分析程序：64位无壳
-放入64位IDA中，主函数没有什么有用的信息
-进入Decry函数中
-
-可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们可以通过观察得到最后的对比字符串text=killshadow和加密密钥key=adsfkndcls
-剩下的只要写逆向脚本就可以得到flag了，自己写的脚本一直报错输出也是乱码，用一下别人的
-12345678910111213141516171819202122232425int main()&#123;	cha...
             </div>
             <!-- read more -->
             
@@ -1190,7 +1188,24 @@ v1是输入
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1361,7 +1376,7 @@ v1是输入
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 52
+        Total : 53
         </div>
         <!-- search  -->
         
@@ -1375,6 +1390,12 @@ v1是输入
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20%5BACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%5DSoulLike/">Buuctf [ACTF新生赛2020]SoulLike</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/13</span>

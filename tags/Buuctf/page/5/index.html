@@ -428,6 +428,47 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20reverse_3/">
+                
+                <span class="abstract-title-text">Buuctf SimpleREV</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf SimpleREV分析程序：64位无壳
+放入64位IDA中，主函数没有什么有用的信息
+进入Decry函数中
+
+可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们可以通过观察得到最后的对比字符串text=killshadow和加密密钥key=adsfkndcls
+剩下的只要写逆向脚本就可以得到flag了，自己写的脚本一直报错输出也是乱码，用一下别人的
+12345678910111213141516171819202122232425int main()&#123;	cha...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20rsa/">
                 
                 <span class="abstract-title-text">Buuctf rsa</span>
@@ -759,43 +800,6 @@ e是随机选择的数，作为公钥
 在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码
 不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail，看到了sendMailByJavaMail（java里的实现邮件发送），跟进，右击点击查找，（找实现邮件发送应该是为了查找邮箱地址吧）
 再通过跟进MAILSERVER发现它是base64编码naturemethod中的信息的，而naturemethod就是文件中非java代码的外部文件，wp告诉我...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%E7%AE%80%E5%8D%95%E6%B3%A8%E5%86%8C%E5%99%A8/">
-                
-                <span class="abstract-title-text">Buuctf 简单注册器</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf 简单注册器看到是apk文件，放入jeb中，在MainActivity中按TAB用c语言查看反编译后的结果,好像看到了关键的对比函数
-写脚本跑一下就可以得到flag了
-1234567891011121314int main() &#123;	char x[] = &quot;dd2940c04462b4dd7c450528835cca15&quot;;	x[2] = ((x[2] + x[3]) - 50);	x[4] = ((x[2] + x[5]) - 48);	x[30] = (char)((x[31] + x[9]) - 48);	x[14] = (char)((x[...
             </div>
             <!-- read more -->
             
@@ -1192,7 +1196,24 @@ e是随机选择的数，作为公钥
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1363,7 +1384,7 @@ e是随机选择的数，作为公钥
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 52
+        Total : 53
         </div>
         <!-- search  -->
         
@@ -1377,6 +1398,12 @@ e是随机选择的数，作为公钥
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20%5BACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%5DSoulLike/">Buuctf [ACTF新生赛2020]SoulLike</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/13</span>

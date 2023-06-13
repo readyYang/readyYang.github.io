@@ -428,6 +428,47 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/06/13/Buuctf%20%5BACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%5DSoulLike/">
+                
+                <span class="abstract-title-text">Buuctf [ACTF新生赛2020]SoulLike</span>
+            </a>
+            <div class="abstract-content">
+                [ACTF新生赛2020]SoulLike按照惯例先分析程序：64位无壳
+放入64位IDA中，直接查看main函数
+
+逻辑清晰，简单易懂，进入sub_83A函数，失败了，出现了too big function报错，有种不好的预感，上网找解决方法，大佬说：
+修改配置文件：【IDA 安装目录】\cfg\hexrays.cfg源文件为：MAX_FUNCSIZE            = 64        // Functions over 64K are not decompiled
+修改为
+MAX_FUNCSIZE            = 1024        // Functions...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/06/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/06/13</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/06/13/Buuctf%20%5BFlareOn5%5DMinesweeper%20Championship%20Registration/">
                 
                 <span class="abstract-title-text">Buuctf [FlareOn5]Minesweeper Championship Registration</span>
@@ -954,7 +995,24 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1125,7 +1183,7 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 52
+        Total : 53
         </div>
         <!-- search  -->
         
@@ -1139,6 +1197,12 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/13</span>
+            <a class="archive-post-title" href="/2023/06/13/Buuctf%20%5BACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%5DSoulLike/">Buuctf [ACTF新生赛2020]SoulLike</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/13</span>

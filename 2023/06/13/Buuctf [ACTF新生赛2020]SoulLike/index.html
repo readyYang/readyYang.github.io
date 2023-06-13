@@ -19,31 +19,27 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf WUSTCTF2020 level4(数据结构二叉树)分析出64位无壳 放入64位IDA中，查看主函数第一句话是“练习我的数据结构代码”，没懂它在说什么，接下来这句“打字…………结构………字符……….*左………..*右………emmmmm…..OK！”就更抽象了，然后就是遍历type1和遍历type2，它不愿意告诉我们type3，可以猜测type3就是我们需要的flag。在虚拟机中跑一">
+    <meta name="description" content="[ACTF新生赛2020]SoulLike按照惯例先分析程序：64位无壳 放入64位IDA中，直接查看main函数  逻辑清晰，简单易懂，进入sub_83A函数，失败了，出现了too big function报错，有种不好的预感，上网找解决方法，大佬说： 修改配置文件：【IDA 安装目录】\cfg\hexrays.cfg源文件为：MAX_FUNCSIZE            &#x3D; 64">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Buuctf WUSTCTF2020 level4(数据结构二叉树)">
-<meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20WUSTCTF2020%20level4(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C%E5%8F%89%E6%A0%91)/index.html">
+<meta property="og:title" content="Buuctf [ACTF新生赛2020]SoulLike">
+<meta property="og:url" content="http://example.com/2023/06/13/Buuctf%20[ACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020]SoulLike/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf WUSTCTF2020 level4(数据结构二叉树)分析出64位无壳 放入64位IDA中，查看主函数第一句话是“练习我的数据结构代码”，没懂它在说什么，接下来这句“打字…………结构………字符……….*左………..*右………emmmmm…..OK！”就更抽象了，然后就是遍历type1和遍历type2，它不愿意告诉我们type3，可以猜测type3就是我们需要的flag。在虚拟机中跑一">
+<meta property="og:description" content="[ACTF新生赛2020]SoulLike按照惯例先分析程序：64位无壳 放入64位IDA中，直接查看main函数  逻辑清晰，简单易懂，进入sub_83A函数，失败了，出现了too big function报错，有种不好的预感，上网找解决方法，大佬说： 修改配置文件：【IDA 安装目录】\cfg\hexrays.cfg源文件为：MAX_FUNCSIZE            &#x3D; 64">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505164404598.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505165619061.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505165841133.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505170309830.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505170332301.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505203551362.png">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505203833472.png">
-<meta property="article:published_time" content="2023-05-25T14:00:01.000Z">
-<meta property="article:modified_time" content="2023-05-25T14:19:17.588Z">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613214456722.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613215125738.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613215226765.png">
+<meta property="article:published_time" content="2023-06-13T14:24:35.000Z">
+<meta property="article:modified_time" content="2023-06-13T14:26:38.143Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Buuctf">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505164404598.png">
+<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613214456722.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Buuctf WUSTCTF2020 level4(数据结构二叉树) · readyYang‘s blog</title>
+    <title>Buuctf [ACTF新生赛2020]SoulLike · readyYang‘s blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -268,7 +264,7 @@
                 <a href="/">我的博客</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">Buuctf WUSTCTF2020 level4(数据结构二叉树)</a>
+                <a href="#" class="post-name">Buuctf [ACTF新生赛2020]SoulLike</a>
             </div>
         </div>
     
@@ -314,7 +310,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                Buuctf WUSTCTF2020 level4(数据结构二叉树)
+                Buuctf [ACTF新生赛2020]SoulLike
             <!-- 404 -->
             
         </h1>
@@ -344,7 +340,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2023/05/25</span>
+                    <span class="post-intro-time">2023/06/13</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -499,20 +495,26 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-WUSTCTF2020-level4-数据结构二叉树"><a href="#Buuctf-WUSTCTF2020-level4-数据结构二叉树" class="headerlink" title="Buuctf WUSTCTF2020 level4(数据结构二叉树)"></a>Buuctf WUSTCTF2020 level4(数据结构二叉树)</h1><p>分析出64位无壳</p>
-<p>放入64位IDA中，查看主函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505164404598.png" alt="image-20230505164404598">第一句话是“练习我的数据结构代码”，没懂它在说什么，接下来这句“打字…………结构………字符……….*左………..*右………emmmmm…..OK！”就更抽象了，然后就是遍历type1和遍历type2，它不愿意告诉我们type3，可以猜测type3就是我们需要的flag。在虚拟机中跑一遍程序查看输出<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505165619061.png" alt="image-20230505165619061"></p>
-<p>可以看出两个类型都是改变v2的顺序输出<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505165841133.png" alt="image-20230505165841133"></p>
-<p>所以type3也是改变字符串顺序的，查看type1和type2<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505170309830.png" alt="image-20230505170309830"><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505170332301.png" alt="image-20230505170332301"></p>
-<p>type1和type2还是递归函数，看不懂，回头去了解数据结构算法这个知识<a target="_blank" rel="noopener" href="https://blog.csdn.net/heyuchang666/article/details/49891635">(27条消息) 数据结构（全）_heyuchang666的博客-CSDN博客</a></p>
-<p>没有找到答案，查看别人的wp，常用数据结构中使用right和left指针的数据结构很可能是一个二叉树（Binary tree），他们从数据结构，*left和*right看出这就是数据结构算法中的左子树和右子树，<a target="_blank" rel="noopener" href="https://blog.csdn.net/heyuchang666/article/details/49364235">(27条消息) 二叉树总结创建，遍历_heyuchang666的博客-CSDN博客</a>了解了二叉树的结构后可以看到二叉树的遍历有先序遍历，中序遍历和后序遍历</p>
-<p>前序遍历：根结点 —&gt; 左子树 —&gt; 右子树</p>
-<p>中序遍历：左子树—&gt; 根结点 —&gt; 右子树</p>
-<p>后序遍历：左子树 —&gt; 右子树 —&gt; 根结点</p>
-<p>层次遍历：只需按层次遍历即可</p>
-<p>知道两个遍历结果，就可以逆推出二叉树的结构，看字符串可以猜出flag开头可能是wctf2020，所以一个是中序遍历，一个是后序遍历，因为先序遍历的w要在最前面，后序遍历的w要在最后面。type3只能是先序遍历了，抄脚本</p>
-<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505203551362.png" alt="image-20230505203551362"></p>
-<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230505203833472.png" alt="image-20230505203833472"></p>
-<p>要开始学数据结构了</p>
+        <h1 id="ACTF新生赛2020-SoulLike"><a href="#ACTF新生赛2020-SoulLike" class="headerlink" title="[ACTF新生赛2020]SoulLike"></a>[ACTF新生赛2020]SoulLike</h1><p>按照惯例先分析程序：64位无壳</p>
+<p>放入64位IDA中，直接查看main函数</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613214456722.png" alt="image-20230613214456722"></p>
+<p>逻辑清晰，简单易懂，进入sub_83A函数，失败了，出现了<code>too big function</code>报错，有种不好的预感，上网找解决方法，大佬说：</p>
+<p>修改配置文件：【IDA 安装目录】\cfg\hexrays.cfg<br>源文件为：<br><code>MAX_FUNCSIZE            = 64        // Functions over 64K are not decompiled</code></p>
+<p>修改为</p>
+<p><code>MAX_FUNCSIZE            = 1024        // Functions over 64K are not decompiled</code></p>
+<p>重新启动IDA，使配置生效。<br>进入sub_83A函数的时候加载了很久，不好的预感更强烈了</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613215125738.png" alt="image-20230613215125738"></p>
+<p>进去后发现都是这样的简单加密，但是有整整3000行</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230613215226765.png" alt="image-20230613215226765"></p>
+<p>最后是普通而又简单的字符串对比，3000行代码，手撸是不可能了，得想帮法解决</p>
+<p>我的思路是写一个脚本，它能把我的输入按行逆序输出，然后我直接复制黏贴再用编译器自带的查找替换功能把++全部变成–，再跑一遍代码就可以得到flag了，因为是要逆序，我是尝试用递归写的脚本，但是能力有限，跑不起来，用AI写的递归脚本也跑不了，好像是为了防止栈溢出，所以对于递归函数，编译器的输入是有限制的，根本到不了3000行，综上所述我后来放弃了递归，用AI写的迭代脚本</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_LINES 4000</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_LENGTH 100</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">char</span> lines[MAX_LINES][MAX_LENGTH];</span><br><span class="line">    <span class="type">int</span> numLines = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入多行文本，以输入空行结束：\n&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span> (numLines &lt; MAX_LINES &amp;&amp; fgets(lines[numLines], MAX_LENGTH, <span class="built_in">stdin</span>) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">strcmp</span>(lines[numLines], <span class="string">&quot;\n&quot;</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        numLines++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n逆序输出结果：\n&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (i = numLines - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, lines[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将复制的代码黏贴进去得到按行逆序输出的代码后就可以查找替换跑出flag了，脚本太长就不写在这了</p>
+<p>写出这道题后，我想看看别的师傅有没有别的方法，就去看了一圈，发现他们全部都是爆破出的脚本，下面是一个师傅的爆破脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"> </span><br><span class="line">T = [<span class="string">&#x27;\x00&#x27;</span>, <span class="string">&#x27;\x01&#x27;</span>, <span class="string">&#x27;\x02&#x27;</span>, <span class="string">&#x27;\x03&#x27;</span>, <span class="string">&#x27;\x04&#x27;</span>, <span class="string">&#x27;\x05&#x27;</span>, <span class="string">&#x27;\x06&#x27;</span>, <span class="string">&#x27;\x07&#x27;</span>, <span class="string">&#x27;\x08&#x27;</span>, <span class="string">&#x27;\t&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, <span class="string">&#x27;\x0b&#x27;</span>, <span class="string">&#x27;\x0c&#x27;</span>, <span class="string">&#x27;\r&#x27;</span>, <span class="string">&#x27;\x0e&#x27;</span>, <span class="string">&#x27;\x0f&#x27;</span>, <span class="string">&#x27;\x10&#x27;</span>, <span class="string">&#x27;\x11&#x27;</span>, <span class="string">&#x27;\x12&#x27;</span>, <span class="string">&#x27;\x13&#x27;</span>, <span class="string">&#x27;\x14&#x27;</span>, <span class="string">&#x27;\x15&#x27;</span>, <span class="string">&#x27;\x16&#x27;</span>, <span class="string">&#x27;\x17&#x27;</span>, <span class="string">&#x27;\x18&#x27;</span>, <span class="string">&#x27;\x19&#x27;</span>, <span class="string">&#x27;\x1a&#x27;</span>, <span class="string">&#x27;\x1b&#x27;</span>, <span class="string">&#x27;\x1c&#x27;</span>, <span class="string">&#x27;\x1d&#x27;</span>, <span class="string">&#x27;\x1e&#x27;</span>, <span class="string">&#x27;\x1f&#x27;</span>, <span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;!&#x27;</span>, <span class="string">&#x27;&quot;&#x27;</span>, <span class="string">&#x27;#&#x27;</span>, <span class="string">&#x27;$&#x27;</span>, <span class="string">&#x27;%&#x27;</span>, <span class="string">&#x27;&amp;&#x27;</span>, <span class="string">&quot;&#x27;&quot;</span>, <span class="string">&#x27;(&#x27;</span>, <span class="string">&#x27;)&#x27;</span>, <span class="string">&#x27;*&#x27;</span>, <span class="string">&#x27;+&#x27;</span>, <span class="string">&#x27;,&#x27;</span>, <span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;.&#x27;</span>, <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;6&#x27;</span>, <span class="string">&#x27;7&#x27;</span>, <span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;9&#x27;</span>, <span class="string">&#x27;:&#x27;</span>, <span class="string">&#x27;;&#x27;</span>, <span class="string">&#x27;&lt;&#x27;</span>, <span class="string">&#x27;=&#x27;</span>, <span class="string">&#x27;&gt;&#x27;</span>, <span class="string">&#x27;?&#x27;</span>, <span class="string">&#x27;@&#x27;</span>, <span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;E&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;G&#x27;</span>, <span class="string">&#x27;H&#x27;</span>, <span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;K&#x27;</span>, <span class="string">&#x27;L&#x27;</span>, <span class="string">&#x27;M&#x27;</span>, <span class="string">&#x27;N&#x27;</span>, <span class="string">&#x27;O&#x27;</span>, <span class="string">&#x27;P&#x27;</span>, <span class="string">&#x27;Q&#x27;</span>, <span class="string">&#x27;R&#x27;</span>, <span class="string">&#x27;S&#x27;</span>, <span class="string">&#x27;T&#x27;</span>, <span class="string">&#x27;U&#x27;</span>, <span class="string">&#x27;V&#x27;</span>, <span class="string">&#x27;W&#x27;</span>, <span class="string">&#x27;X&#x27;</span>, <span class="string">&#x27;Y&#x27;</span>, <span class="string">&#x27;Z&#x27;</span>, <span class="string">&#x27;[&#x27;</span>, <span class="string">&#x27;\\&#x27;</span>, <span class="string">&#x27;]&#x27;</span>, <span class="string">&#x27;^&#x27;</span>, <span class="string">&#x27;_&#x27;</span>, <span class="string">&#x27;`&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;h&#x27;</span>, <span class="string">&#x27;i&#x27;</span>, <span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;m&#x27;</span>, <span class="string">&#x27;n&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;p&#x27;</span>, <span class="string">&#x27;q&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;t&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;w&#x27;</span>, <span class="string">&#x27;x&#x27;</span>, <span class="string">&#x27;y&#x27;</span>, <span class="string">&#x27;z&#x27;</span>, <span class="string">&#x27;&#123;&#x27;</span>, <span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;&#125;&#x27;</span>, <span class="string">&#x27;~&#x27;</span>, <span class="string">&#x27;\x7f&#x27;</span>]</span><br><span class="line"> </span><br><span class="line">a = <span class="string">&#x27;actf&#123;&#x27;</span></span><br><span class="line">b = <span class="number">0</span></span><br><span class="line">pty = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">12</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> T:</span><br><span class="line">        io = process(<span class="string">&#x27;./SoulLike&#x27;</span>)     </span><br><span class="line">        flag = a + i</span><br><span class="line">        flag = flag.ljust(<span class="number">17</span>,<span class="string">&#x27;@&#x27;</span>)</span><br><span class="line">        flag += <span class="string">&#x27;&#125;&#x27;</span></span><br><span class="line">        success(flag)</span><br><span class="line">        io.sendline(flag)      </span><br><span class="line">        io.recvuntil(<span class="string">&#x27;#&#x27;</span>)      </span><br><span class="line">        <span class="keyword">if</span> b &lt; <span class="number">9</span> :</span><br><span class="line">            n = <span class="built_in">int</span>(io.recv(<span class="number">1</span>)) </span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            n = <span class="built_in">int</span>(io.recv(<span class="number">2</span>))</span><br><span class="line">        io.close()              </span><br><span class="line">        <span class="keyword">if</span> n == b + <span class="number">1</span>:          </span><br><span class="line">            a = a + i</span><br><span class="line">            b = b + <span class="number">1</span></span><br><span class="line">            <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<p>总结：这道题用的方法与别的师傅都不一样，对我来说，这题告诉我该提升的还是代码的编写能力，不能太依靠AI</p>
 
     </article>
     <!-- license -->
@@ -521,17 +523,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/" title="Buuctf WUSTCTF2020 crossfun">
-                    <div class="nextTitle">Buuctf WUSTCTF2020 crossfun</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2023/05/25/Buuctf%20WUSTCTF2020level2/" title="Buuctf WUSTCTF2020level2">
-                    <div class="prevTitle">Buuctf WUSTCTF2020level2</div>
+                <a href="/2023/06/13/Buuctf%20%5BFlareOn5%5DMinesweeper%20Championship%20Registration/" title="Buuctf [FlareOn5]Minesweeper Championship Registration">
+                    <div class="prevTitle">Buuctf [FlareOn5]Minesweeper Championship Registration</div>
                 </a>
             
         </li>
@@ -678,7 +675,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Buuctf-WUSTCTF2020-level4-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">1.</span> <span class="toc-text">Buuctf WUSTCTF2020 level4(数据结构二叉树)</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020-SoulLike"><span class="toc-number">1.</span> <span class="toc-text">[ACTF新生赛2020]SoulLike</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
