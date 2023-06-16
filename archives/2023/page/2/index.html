@@ -428,6 +428,50 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20Find%20it/">
+                
+                <span class="abstract-title-text">Buuctf Find it</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf Find itAPK文件放入jeb反编译
+用c语言形式查看MainActivity函数里全是字符串，而且它函数很宽，jeb又没有左右移动的滑块看得非常难受，我还是复制代码到vscode上才看懂了一些，上面的函数好像没什么用，虽然字符串中有flag，但是关键在下面那个函数上
+注意
+如图，当字符超出ASCII码范围，c语言将无法识别其对应ASCII码大小
+
+但是依旧可以进行运算，不知道用python写脚本会不会遇到这个问题
+
+所以因为上面的原因这道题我写出了上面这个解密函数却跑不出结果
+看别人wp可以用网上的凯撒加密在线工具，在函数里可以看出偏移量是10，在线解密一下得到flag
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20HelloWorld/">
                 
                 <span class="abstract-title-text">Buuctf HelloWorld</span>
@@ -752,45 +796,6 @@ f1是flag的前半段，直接给出，f2是后半段
 看上去很简单，直接进入check函数
 进去后都是这样的函数，手撸，将a1拼出来，就得到了flag
 
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level4(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C%E5%8F%89%E6%A0%91)/">
-                
-                <span class="abstract-title-text">Buuctf WUSTCTF2020 level4(数据结构二叉树)</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf WUSTCTF2020 level4(数据结构二叉树)分析出64位无壳
-放入64位IDA中，查看主函数第一句话是“练习我的数据结构代码”，没懂它在说什么，接下来这句“打字…………结构………字符……….*左………..*右………emmmmm…..OK！”就更抽象了，然后就是遍历type1和遍历type2，它不愿意告诉我们type3，可以猜测type3就是我们需要的flag。在虚拟机中跑一遍程序查看输出
-可以看出两个类型都是改变v2的顺序输出
-所以type3也是改变字符串顺序的，查看type1和type2
-type1和type2还是递归函数，看不懂，回头去了解数据结构算法这个知识...
             </div>
             <!-- read more -->
             
@@ -1192,7 +1197,24 @@ type1和type2还是递归函数，看不懂，回头去了解数据结构算法�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1375,7 +1397,7 @@ type1和type2还是递归函数，看不懂，回头去了解数据结构算法�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 53
+        Total : 54
         </div>
         <!-- search  -->
         
@@ -1389,6 +1411,12 @@ type1和type2还是递归函数，看不懂，回头去了解数据结构算法�
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/2023/06/16/Buuctf%20%5BFlareOn5%5DUltimate%20Minesweeper/">Buuctf [FlareOn5]Ultimate Minesweeper</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/13</span>

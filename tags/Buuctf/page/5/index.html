@@ -428,6 +428,49 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20rome/">
+                
+                <span class="abstract-title-text">Buuctf rome</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf rome分析程序，是32位无壳的
+字符串定位进main函数
+可以看出关键在下面这个加密过程中
+
+v1是输入
+看出*(_DWORD *)&amp;v12[17]是i
+%26+65和%26+97是变大小写
+我认为偏移量是51-39和79-71，，所以写的脚本一直报错，看了一下别人的wp，没想到偏移量就是65-51和97-79，我自己的脚本在这之后又没有+26，导致一些字符不对，+26后就能得出flag
+123456789101112131415161718192021int main()&#123;	char y[] = &quot;Qsw3sj_lz4_Ujw@l&quot;...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20reverse_3/">
                 
                 <span class="abstract-title-text">Buuctf SimpleREV</span>
@@ -762,44 +805,6 @@ e是随机选择的数，作为公钥
 看题目就是魔改字符串，直接跑脚本出flag
 说实话，它一点也不特殊
 
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%E7%9B%B8%E5%86%8C/">
-                
-                <span class="abstract-title-text">Buuctf 相册</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf 相册APK文件，放入jeb中反编译
-在文件列表中找到了一个名为base64的文件和一个名为FLAGS的文件，按TAB反编译，得到一段java代码
-不会了，查看别人的wp，他们用jadx打开文件，题目告诉我们完整的邮箱地址就是flag，所以他们没有选择搜索flag，而是搜索mail，看到了sendMailByJavaMail（java里的实现邮件发送），跟进，右击点击查找，（找实现邮件发送应该是为了查找邮箱地址吧）
-再通过跟进MAILSERVER发现它是base64编码naturemethod中的信息的，而naturemethod就是文件中非java代码的外部文件，wp告诉我...
             </div>
             <!-- read more -->
             
@@ -1201,7 +1206,24 @@ e是随机选择的数，作为公钥
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1384,7 +1406,7 @@ e是随机选择的数，作为公钥
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 53
+        Total : 54
         </div>
         <!-- search  -->
         
@@ -1398,6 +1420,12 @@ e是随机选择的数，作为公钥
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/2023/06/16/Buuctf%20%5BFlareOn5%5DUltimate%20Minesweeper/">Buuctf [FlareOn5]Ultimate Minesweeper</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/13</span>

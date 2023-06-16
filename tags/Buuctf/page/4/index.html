@@ -428,6 +428,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BGWCTF%202019%5Dxxor(tea%E5%8A%A0%E5%AF%86)/">
+                
+                <span class="abstract-title-text">Buuctf [GWCTF 2019]xxor(tea加密)</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳
+放入64位IDA中，查看main函数
+函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数
+第一次进来时有的元素是负数，按两次H转换成16进制再转换回来就变成正的10进制数了，上面是三个方程，用python的z3库可以约束求解出a[2],a[3],a[4]的值，然后再回头看那个加密函数400686
+它通过多次位运算进行...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20%5B%E7%BD%91%E9%BC%8E%E6%9D%AF%202020%20%E9%9D%92%E9%BE%99%E7%BB%84%5Dsingal(%E6%95%B0%E7%BB%84%E6%AF%94%E8%BE%83)/">
                 
                 <span class="abstract-title-text">Buuctf [网鼎杯 2020 青龙组]singal(数组比较)</span>
@@ -749,49 +788,6 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
 放入64位IDA中，进入main函数中
 可以看出是字符串比较的题目，查看Str2，看到是{hello_world}，提交flag，错了，上面有一个操作是把Str2中的’o’替换成’0’(o的ASCII值是111，0的ASCII值是48),试试flag{hello_w0rld}，成功了。v3，v7和i不知道有什么用，已经得到了flag，就不用管它们了
 
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20rome/">
-                
-                <span class="abstract-title-text">Buuctf rome</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf rome分析程序，是32位无壳的
-字符串定位进main函数
-可以看出关键在下面这个加密过程中
-
-v1是输入
-看出*(_DWORD *)&amp;v12[17]是i
-%26+65和%26+97是变大小写
-我认为偏移量是51-39和79-71，，所以写的脚本一直报错，看了一下别人的wp，没想到偏移量就是65-51和97-79，我自己的脚本在这之后又没有+26，导致一些字符不对，+26后就能得出flag
-123456789101112131415161718192021int main()&#123;	char y[] = &quot;Qsw3sj_lz4_Ujw@l&quot;...
             </div>
             <!-- read more -->
             
@@ -1193,7 +1189,24 @@ v1是输入
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1376,7 +1389,7 @@ v1是输入
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 53
+        Total : 54
         </div>
         <!-- search  -->
         
@@ -1390,6 +1403,12 @@ v1是输入
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/2023/06/16/Buuctf%20%5BFlareOn5%5DUltimate%20Minesweeper/">Buuctf [FlareOn5]Ultimate Minesweeper</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/13</span>

@@ -428,6 +428,42 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020level2/">
+                
+                <span class="abstract-title-text">Buuctf WUSTCTF2020level2</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf WUSTCTF2020level2分析出32位带UPX壳，脱壳后用IDA32打开，直接看到flag
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20Youngter-drive/">
                 
                 <span class="abstract-title-text">Buuctf Youngter-drive</span>
@@ -751,45 +787,6 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
 进入if后的那个函数
 利用计算器逐个算出值然后转成字符flag{e65421110b0a3099a1c039337}，提交后显示错误，检查了好久，后面发现原函数a1[16]和a1[17]的顺序反了，并且没有a1[6]，调换回去后，去找别的函数中是否有提到a1[6]，结果看不懂且找不到，看了别人的wp发现他们都是直接爆破a1[6],并且a1[6]就是1，可恶，应该尝试一下爆破的
 
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BGWCTF%202019%5Dxxor(tea%E5%8A%A0%E5%AF%86)/">
-                
-                <span class="abstract-title-text">Buuctf [GWCTF 2019]xxor(tea加密)</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [GWCTF 2019]xxor(tea加密)分析程序：64位无壳
-放入64位IDA中，查看main函数
-函数要求输入6次，不知道原因但是应该是存入数组v6中，看别人的wp也是这样默认的，但是我动调的时候v6中的值不知道为什么是固定的，先放一边。之后再将v6其中的元素经过400686函数的加密变换输出存入v7中，最后验证v7中的元素，先进入验证函数
-第一次进来时有的元素是负数，按两次H转换成16进制再转换回来就变成正的10进制数了，上面是三个方程，用python的z3库可以约束求解出a[2],a[3],a[4]的值，然后再回头看那个加密函数400686
-它通过多次位运算进行...
             </div>
             <!-- read more -->
             
@@ -1191,7 +1188,24 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1374,7 +1388,7 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 53
+        Total : 54
         </div>
         <!-- search  -->
         
@@ -1388,6 +1402,12 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/2023/06/16/Buuctf%20%5BFlareOn5%5DUltimate%20Minesweeper/">Buuctf [FlareOn5]Ultimate Minesweeper</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/13</span>
