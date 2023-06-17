@@ -19,25 +19,27 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="Buuctf 简单注册器看到是apk文件，放入jeb中，在MainActivity中按TAB用c语言查看反编译后的结果,好像看到了关键的对比函数 写脚本跑一下就可以得到flag了 1234567891011121314int main() &amp;#123;	char x[] &#x3D; &quot;dd2940c04462b4dd7c450528835cca15&quot;;	x[2] &#x3D; ((x[2] +">
+    <meta name="description" content="firmwarehint：网管小张审计日志时发现疑似黑客使用Bash漏洞对公司的路由器进行了攻击，小张通过技术手段获取到了路由器固件dump文件，但是小张不懂逆向分析，请帮助小张分析出后门程序所使用的远程服务器和端口.(flag文件在&#x2F;home&#x2F;ctf&#x2F;flag.txt文件中，Flag形式为 md5(网址：端口)}，注意网址不包含http比如：md5(www.baidu.com:80)&#x3D;5411a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Buuctf 简单注册器">
-<meta property="og:url" content="http://example.com/2023/05/25/Buuctf%20%E7%AE%80%E5%8D%95%E6%B3%A8%E5%86%8C%E5%99%A8/index.html">
+<meta property="og:title" content="Buuctf firmware">
+<meta property="og:url" content="http://example.com/2023/06/17/Buuctf%20firmware/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Buuctf 简单注册器看到是apk文件，放入jeb中，在MainActivity中按TAB用c语言查看反编译后的结果,好像看到了关键的对比函数 写脚本跑一下就可以得到flag了 1234567891011121314int main() &amp;#123;	char x[] &#x3D; &quot;dd2940c04462b4dd7c450528835cca15&quot;;	x[2] &#x3D; ((x[2] +">
+<meta property="og:description" content="firmwarehint：网管小张审计日志时发现疑似黑客使用Bash漏洞对公司的路由器进行了攻击，小张通过技术手段获取到了路由器固件dump文件，但是小张不懂逆向分析，请帮助小张分析出后门程序所使用的远程服务器和端口.(flag文件在&#x2F;home&#x2F;ctf&#x2F;flag.txt文件中，Flag形式为 md5(网址：端口)}，注意网址不包含http比如：md5(www.baidu.com:80)&#x3D;5411a">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230524211832250.png">
-<meta property="article:published_time" content="2023-05-25T14:00:01.000Z">
-<meta property="article:modified_time" content="2023-05-25T14:17:46.010Z">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230617171254380.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230617220151005.png">
+<meta property="og:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230617220931205.png">
+<meta property="article:published_time" content="2023-06-17T14:24:11.000Z">
+<meta property="article:modified_time" content="2023-06-17T14:25:59.952Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Buuctf">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230524211832250.png">
+<meta name="twitter:image" content="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230617171254380.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Buuctf 简单注册器 · readyYang‘s blog</title>
+    <title>Buuctf firmware · readyYang‘s blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -262,7 +264,7 @@
                 <a href="/">我的博客</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">Buuctf 简单注册器</a>
+                <a href="#" class="post-name">Buuctf firmware</a>
             </div>
         </div>
     
@@ -308,7 +310,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                Buuctf 简单注册器
+                Buuctf firmware
             <!-- 404 -->
             
         </h1>
@@ -338,7 +340,7 @@
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2023/05/25</span>
+                    <span class="post-intro-time">2023/06/17</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -493,10 +495,34 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Buuctf-简单注册器"><a href="#Buuctf-简单注册器" class="headerlink" title="Buuctf 简单注册器"></a>Buuctf 简单注册器</h1><p>看到是apk文件，放入jeb中，在MainActivity中按<code>TAB</code>用c语言查看反编译后的结果,好像看到了关键的对比函数<img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230524211832250.png" alt="image-20230524211832250"></p>
-<p>写脚本跑一下就可以得到flag了</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">char</span> x[] = <span class="string">&quot;dd2940c04462b4dd7c450528835cca15&quot;</span>;</span><br><span class="line">	x[<span class="number">2</span>] = ((x[<span class="number">2</span>] + x[<span class="number">3</span>]) - <span class="number">50</span>);</span><br><span class="line">	x[<span class="number">4</span>] = ((x[<span class="number">2</span>] + x[<span class="number">5</span>]) - <span class="number">48</span>);</span><br><span class="line">	x[<span class="number">30</span>] = (<span class="type">char</span>)((x[<span class="number">31</span>] + x[<span class="number">9</span>]) - <span class="number">48</span>);</span><br><span class="line">	x[<span class="number">14</span>] = (<span class="type">char</span>)((x[<span class="number">27</span>] + x[<span class="number">28</span>]) - <span class="number">97</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i++) &#123;</span><br><span class="line">		<span class="type">char</span> a = x[<span class="number">31</span> - i];</span><br><span class="line">		x[<span class="number">31</span> - i] = x[i];</span><br><span class="line">		x[i] = a;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;flag&#123;%s&#125;&quot;</span>, x);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="firmware"><a href="#firmware" class="headerlink" title="firmware"></a>firmware</h1><p>hint：网管小张审计日志时发现疑似黑客使用Bash漏洞对公司的路由器进行了攻击，小张通过技术手段获取到了路由器固件dump文件，但是小张不懂逆向分析，请帮助小张分析出后门程序所使用的远程服务器和端口.(flag文件在/home/ctf/flag.txt文件中，Flag形式为 md5(网址：端口)}，注意网址不包含http比如：md5(<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com:80</a>)=5411a465b86d593986b8b9f9b1c1788c) 注意：得到的 flag 请包上 flag{} 提交</p>
+<p>网管还要管这种事的吗？这道题我很早就开始试了，也是做的真的挺久的，但我自己什么都没有看出来，看了别人的wp才勉强知道怎么做。</p>
+<p>第一次做固件分析，固件逆向是指在不对嵌入式系统进行实际运行的情况下，通过对固件文件进行逆向解析，分析固件中各代码模块的调用关系及代码内容，从而发现嵌入式系统中可能存在的漏洞及后门的一种技术手段。现在我觉的靠自己是不可能做出这道题的，因为我看师傅们的wp也是看了很久才看懂一些。网上搜到的一些有关固件逆向的文章也是看不懂一点，好像固件逆向和工控还有物联网有点关系。</p>
+<p>这道题的固件是路由器固件，给的是一个.bin文件，我自己做的时候是想把.bin文件转换成别的类型的文件，然后再去逆向分析它，结果当然是毫无进展。</p>
+<p>这道题首先要用到binwalk，这是一个固件分析工具，它可以扫描固件映像以查找许多不同的嵌入式文件类型和文件系统。先在linux虚拟机上安装好binwalk，用<code>binwalk -e 文件地址</code>提取bin文件也就是固件映像中找到的所有文件，提取出来的文件会放在映像的同级文件夹下，打开生成的文件夹</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230617171254380.png" alt="image-20230617171254380"></p>
+<p>里面有四个文件，第一个文件夹是空的，第三个我会解压缩失败，不知道为啥，但这些其实不重要，主要的是第四个文件。<a target="_blank" rel="noopener" href="https://www.cnblogs.com/blacksunny/p/7208451.html?utm_source=itdadao&utm_medium=referral">路由器文件系统</a>这个文章是大神对路由器固件的分析，里面讲的很详细了，看完对这道题的理解帮助很大。</p>
+<p>按照网上wp里大佬的步骤接下来就是安装firmware-mod-kit，(Firmware Mod Kit是一种工具，它允许轻松地对各种嵌入式设备的固件映像进行解构和重构。它主要针对基于Linux的路由器，但应该与使用常见固件格式和文件系统（如TRX/uImage和SquashFS/CramFS）的大多数固件兼容。它的功能包括固件文件的解包和打包、固件提取文件系统的解压和压缩、DD-WRT Web Pages的修改等)。但我按他们的步骤来的时候每一步都出现了问题，这害我差点放弃这道题，接下来我会把我的解决方法加上</p>
+<p><code>sudo yum install git build-essential zlib1g-dev liblzma-dev python-magic</code></p>
+<p>这步是安装安装firmware-mod-kit时所依赖软件包，我在这步出现以下报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有一些软件包无法被安装。如果您用的是 unstable 发行版，这也许是 因为系统无法达到您要求的状态造成的。该版本中可能会有一些您需要的软件 包尚未被创建或是它们已被从新到(Incoming)目录移出。 下列信息可能会对解决问题有所帮助： 下列软件包有未满足的依赖关系： liblzma-dev : 依赖: liblzma5 (= 5.2.4-1ubuntu1.1) 但是 5.2.5-2ubuntu1 正要被安装 E: 无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。</span><br></pre></td></tr></table></figure>
 
+<p>这里是liblzma-dev安装失败了，好像是因为不支持新版ubuntu。所以需要在前面加上命令<code>sudo apt-get install liblzma5=5.2.4-1ubuntu1.</code>来回退版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/mirror/firmware-mod-kit.git</span><br><span class="line">cd firmware-mod-kit/src</span><br><span class="line">./configure &amp;&amp; make</span><br></pre></td></tr></table></figure>
+
+<p>这三步分别是克隆firmware-mod-kit的github仓库内容，移动到指定文件夹和编译可执行文件。我在克隆仓库时一直报错，这是实际上网络问题，找个好点的时间段或者挂个代理多试几次就好了。随后我又在编译时报了很多莫名其妙的错，如果无视掉，接下来的步骤同样进行不了。<a target="_blank" rel="noopener" href="https://blog.csdn.net/LONH1253870265/article/details/127844317">firmware-mod-kit Ubuntu22.04编译通过</a>，在这篇文章里介绍了编译失败的原因，主要是软件太老了，文章末尾还给了一个<a target="_blank" rel="noopener" href="https://github.com/mirror/firmware-mod-kit">懒人包地址</a>,好人啊</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/LovenSar/firmware-mod-kit-improveVer</span><br><span class="line">cd firmware-mod-kit-improveVer/src</span><br><span class="line">./configure &amp;&amp; make</span><br></pre></td></tr></table></figure>
+
+<p>换懒人包重新来，克隆库同样要多试几次。编译过程等一会就编译好了，将120200.squashfs放入firmware-mod-kit-improveVer目录下然后运行命令<code>./unsquashfs_all.sh 120200.squashfs</code>然后就可以在squashfs-root的tmp文件夹下找到名为backdoor的文件，这步有的wp作者有多做了几步，但是结果好像是一样的，我就没有去深入了解而是选择最简洁的方法</p>
+<p>unsquashfs_all.sh是 firmware-mod-kit 工具包中的一个脚本，它用于提取 SquashFS 文件系统。SquashFS 是一种常用于嵌入式设备和只读文件系统的压缩文件系统。</p>
+<p>unsquashfs_all.sh脚本会尝试使用多种不同的工具来提取 SquashFS 文件系统，以支持不同版本的 SquashFS 文件系统。当你运行这个脚本时，它会自动检测 SquashFS 文件系统的版本，并使用合适的工具来提取文件系统</p>
+<p>照例，分析程序：32位带upx壳</p>
+<p>脱壳，放入32位IDA中，查看字符串找到符合要求的字符串</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230617220151005.png" alt="image-20230617220151005"></p>
+<p>跟进字符串，有两处引用，一处没用，一处可以找到端口</p>
+<p><img src="https://readyfigurebed.oss-cn-beijing.aliyuncs.com/image-20230617220931205.png" alt="image-20230617220931205"></p>
+<p>所以flag是echo.byethost51.com:36667的MD5加密33a422c45d551ac6e4756f59812a954b</p>
+<p>总结：好几把难，出现了好多奇奇怪怪的问题，学逆向还是任重而道远，仍需上下求索</p>
 
     </article>
     <!-- license -->
@@ -505,17 +531,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2023/05/25/Buuctf%20%E7%9B%B8%E5%86%8C/" title="Buuctf 相册">
-                    <div class="nextTitle">Buuctf 相册</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2023/05/25/Buuctf%20%E7%BA%A2%E5%B8%BD%E6%9D%AF2019easyre/" title="Buuctf 红帽杯2019easyre">
-                    <div class="prevTitle">Buuctf 红帽杯2019easyre</div>
+                <a href="/2023/06/16/Buuctf%20%5BFlareOn5%5DUltimate%20Minesweeper/" title="Buuctf [FlareOn5]Ultimate Minesweeper">
+                    <div class="prevTitle">Buuctf [FlareOn5]Ultimate Minesweeper</div>
                 </a>
             
         </li>
@@ -662,7 +683,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Buuctf-%E7%AE%80%E5%8D%95%E6%B3%A8%E5%86%8C%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">Buuctf 简单注册器</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#firmware"><span class="toc-number">1.</span> <span class="toc-text">firmware</span></a></li></ol>
             </div>
         
         <!-- sidebar -->

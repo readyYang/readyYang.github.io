@@ -443,6 +443,44 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20reverse_2/">
+                
+                <span class="abstract-title-text">Buuctf reverse_2</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf reverse_2分析出64位无壳
+用64位IDA打开，字符串定位法进入main函数，可以看出又是字符串比较的题查看s2，看不到，在字符串界面看到可疑字符串
+猜测这就是flag，将’i’和’r改为’1’,尝试输入，成功了
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20reverse_1/">
                 
                 <span class="abstract-title-text">Buuctf reverse_1</span>
@@ -780,45 +818,6 @@ e是随机选择的数，作为公钥
 有很多莫名其妙的字符串，比如那些月份字符串，在里面可以找到base64的加密字符串，但是没有A，还以为是变表加密，后面发现其实是IDA用的不熟，跟进字符串可以看到A的，自己做的时候还不知道。
 进入主函数，好像又是字符串比较。点进开头被赋值的元素，发现他们的内存是连在一起的，所以他们实际上是一个字符串，随后字符串进入了4010F0函数
 这个函数我是一点看不懂，看大佬wp，他们将函数放进编译器中跑了一遍，得出这是一个将字符串中的字符从小到大升序排列的函数。所以大家看不出来的函数不要嗯看，可以将函数改造完后放入可执行的c...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">
-                
-                <span class="abstract-title-text">Buuctf 新年快乐</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf 新年快乐分析程序32位带UPX壳
-使用命令脱壳.\upx -d
-之后用32位IDA查看主函数
-又是字符串比较，可以看出flag就是HappyNewYear！
-
             </div>
             <!-- read more -->
             
@@ -1317,7 +1316,24 @@ e是随机选择的数，作为公钥
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1512,7 +1528,7 @@ e是随机选择的数，作为公钥
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 54
+        Total : 55
         </div>
         <!-- search  -->
         
@@ -1526,6 +1542,12 @@ e是随机选择的数，作为公钥
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/2023/06/17/Buuctf%20firmware/">Buuctf firmware</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>

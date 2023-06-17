@@ -443,6 +443,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">
+                
+                <span class="abstract-title-text">Buuctf WUSTCTF2020 crossfun</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf WUSTCTF2020 crossfun分析出64位无壳，放入IDA中
+进入main函数
+看上去很简单，直接进入check函数
+进去后都是这样的函数，手撸，将a1拼出来，就得到了flag
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level4(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C%E5%8F%89%E6%A0%91)/">
                 
                 <span class="abstract-title-text">Buuctf WUSTCTF2020 level4(数据结构二叉树)</span>
@@ -762,44 +801,6 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
 这段函数是加密函数，字符串403000已经知道了，唯一不知道的是v4的初值，v4的初值是函数401000的值，但是函数401000的内容只有
 return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
 完全不知道函数的意思，搜索也搜索不到。只找到了汇编命令ROL：（循环左移）指令把所有位都向左移。最高位复制到进位标志位和最低位。但是还是不知道函数的作用和输出。很奇怪，进行动态调试也看不到v4的值。看别人的wp，他们动调能出来。重新打开IDA，动...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DOverlong/">
-                
-                <span class="abstract-title-text">Buuctf [FlareOn4]Overlong</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [FlareOn4]Overlong分析程序，32位无壳
-查看提示：he secret of this next challenge is cleverly hidden. However, with the right approach, finding the solution will not take an overlong amount of time.（他下一个挑战的秘密被巧妙地隐藏起来。但是，使用正确的方法，找到解决方案不会花费过多的时间。）不太懂提示的意思，题目本身也是超长的意思。运行程序我从不破坏代码
-放入32位IDA中，只有3个函数
-以为text就是输出...
             </div>
             <!-- read more -->
             
@@ -1298,7 +1299,24 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1493,7 +1511,7 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 54
+        Total : 55
         </div>
         <!-- search  -->
         
@@ -1507,6 +1525,12 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/2023/06/17/Buuctf%20firmware/">Buuctf firmware</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>

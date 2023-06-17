@@ -428,6 +428,42 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/06/17/Buuctf%20firmware/">
+                
+                <span class="abstract-title-text">Buuctf firmware</span>
+            </a>
+            <div class="abstract-content">
+                firmwarehint：网管小张审计日志时发现疑似黑客使用Bash漏洞对公司的路由器进行了攻击，小张通过技术手段获取到了路由器固件dump文件，但是小张不懂逆向分析，请帮助小张分析出后门程序所使用的远程服务器和端口.(flag文件在/home/ctf/flag.txt文件中，Flag形式为 md5(网址：端口)}，注意网址不包含http比如：md5(www.baidu.com:80)=5411a465b86d593986b8b9f9b1c1788c) 注意：得到的 flag 请包上 flag{} 提交
+网管还要管这种事的吗？这道题我很早就开始试了，也是做的真的挺久的，但我自己什么都没有...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/06/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/06/17</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/06/16/Buuctf%20%5BFlareOn5%5DUltimate%20Minesweeper/">
                 
                 <span class="abstract-title-text">Buuctf [FlareOn5]Ultimate Minesweeper</span>
@@ -763,51 +799,6 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
 查看main函数
 可以看出flag的开头必须是’actf{‘,因为是在Buuctf上做的这道题，所以这个信息没什么用，整道题的关键在55F91380078A这个函数上，查看这个函数
 在浏览器搜索题目Oruga是什么意思的时候，不小心看到别人wp的标题说这是道迷宫题，那这样的话那个256位的字符串55F913A01020就是迷宫，很明显可以看出WMJE分别控制着上下左右，但是下面那个while循环却没有看懂，放进Linux虚拟机中动调也没看出来什么，就先跳过了。把地图画出来后却有点懵，33是终...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20CrackRTF/">
-                
-                <span class="abstract-title-text">Buuctf CrackRTF</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf CrackRTF放入分析软件中，32位无壳
-放入32位IDA中，看到主函数是这样的
-进入两个函数后分别与两个字符串对比
-点入这两个函数中看到两个几乎一样的函数
-搜索函数名，发现是Hash加密。然后就不知道做什么了
-看别人的wp后得知0x8004是sha1加密，0x8003是MD5加密
-放入在线解密网站中得到第一个密码是123321
-
-第二个密码是~!3a@0
-在程序中先后输入密码后，文件夹中出现一个dbapp.rtf文件，打开后就可以看到flag了
-脚本爆破sha11234567891011import hashlibflag = &quot;@DBApp&quot;for...
             </div>
             <!-- read more -->
             
@@ -1214,7 +1205,24 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1409,7 +1417,7 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 54
+        Total : 55
         </div>
         <!-- search  -->
         
@@ -1423,6 +1431,12 @@ sub_181000里有个isalnum函数，这个函数可以检测输入，如果输入
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/2023/06/17/Buuctf%20firmware/">Buuctf firmware</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>

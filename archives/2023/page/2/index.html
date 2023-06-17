@@ -428,6 +428,51 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20CrackRTF/">
+                
+                <span class="abstract-title-text">Buuctf CrackRTF</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf CrackRTF放入分析软件中，32位无壳
+放入32位IDA中，看到主函数是这样的
+进入两个函数后分别与两个字符串对比
+点入这两个函数中看到两个几乎一样的函数
+搜索函数名，发现是Hash加密。然后就不知道做什么了
+看别人的wp后得知0x8004是sha1加密，0x8003是MD5加密
+放入在线解密网站中得到第一个密码是123321
+
+第二个密码是~!3a@0
+在程序中先后输入密码后，文件夹中出现一个dbapp.rtf文件，打开后就可以看到flag了
+脚本爆破sha11234567891011import hashlibflag = &quot;@DBApp&quot;for...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20Find%20it/">
                 
                 <span class="abstract-title-text">Buuctf Find it</span>
@@ -757,45 +802,6 @@ f1是flag的前半段，直接给出，f2是后半段
 搜索96A这个函数内容，发现它是将输入转换成16进制字符
 搜索函数名得知__gmpz_init_set_str(a,b,c)是将b以c的形式存入a中，__gmpz_powm(a,b,c,d)是将b的c次方对d取模然后存入a中,所以函数流程是将输入的flag字符串以16进制的形式储存，再将它的v5次方对v4取模最后与v7做比较，我在看懂后尝试写逆向函数，但是失败了，我写不出来
 观看别人的wp得知，这又是RSA解密，我一点都没看出来。可以回头看看之前做的rsa题复习一下，根据题...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">
-                
-                <span class="abstract-title-text">Buuctf WUSTCTF2020 crossfun</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf WUSTCTF2020 crossfun分析出64位无壳，放入IDA中
-进入main函数
-看上去很简单，直接进入check函数
-进去后都是这样的函数，手撸，将a1拼出来，就得到了flag
-
             </div>
             <!-- read more -->
             
@@ -1202,7 +1208,24 @@ f1是flag的前半段，直接给出，f2是后半段
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1397,7 +1420,7 @@ f1是flag的前半段，直接给出，f2是后半段
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 54
+        Total : 55
         </div>
         <!-- search  -->
         
@@ -1411,6 +1434,12 @@ f1是flag的前半段，直接给出，f2是后半段
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/2023/06/17/Buuctf%20firmware/">Buuctf firmware</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>

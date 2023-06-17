@@ -428,6 +428,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20level4(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%BA%8C%E5%8F%89%E6%A0%91)/">
+                
+                <span class="abstract-title-text">Buuctf WUSTCTF2020 level4(数据结构二叉树)</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf WUSTCTF2020 level4(数据结构二叉树)分析出64位无壳
+放入64位IDA中，查看主函数第一句话是“练习我的数据结构代码”，没懂它在说什么，接下来这句“打字…………结构………字符……….*左………..*右………emmmmm…..OK！”就更抽象了，然后就是遍历type1和遍历type2，它不愿意告诉我们type3，可以猜测type3就是我们需要的flag。在虚拟机中跑一遍程序查看输出
+可以看出两个类型都是改变v2的顺序输出
+所以type3也是改变字符串顺序的，查看type1和type2
+type1和type2还是递归函数，看不懂，回头去了解数据结构算法这个知识...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020level2/">
                 
                 <span class="abstract-title-text">Buuctf WUSTCTF2020level2</span>
@@ -746,47 +785,6 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
 查看提示：he secret of this next challenge is cleverly hidden. However, with the right approach, finding the solution will not take an overlong amount of time.（他下一个挑战的秘密被巧妙地隐藏起来。但是，使用正确的方法，找到解决方案不会花费过多的时间。）不太懂提示的意思，题目本身也是超长的意思。运行程序我从不破坏代码
 放入32位IDA中，只有3个函数
 以为text就是输出...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BGUET-CTF2019%5Dre/">
-                
-                <span class="abstract-title-text">Buuctf [GUET-CTF2019]re</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [GUET-CTF2019]re分析程序得知是64位带UPX壳
-脱壳后打开
-利用字符串”input your flag”定位到函数
-
-进入if后的那个函数
-利用计算器逐个算出值然后转成字符flag{e65421110b0a3099a1c039337}，提交后显示错误，检查了好久，后面发现原函数a1[16]和a1[17]的顺序反了，并且没有a1[6]，调换回去后，去找别的函数中是否有提到a1[6]，结果看不懂且找不到，看了别人的wp发现他们都是直接爆破a1[6],并且a1[6]就是1，可恶，应该尝试一下爆破的
-
             </div>
             <!-- read more -->
             
@@ -1193,7 +1191,24 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1388,7 +1403,7 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 54
+        Total : 55
         </div>
         <!-- search  -->
         
@@ -1402,6 +1417,12 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/2023/06/17/Buuctf%20firmware/">Buuctf firmware</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>

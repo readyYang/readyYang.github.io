@@ -428,6 +428,47 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BGUET-CTF2019%5Dre/">
+                
+                <span class="abstract-title-text">Buuctf [GUET-CTF2019]re</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf [GUET-CTF2019]re分析程序得知是64位带UPX壳
+脱壳后打开
+利用字符串”input your flag”定位到函数
+
+进入if后的那个函数
+利用计算器逐个算出值然后转成字符flag{e65421110b0a3099a1c039337}，提交后显示错误，检查了好久，后面发现原函数a1[16]和a1[17]的顺序反了，并且没有a1[6]，调换回去后，去找别的函数中是否有提到a1[6]，结果看不懂且找不到，看了别人的wp发现他们都是直接爆破a1[6],并且a1[6]就是1，可恶，应该尝试一下爆破的
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BGWCTF%202019%5Dxxor(tea%E5%8A%A0%E5%AF%86)/">
                 
                 <span class="abstract-title-text">Buuctf [GWCTF 2019]xxor(tea加密)</span>
@@ -749,44 +790,6 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
                 Buuctf reverse_2分析出64位无壳
 用64位IDA打开，字符串定位法进入main函数，可以看出又是字符串比较的题查看s2，看不到，在字符串界面看到可疑字符串
 猜测这就是flag，将’i’和’r改为’1’,尝试输入，成功了
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20reverse_1/">
-                
-                <span class="abstract-title-text">Buuctf reverse_1</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf reverse_1分析程序64位无壳
-放入64位IDA中，进入main函数中
-可以看出是字符串比较的题目，查看Str2，看到是{hello_world}，提交flag，错了，上面有一个操作是把Str2中的’o’替换成’0’(o的ASCII值是111，0的ASCII值是48),试试flag{hello_w0rld}，成功了。v3，v7和i不知道有什么用，已经得到了flag，就不用管它们了
 
             </div>
             <!-- read more -->
@@ -1194,7 +1197,24 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1389,7 +1409,7 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 54
+        Total : 55
         </div>
         <!-- search  -->
         
@@ -1403,6 +1423,12 @@ a2经过一系列操作然后与字符串对比，所以要去找a2的操作过�
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/2023/06/17/Buuctf%20firmware/">Buuctf firmware</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>
