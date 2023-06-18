@@ -428,6 +428,49 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/06/18/Buuctf%20%5BMRCTF2020%5DPixelShooter/">
+                
+                <span class="abstract-title-text">Buuctf [MRCTF2020]PixelShooter</span>
+            </a>
+            <div class="abstract-content">
+                [MRCTF2020]PixelShooter被这题的题目吸引了，为它跳了几题。像素射手，看上去是个游戏题。
+下载附件，是个APK文件，可恶，看来是玩不上了
+按照惯例，APK文件放入jeb中反编译
+
+可以看到有很多个文件，我做的时候一直在Bytecode这个文件夹里找东西，但实际上除了这个游戏是用Unity3d做的以外，文件夹里其他一大堆代码看不出什么东西来。
+
+看了别人的wp才想起来之前做过Unity3d题的，那道题要我们反编译Assembly-CSharp.dll这个文件，这道题也是一样，找到Assembly-CSharp.dll
+
+有的wp作者直接在jeb的界面找到了flag，我找...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/06/18">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/06/18</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/06/17/Buuctf%20firmware/">
                 
                 <span class="abstract-title-text">Buuctf firmware</span>
@@ -758,51 +801,6 @@ Welcome to the Fifth Annual Flare-On Challenge! The Minesweeper World Championsh
 查看main函数
 可以看出flag的开头必须是’actf{‘,因为是在Buuctf上做的这道题，所以这个信息没什么用，整道题的关键在55F91380078A这个函数上，查看这个函数
 在浏览器搜索题目Oruga是什么意思的时候，不小心看到别人wp的标题说这是道迷宫题，那这样的话那个256位的字符串55F913A01020就是迷宫，很明显可以看出WMJE分别控制着上下左右，但是下面那个while循环却没有看懂，放进Linux虚拟机中动调也没看出来什么，就先跳过了。把地图画出来后却有点懵，33是终...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20CrackRTF/">
-                
-                <span class="abstract-title-text">Buuctf CrackRTF</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf CrackRTF放入分析软件中，32位无壳
-放入32位IDA中，看到主函数是这样的
-进入两个函数后分别与两个字符串对比
-点入这两个函数中看到两个几乎一样的函数
-搜索函数名，发现是Hash加密。然后就不知道做什么了
-看别人的wp后得知0x8004是sha1加密，0x8003是MD5加密
-放入在线解密网站中得到第一个密码是123321
-
-第二个密码是~!3a@0
-在程序中先后输入密码后，文件夹中出现一个dbapp.rtf文件，打开后就可以看到flag了
-脚本爆破sha11234567891011import hashlibflag = &quot;@DBApp&quot;for...
             </div>
             <!-- read more -->
             
@@ -1214,7 +1212,24 @@ Welcome to the Fifth Annual Flare-On Challenge! The Minesweeper World Championsh
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1421,7 +1436,7 @@ Welcome to the Fifth Annual Flare-On Challenge! The Minesweeper World Championsh
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 55
+        Total : 56
         </div>
         <!-- search  -->
         
@@ -1435,6 +1450,12 @@ Welcome to the Fifth Annual Flare-On Challenge! The Minesweeper World Championsh
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span>
+            <a class="archive-post-title" href="/2023/06/18/Buuctf%20%5BMRCTF2020%5DPixelShooter/">Buuctf [MRCTF2020]PixelShooter</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/17</span>

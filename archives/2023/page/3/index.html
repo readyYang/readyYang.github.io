@@ -428,6 +428,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/25/Buuctf%20SUCTF2019%20sign%20in(RSA)/">
+                
+                <span class="abstract-title-text">Buuctf SUCTF2019 sign in(RSA)</span>
+            </a>
+            <div class="abstract-content">
+                Buuctf SUCTF2019 sign in(RSA)分析文件，64位无壳
+直接放入64位IDA中看到下列函数
+搜索96A这个函数内容，发现它是将输入转换成16进制字符
+搜索函数名得知__gmpz_init_set_str(a,b,c)是将b以c的形式存入a中，__gmpz_powm(a,b,c,d)是将b的c次方对d取模然后存入a中,所以函数流程是将输入的flag字符串以16进制的形式储存，再将它的v5次方对v4取模最后与v7做比较，我在看懂后尝试写逆向函数，但是失败了，我写不出来
+观看别人的wp得知，这又是RSA解密，我一点都没看出来。可以回头看看之前做的rsa题复习一下，根据题...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20WUSTCTF2020%20crossfun/">
                 
                 <span class="abstract-title-text">Buuctf WUSTCTF2020 crossfun</span>
@@ -747,45 +786,6 @@ DB10FF是输入函数，StartAddress和DB119F好像是加密过程，DB1190是�
 看不懂，但是查看413000字符串发现它是魔改的base64字符表，到这里我想试试直接base64解码看看能不能出flag
 成功了
 
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20%5BFlareOn4%5DIgniteMe/">
-                
-                <span class="abstract-title-text">Buuctf [FlareOn4]IgniteMe</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf [FlareOn4]IgniteMe分析出32位无壳
-只有4个函数
-这段函数是加密函数，字符串403000已经知道了，唯一不知道的是v4的初值，v4的初值是函数401000的值，但是函数401000的内容只有
-return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
-完全不知道函数的意思，搜索也搜索不到。只找到了汇编命令ROL：（循环左移）指令把所有位都向左移。最高位复制到进位标志位和最低位。但是还是不知道函数的作用和输出。很奇怪，进行动态调试也看不到v4的值。看别人的wp，他们动调能出来。重新打开IDA，动...
             </div>
             <!-- read more -->
             
@@ -1197,7 +1197,24 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1404,7 +1421,7 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 55
+        Total : 56
         </div>
         <!-- search  -->
         
@@ -1418,6 +1435,12 @@ return (unsigned __int16)__ROL4__(-2147024896, 4) &gt;&gt; 1;
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span>
+            <a class="archive-post-title" href="/2023/06/18/Buuctf%20%5BMRCTF2020%5DPixelShooter/">Buuctf [MRCTF2020]PixelShooter</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/17</span>
