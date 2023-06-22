@@ -443,6 +443,48 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/2023/05/26/Buuctf%20%5B%E7%BE%8A%E5%9F%8E%E6%9D%AF2020%5Deasyre/">
+                
+                <span class="abstract-title-text">Buuctf [羊城杯2020]easyre</span>
+            </a>
+            <div class="abstract-content">
+                [羊城杯 2020]easyre分析程序，64位无壳
+进去后定位到main函数
+可以看到又是字符串比较的题，Str2是最后用来比较的字符串，分别进入三个加密函数
+第一个加密函数通过跟进alphabet字符串可以看出是base64加密函数
+第二个加密函数是将字符串分为四个每个13个字符的字符串，然后换位置
+第三个加密函数是凯撒加密，在写逆向脚本时要注意的是因为取模操作的原因a,b,c,A,B,C,0,1,2是由x,y,z,X,Y,Z,7,8,9变换来的，其余的就是直接-3输出就好了
+先用跑第三个加密函数的逆向脚本，再手撸第二个加密函数，再把结果放在在线网站上就能出flag了，脚本如下
+12...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/05/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/2023/05/25/Buuctf%20ACTF%E6%96%B0%E7%94%9F%E8%B5%9B2020%20Oruga(%E8%BF%B7%E5%AE%AB)/">
                 
                 <span class="abstract-title-text">Buuctf ACTF新生赛2020 Oruga(迷宫)</span>
@@ -775,47 +817,6 @@ f1是flag的前半段，直接给出，f2是后半段
 
 直接就能得到flag了
 
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Buuctf">Buuctf</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/05/25/Buuctf%20SimpleREV/">
-                
-                <span class="abstract-title-text">Buuctf SimpleREV</span>
-            </a>
-            <div class="abstract-content">
-                Buuctf SimpleREV分析程序：64位无壳
-放入64位IDA中，主函数没有什么有用的信息
-进入Decry函数中
-
-可以看出又是字符串比较的题目，strcat是字符串拼接函数，能将后面那个字符串接在前面那个字符串的后面，join函数是一个套了壳的strcat函数，所以我们可以通过观察得到最后的对比字符串text=killshadow和加密密钥key=adsfkndcls
-剩下的只要写逆向脚本就可以得到flag了，自己写的脚本一直报错输出也是乱码，用一下别人的
-12345678910111213141516171819202122232425int main()&#123;	cha...
             </div>
             <!-- read more -->
             
@@ -1324,7 +1325,24 @@ f1是flag的前半段，直接给出，f2是后半段
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1543,7 +1561,7 @@ f1是flag的前半段，直接给出，f2是后半段
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 56
+        Total : 57
         </div>
         <!-- search  -->
         
@@ -1557,6 +1575,12 @@ f1是flag的前半段，直接给出，f2是后半段
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/22</span>
+            <a class="archive-post-title" href="/2023/06/22/Buuctf%20%5BFlareOn1%5DBob%20Doge/">Buuctf [FlareOn1]Bob Doge</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/18</span>
